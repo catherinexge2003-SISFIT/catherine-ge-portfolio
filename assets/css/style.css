@@ -1,12 +1,17 @@
 /* Variables & Reset */
 :root {
-    --bg-color: #0a0a0c;
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
-    --accent-primary: #3b82f6; /* Electric Blue */
-    --accent-secondary: #8b5cf6; /* Violet */
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --bg-color: #1a0f0a;
+    /* Deep Espresso */
+    --text-primary: #fdf8f5;
+    /* Warm Off-white */
+    --text-secondary: #d1bab0;
+    /* Soft Latte */
+    --accent-primary: #cc3d33;
+    /* Sophisticated Crimson */
+    --accent-secondary: #92400e;
+    /* Rich Roast Coffee */
+    --glass-bg: rgba(253, 248, 245, 0.05);
+    --glass-border: rgba(253, 248, 245, 0.1);
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -27,7 +32,9 @@ body {
 }
 
 /* Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-heading);
     font-weight: 700;
 }
@@ -53,6 +60,7 @@ p.lead {
 .gradient-text {
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -206,8 +214,9 @@ p.lead {
 .stat-card h3 {
     font-size: 3rem;
     margin: 1rem 0 0.5rem;
-    background: linear-gradient(to bottom, #fff, #aaa);
+    background: linear-gradient(to bottom, var(--text-primary), var(--text-secondary));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -321,21 +330,22 @@ p.lead {
     h1 {
         font-size: 2.5rem;
     }
-    
+
     .split-layout {
         grid-template-columns: 1fr;
     }
-    
+
     .project-card {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .project-action {
         margin-top: 1.5rem;
     }
-    
+
     .nav-links {
-        display: none; /* Mobile menu needed for full prod, sticking to simple for now */
+        display: none;
+        /* Mobile menu needed for full prod, sticking to simple for now */
     }
 }
