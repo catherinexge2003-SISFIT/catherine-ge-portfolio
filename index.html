@@ -4,19 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SISFIT Academy | Digital Health Education & Behavioral Science</title>
+    <title>SISFIT Academy | Bridging Behavioral Science and Digital Health</title>
     <meta name="description"
-        content="SISFIT Academy: Bridging Education and Health through Digital Platforms. Home of the SISFIT Living Lab.">
+        content="SISFIT Academy: A leading research-driven institution bridging the gap between high-level behavioral science and large-scale digital health interventions.">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Mix of Serif (Academic) and Sans-Serif (Modern) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&family=Outfit:wght@700&display=swap"
         rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        :root {
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-serif);
+            letter-spacing: -0.02em;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        .bridge-section {
+            padding: 8rem 0;
+            background: var(--bg-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bridge-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .proof-stats {
+            display: flex;
+            gap: 4rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .proof-item h4 {
+            font-size: 2.5rem;
+            color: var(--accent-primary);
+            margin: 0;
+        }
+
+        .proof-item span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+        }
+
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .curriculum-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 3rem 2rem;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .curriculum-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-primary);
+            transform: translateY(-10px);
+        }
+
+        .tag-line {
+            font-family: var(--font-sans);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent-primary);
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
 
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -27,11 +113,13 @@
     <!-- Navigation -->
     <nav class="navbar glass">
         <div class="container">
-            <a href="/" class="logo">SISFIT<span class="dot"> Academy</span></a>
+            <a href="/" class="logo" style="font-family: var(--font-serif);">SISFIT<span class="dot"
+                    style="color: var(--accent-primary);">Academy</span></a>
             <div class="nav-links">
-                <a href="#vision">Vision</a>
-                <a href="#lab">The Lab</a>
-                <a href="./CatherineGe" class="btn-primary">Meet the Founder</a>
+                <a href="#mission">Philosophy</a>
+                <a href="#lab">Living Lab</a>
+                <a href="#curriculum">Curriculum</a>
+                <a href="./CatherineGe" class="btn-primary">Researcher Bio</a>
             </div>
         </div>
     </nav>
@@ -39,68 +127,116 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="container hero-content">
-            <span class="badge">Digital Health & Education</span>
-            <h1>Intelligence Behind <br><span class="gradient-text">Physical Excellence</span></h1>
-            <p class="lead">SISFIT is more than an academy. It is a research-driven ecosystem where <strong>Behavioral
-                    Science</strong> meets <strong>Social Media</strong> to create sustainable health transformation.
-            </p>
-            <div class="cta-group">
-                <a href="./CatherineGe" class="btn-primary">Research Portfolio</a>
-                <a href="#lab" class="btn-secondary">Explore the Lab</a>
+            <span class="tag-line">Systems for Impact & Fit</span>
+            <h1 class="hero-title">Bridging <span class="gradient-text italic">Behavioral Science</span> & <br>Digital
+                Health at Scale.</h1>
+            <p class="lead" style="max-width: 700px; margin-left: auto; margin-right: auto;">SISFIT Academy is a
+                Think-Tank and Research Institution dedicated to decoding the algorithms of behavior change. We
+                translate complex physiological research into high-impact digital interventions.</p>
+            <div class="cta-group" style="justify-content: center; margin-top: 3rem;">
+                <a href="#lab" class="btn-primary">The Living Lab</a>
+                <a href="#curriculum" class="btn-secondary">View Frameworks</a>
             </div>
         </div>
         <div class="hero-bg-grid"></div>
     </header>
 
-    <!-- Official Vision Section -->
-    <section id="vision" class="stats-section">
+    <!-- The Bridge: Academic Depth vs Industry Height -->
+    <section id="mission" class="bridge-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Mission</h2>
-                <p>Decoding the algorithms of behavior change to democratize health literacy.</p>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card glass">
-                    <i data-lucide="brain" class="icon-accent"></i>
-                    <h3>Evidence-Based</h3>
-                    <p>Curriculum Design</p>
-                    <span class="subtext">Based on ACSM standards</span>
+            <div class="bridge-grid">
+                <div class="glass" style="padding: 1.5rem; border-radius: 20px; text-align: center;">
+                    <img src="assets/images/training_proof_sz.jpg" alt="ACSM-CASM Training"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 1rem; filter: grayscale(0.2);">
+                    <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 1rem;">
+                        <img src="assets/images/sisfit_academy_logo.png" alt="SISFIT Academy Logo"
+                            style="height: 30px;">
+                        <img src="assets/images/living_lab_logo.jpg" alt="Living Lab Logo" style="height: 30px;">
+                    </div>
                 </div>
-                <div class="stat-card glass">
-                    <i data-lucide="trending-up" class="icon-accent"></i>
-                    <h3>Data-Driven</h3>
-                    <p>Behavior Optimization</p>
-                    <span class="subtext">NLP & Sentiment Analysis</span>
-                </div>
-                <div class="stat-card glass">
-                    <i data-lucide="globe" class="icon-accent"></i>
-                    <h3>Scale</h3>
-                    <p>300k+ Active Subscribers</p>
-                    <span class="subtext">The SISFIT Living Lab ecosystem</span>
+                <div>
+                    <span class="tag-line">The Scientist-Practitioner Model</span>
+                    <h2>We solve the "Engagement vs. Health" paradox.</h2>
+                    <p>Traditional health education fails due to a lack of engagement. Viral content fails due to a lack
+                        of rigor. SISFIT operates at the intersection, using large-scale data to drive evidence-based
+                        outcomes.</p>
+
+                    <div class="proof-stats">
+                        <div class="proof-item">
+                            <h4>N=300k</h4>
+                            <span>Research Cohort</span>
+                        </div>
+                        <div class="proof-item">
+                            <h4>100k+</h4>
+                            <span>Community Leaders</span>
+                        </div>
+                        <div class="proof-item">
+                            <h4>ACSM</h4>
+                            <span>Global Standards</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lab Reference -->
-    <section id="lab" class="about-section">
-        <div class="container split-layout">
-            <div class="text-content">
-                <h2>The SISFIT Living Lab</h2>
-                <p>We leverage industrial-scale digital assets to answer academic questions about human behavior.</p>
-                <p>By conducting naturalistic observations across 300,000+ longitudinal data points, our academy
-                    provides the "Living Lab" framework necessary for modern digital health interventions.</p>
-                <a href="./CatherineGe" class="btn-secondary"
-                    style="margin-top: 2rem; display: inline-block;">Scientific Framework Detail &rarr;</a>
+    <!-- The Living Lab -->
+    <section id="lab" class="stats-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag-line">Infrastructure</span>
+                <h2>The Living Lab (N=300,000)</h2>
+                <p>A self-sustaining research ecosystem conducting naturalistic observations of health behavior.</p>
             </div>
-            <div class="visual-content glass">
-                <div class="code-block">
-                    <pre><code>
-Organization: SISFIT Academy
-Core Asset: Living Lab (N=300k)
-PI: Catherine Ge
-Focus: Digital Scaffolding
-                    </code></pre>
+            <div class="stats-grid">
+                <div class="stat-card glass">
+                    <i data-lucide="trending-up" class="icon-accent"></i>
+                    <h3>2.4 Million</h3>
+                    <p>Interaction Data Points</p>
+                    <span class="subtext">Encoding the mechanics of retention.</span>
+                </div>
+                <div class="stat-card glass">
+                    <i data-lucide="map-pin" class="icon-accent"></i>
+                    <h3>National Reach</h3>
+                    <p>Cross-City Cohorts</p>
+                    <span class="subtext">Beijing, Shenzhen, Xi'an, Shanghai.</span>
+                </div>
+                <div class="stat-card glass">
+                    <i data-lucide="zap" class="icon-accent"></i>
+                    <h3>3,000+</h3>
+                    <p>Content Interventions</p>
+                    <span class="subtext">A/B testing for behavior change.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section id="curriculum" class="about-section">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <span class="tag-line">Authorized Frameworks</span>
+                <h2>Industry-Leading Curriculum</h2>
+                <p>Our educational protocols are built on ACSM standards and localized for digital platform ecologies.
+                </p>
+            </div>
+            <div class="curriculum-grid">
+                <div class="curriculum-card">
+                    <i data-lucide="activity" size="40" class="icon-accent"></i>
+                    <h3>SAT Series</h3>
+                    <p>Specialized Activity Training. Essential protocols for common sports injuries and musculoskeletal
+                        rehabilitation.</p>
+                </div>
+                <div class="curriculum-card">
+                    <i data-lucide="users" size="40" class="icon-accent"></i>
+                    <h3>Youth Fitness</h3>
+                    <p>Developing lifelong health literacy in pediatric populations using scaffolded digital learning.
+                    </p>
+                </div>
+                <div class="curriculum-card">
+                    <i data-lucide="heart" size="40" class="icon-accent"></i>
+                    <h3>Clinical Populations</h3>
+                    <p>Evidence-based exercise prescriptions for rehabilitation hospitals and special needs.</p>
                 </div>
             </div>
         </div>
@@ -109,16 +245,22 @@ Focus: Digital Scaffolding
     <!-- Footer -->
     <footer id="contact" class="footer">
         <div class="container">
-            <div class="footer-content">
-                <a href="/" class="logo">SISFIT<span class="dot"> Academy</span></a>
-                <p>Turning viral moments into vital outcomes.</p>
-                <div class="social-links">
-                    <a href="./CatherineGe">Founder Profile</a>
-                    <a href="mailto:your.email@example.com"><i data-lucide="mail"></i></a>
+            <div class="footer-content" style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4rem;">
+                <div style="max-width: 400px;">
+                    <a href="/" class="logo" style="font-family: var(--font-serif); font-size: 2rem;">SISFIT<span
+                            class="dot">Academy</span></a>
+                    <p style="margin-top: 1.5rem;">Turning viral engagement into vital public health outcomes.
+                        Registered under the 'Living Lab' scientific framework.</p>
+                </div>
+                <div class="nav-links" style="flex-direction: column; align-items: flex-start; gap: 1rem;">
+                    <strong>Documentation</strong>
+                    <a href="./CatherineGe">Research Portfolio</a>
+                    <a href="#lab">Data Infrastructure</a>
+                    <a href="#curriculum">Curriculum Map</a>
                 </div>
             </div>
-            <div class="copyright">
-                &copy; 2026 SISFIT Academy. All rights reserved.
+            <div class="copyright" style="padding-top: 2rem;">
+                &copy; 2026 SISFIT Academy. All rights reserved. Intellectual property of the Living Lab.
             </div>
         </div>
     </footer>
