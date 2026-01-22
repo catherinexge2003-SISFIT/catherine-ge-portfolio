@@ -116,10 +116,14 @@
     <!-- Navigation -->
     <nav class="navbar glass">
         <div class="container">
-            <a href="/" class="logo" style="font-family: var(--font-serif);">SISFIT<span class="dot"
-                    style="color: var(--accent-primary);">Academy</span></a>
+            <a href="/" class="logo"
+                style="font-family: var(--font-serif); display: flex; align-items: center; gap: 10px;">
+                <img src="assets/images/sisfit_logo_graygold.png" alt="SISFIT Logo" style="height: 30px;">
+                SISFIT<span class="dot" style="color: var(--accent-primary);">Academy</span>
+            </a>
             <div class="nav-links">
-                <a href="#mission">Philosophy</a>
+                <a href="#events">Events</a>
+                <a href="#articles">Articles</a>
                 <a href="#lab">Living Lab</a>
                 <a href="#curriculum">Curriculum</a>
                 <a href="./CatherineGe" class="btn-primary">Researcher Bio</a>
@@ -238,7 +242,7 @@
         </div>
     </section>
 
-    <!-- Strategic Assets Gallery (NEW) -->
+    <!-- Strategic Assets Gallery (Updated with Carousel) -->
     <section class="stats-section" style="background: var(--accent-secondary); color: white;">
         <div class="container">
             <div class="section-header" style="text-align: center;">
@@ -255,13 +259,57 @@
                     <span style="font-size: 0.75rem; color: rgba(255,255,255,0.6);">Douyin Creator Growth (Jan
                         2026)</span>
                 </div>
-                <div class="glass" style="padding: 1rem; background: rgba(255,255,255,0.05);">
-                    <img src="assets/images/sat_textbook.png" alt="SAT Textbook"
-                        style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+
+                <!-- Dynamic Textbook Carousel -->
+                <div class="glass"
+                    style="padding: 1rem; background: rgba(255,255,255,0.05); position: relative; overflow: hidden;">
+                    <style>
+                        .book-carousel {
+                            position: relative;
+                            width: 100%;
+                            height: 0;
+                            padding-bottom: 145%;
+                            /* Aspect ratio of textbook */
+                            overflow: hidden;
+                            margin-bottom: 1rem;
+                        }
+
+                        .book-carousel img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 8px;
+                            opacity: 0;
+                            transition: opacity 1s ease-in-out;
+                        }
+
+                        .book-carousel img.active {
+                            opacity: 1;
+                        }
+                    </style>
+                    <div class="book-carousel" id="book-carousel">
+                        <img src="assets/images/sat_textbook.png" alt="SAT Essential" class="active">
+                        <img src="assets/images/book_ybpc.jpg" alt="Youth Body Posture">
+                        <img src="assets/images/book_mt.jpg" alt="Manual Technical">
+                    </div>
+                    <script>
+                        (function () {
+                            let currentIndex = 0;
+                            const images = document.querySelectorAll('#book-carousel img');
+                            setInterval(() => {
+                                images[currentIndex].classList.remove('active');
+                                currentIndex = (currentIndex + 1) % images.length;
+                                images[currentIndex].classList.add('active');
+                            }, 3000);
+                        })();
+                    </script>
                     <h4 style="font-family: var(--font-sans); font-size: 0.9rem;">Proprietary Textbooks</h4>
-                    <span style="font-size: 0.75rem; color: rgba(255,255,255,0.6);">SISFIT-SAT Essential Level 1
-                        (2022)</span>
+                    <span style="font-size: 0.75rem; color: rgba(255,255,255,0.6);">SISFIT-SAT Series (2022-2026)</span>
                 </div>
+
                 <div class="glass" style="padding: 1rem; background: rgba(255,255,255,0.05);">
                     <img src="assets/images/nsca_shanghai.png" alt="NSCA Shanghai"
                         style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
@@ -279,12 +327,37 @@
         </div>
     </section>
 
+    <!-- Placeholder Sections (Events, Articles, Videos, About) -->
+    <section id="events" class="about-section" style="padding: 4rem 0;">
+        <div class="container">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--accent-primary); padding-bottom: 1rem;">
+                <h2 style="margin: 0; font-size: 1.5rem; letter-spacing: 0.1em; color: var(--accent-secondary);">
+                    ACADEMIC EVENTS</h2>
+                <div style="display: flex; gap: 3rem;">
+                    <a href="#articles"
+                        style="text-decoration: none; color: var(--text-secondary); font-size: 0.9rem; font-weight: 600;">ARTICLES</a>
+                    <a href="#videos"
+                        style="text-decoration: none; color: var(--text-secondary); font-size: 0.9rem; font-weight: 600;">VIDEOS</a>
+                    <a href="#about"
+                        style="text-decoration: none; color: var(--text-secondary); font-size: 0.9rem; font-weight: 600;">ABOUT</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- The Living Lab -->
     <section id="lab" class="stats-section">
         <div class="container">
             <div class="section-header">
-                <span class="tag-line">Infrastructure</span>
-                <h2>The Living Lab (N=300,000)</h2>
+                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 1rem;">
+                    <img src="assets/images/livinglab_logo_2026.jpg" alt="Living Lab Logo"
+                        style="height: 60px; border-radius: 10px;">
+                    <div>
+                        <span class="tag-line" style="margin:0;">Infrastructure</span>
+                        <h2 style="margin:0;">The Living Lab (N=300,000)</h2>
+                    </div>
+                </div>
                 <p>A self-sustaining research ecosystem conducting naturalistic observations of health behavior.</p>
             </div>
             <div class="stats-grid">
@@ -346,8 +419,11 @@
         <div class="container">
             <div class="footer-content" style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4rem;">
                 <div style="max-width: 400px;">
-                    <a href="/" class="logo" style="font-family: var(--font-serif); font-size: 2rem;">SISFIT<span
-                            class="dot">Academy</span></a>
+                    <a href="/" class="logo"
+                        style="font-family: var(--font-serif); font-size: 2rem; display: flex; align-items: center; gap: 15px;">
+                        <img src="assets/images/sisfit_logo_graygold.png" alt="SISFIT Logo" style="height: 40px;">
+                        SISFIT<span class="dot">Academy</span>
+                    </a>
                     <p style="margin-top: 1.5rem;">Turning viral engagement into vital public health outcomes.
                         Registered under the 'Living Lab' scientific framework.</p>
                 </div>
@@ -358,8 +434,11 @@
                     <a href="#curriculum">Curriculum Map</a>
                 </div>
             </div>
-            <div class="copyright" style="padding-top: 2rem;">
-                &copy; 2026 SISFIT Academy. All rights reserved. Intellectual property of the Living Lab.
+            <div class="copyright"
+                style="padding-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
+                <div>&copy; 2026 SISFIT Academy. All rights reserved. Intellectual property of the Living Lab.</div>
+                <img src="assets/images/sisfit_logo_graygold.png" alt="SISFIT Logo Footer"
+                    style="height: 25px; opacity: 0.5;">
             </div>
         </div>
     </footer>
