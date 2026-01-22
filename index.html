@@ -39,7 +39,10 @@
 
         .bridge-section {
             padding: 8rem 0;
-            background: var(--bg-dark);
+            background: var(--accent-secondary);
+            /* This is #2C2C2C in Academy theme */
+            color: #ffffff;
+            /* Contrast for the dark section */
             position: relative;
             overflow: hidden;
         }
@@ -55,7 +58,7 @@
             display: flex;
             gap: 4rem;
             margin-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
             padding-top: 2rem;
         }
 
@@ -80,16 +83,16 @@
         }
 
         .curriculum-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
             padding: 3rem 2rem;
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .curriculum-card:hover {
-            background: rgba(255, 255, 255, 0.05);
             border-color: var(--accent-primary);
             transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .tag-line {
@@ -108,7 +111,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body>
+<body data-theme="academy">
 
     <!-- Navigation -->
     <nav class="navbar glass">
