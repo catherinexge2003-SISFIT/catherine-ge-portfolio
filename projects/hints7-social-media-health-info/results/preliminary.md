@@ -69,3 +69,16 @@ Their opposite associations with health-decision use suggest potentially distinc
 - mode-effect assessment if an appropriate administration-mode variable is available/documented for this public-use file;
 - missing-data sensitivity;
 - final PRICSSA reporting audit.
+
+
+## Ordinal sensitivity analysis
+
+To test whether the primary finding was an artifact of dichotomising the four-level `SocMed_MakeDecisions` response, a proportional-odds sensitivity model retained the original ordinal outcome.
+
+- complete-case n = **5,183**
+- proportional-odds OR for stronger agreement/use = **1.50**
+- 95% CI = **1.25–1.78**
+- p < **0.001**
+- focal coefficient variance estimated with the 50 HINTS JK1 replicate weights
+
+The direction remains consistent with the primary binary model, reducing concern that the main association is driven only by the binary cut-point.
