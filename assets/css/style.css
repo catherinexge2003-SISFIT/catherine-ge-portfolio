@@ -359,8 +359,40 @@ p.lead {
         margin-top: 1.5rem;
     }
 
+    .navbar {
+        padding: 0.8rem 0;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.65rem;
+    }
+
     .nav-links {
-        display: none;
-        /* Mobile menu needed for full prod, sticking to simple for now */
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 0.25rem;
+        scrollbar-width: thin;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        margin-right: 1rem;
+        font-size: 0.78rem;
+        flex: 0 0 auto;
+    }
+
+    .nav-links .btn-primary,
+    .nav-links .btn-secondary {
+        padding: 0.45rem 0.85rem;
+    }
+
+    .hero {
+        padding-top: 130px;
+        min-height: 100vh;
+        height: auto;
     }
 }
