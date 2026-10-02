@@ -141,3 +141,16 @@ Not yet suitable for:
 - claiming a validated digital-health-literacy measure;
 - causal claims;
 - describing the finding as a clinical or behavioural intervention effect.
+
+
+## End-to-end reproducibility check
+
+The three repository scripts were fetched from this branch and executed unchanged against the official HINTS 7 STATA public-use file:
+
+- `src/analysis.py`: exit 0
+- `src/sensitivity_ordinal.py`: exit 0
+- `src/missing_sensitivity.py`: exit 0
+
+The reproduced outputs matched the values documented in this repository.
+
+Validation date: 2026-10-02.
