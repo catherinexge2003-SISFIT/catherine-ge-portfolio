@@ -1,6 +1,7 @@
 """Calculate inter-rater reliability for the SISFIT content coding study."""
 
 from pathlib import Path
+import argparse
 import csv
 import math
 from collections import Counter
@@ -97,8 +98,21 @@ def linear_weighted_kappa(a, b):
 
 
 def main():
-    coder1 = read_csv(CODING / "coder1.csv")
-    coder2 = read_csv(CODING / "coder2.csv")
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--coder1",
+        default=str(CODING / "coder1.csv"),
+        help="CSV file for coder 1",
+    )
+    parser.add_argument(
+        "--coder2",
+        default=str(CODING / "coder2.csv"),
+        help="CSV file for coder 2",
+    )
+    args = parser.parse_args()
+
+    coder1 = read_csv(Path(args.coder1))
+    coder2 = read_csv(Path(args.coder2))
 
     shared_ids = sorted(set(coder1) & set(coder2))
 
