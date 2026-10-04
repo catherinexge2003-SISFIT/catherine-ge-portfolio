@@ -99,6 +99,10 @@ dat <- demo %>%
   inner_join(paq, by = "SEQN") %>%
   inner_join(pax, by = "SEQN") %>%
   inner_join(bmx, by = "SEQN") %>%
+  mutate(
+    education = ifelse(education_raw %in% c(7, 9), NA, education_raw),
+    education = factor(education)
+  ) %>%
   filter(
     age >= 18,
     !is.na(leisure_met_min_week),
@@ -109,8 +113,6 @@ dat <- demo %>%
     WTMEC2YR > 0
   ) %>%
   mutate(
-    education = ifelse(education_raw %in% c(7, 9), NA, education_raw),
-    education = factor(education),
     age_group = cut(
       age,
       breaks = c(18, 35, 50, 65, Inf),
