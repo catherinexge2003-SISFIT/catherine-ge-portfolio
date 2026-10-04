@@ -1,100 +1,99 @@
 # SISFIT Content Measurement Pilot
 
+## Working title
+
+**Operationalising Communication, Safety and Behaviour-Support Features in Digital Health-Education Content: A Reproducible Coding Framework Pilot**
+
 ## Purpose
 
-This project develops a reproducible coding framework for public-facing SISFIT health-education content.
+This project develops and tests a reproducible coding framework for public-facing SISFIT health-education content.
 
-The goal is **not** to infer health outcomes from audience metrics. The goal is to test whether recurring communication features can be defined, operationalised, and coded reliably enough for future observational research.
+The project asks whether communication features can be defined and coded consistently enough for later observational content research. It does **not** infer audience health outcomes from engagement metrics.
 
-This is a measurement-development pilot aligned with Catherine Ge's interests in digital health literacy, health communication, behaviour change and physical activity.
+## Current stage
 
-## Current research-development question
+**Human inter-rater reliability stage.**
 
-Can features of public-facing digital health-education content be operationalised into a reproducible coding framework that distinguishes:
+A 30-item reliability set (`PUB-001`–`PUB-030`) is frozen. Codebook v0.2 is frozen before formal human double coding.
 
-- clarity and plain-language communication;
-- evidence traceability;
-- actionability;
-- uncertainty calibration;
-- causal-claim strength;
-- safety / referral boundaries;
-- self-monitoring prompts;
-- behaviour-change support?
+The earlier 30-item AI/agent scoring exercise is retained only as a **codebook-development rehearsal**. It is not a human second coder and is not formal inter-rater reliability.
 
-## Framework influences
+Formal human coders:
+- Catherine
+- Starr
 
-The codebook is custom to this project but draws conceptually on two public health-communication assessment frameworks:
+Both must independently code all 30 frozen items before reliability is calculated or disagreements are discussed.
 
-- AHRQ Patient Education Materials Assessment Tool (PEMAT), particularly its separation of **understandability** and **actionability**:
-  https://www.ahrq.gov/health-literacy/patient-education/pemat-p.html
-- CDC Clear Communication Index, particularly its domains covering main message, plain language, state of the science, behavioural recommendations, numbers and risk:
-  https://www.cdc.gov/ccindex/
+## Constructs
 
-The project does **not** reproduce either instrument or claim to be a validated derivative. It uses these frameworks to motivate a smaller coding system tailored to SISFIT's research question.
+The v0.2 framework operationalises:
 
-## Unit of analysis
+1. purpose clarity
+2. plain language
+3. evidence traceability
+4. actionability
+5. uncertainty calibration
+6. causal-claim strength
+7. risk relevance
+8. safety/referral boundaries
+9. self-monitoring prompts
+10. behaviour-change support
+11. commercial call to action
 
-One public-facing content artifact.
+The framework is custom to this project. It is conceptually informed by:
+- AHRQ Patient Education Materials Assessment Tool (PEMAT)
+- CDC Clear Communication Index
 
-Examples:
-- article;
-- public educational post;
-- public course/education communication asset.
+It is not presented as a validated derivative of either instrument.
 
-User comments, private messages, client records, health records and identifiable audience data are excluded.
+## Frozen reliability materials
 
-## Pilot corpus
+- `codebook.md` — Codebook v0.2
+- `coding/human_reliability_manifest.csv` — 30 frozen IDs
+- `coding/HUMAN_RELIABILITY_PROTOCOL.md` — independence and analysis contract
+- `coding/coder_catherine_template.csv`
+- `coding/coder_starr_template.csv`
+- `src/reliability.py` — pre-adjudication reliability analysis
+- `results/STATUS.md` — current project status
 
-The current feasibility pilot includes:
+The content bodies remain in the audited local sample bundle rather than being duplicated into this repository.
 
-1. **PUB-001** — a published SISFIT long-form article:
-   “为何你越深呼吸，身体越紧张？”
-   published 2025-11-21 on the historical SISFIT public site.
-2. **PUB-002** — a public GitHub communication draft for the SISFIT Coursepack Skill.
-   This second item is included only as an edge-case coding artifact and is **not** treated as a published social-platform post in the main study.
+## Reliability plan
 
-The pilot is too small for reliability inference. Its purpose is to expose ambiguous coding rules before two-coder work begins.
+Binary variables:
+- exact agreement
+- ordinary Cohen's kappa
 
-## What the pilot already shows
+Ordinal variables:
+- exact agreement
+- linearly weighted Cohen's kappa on the fixed 0–1–2 scale
 
-The codebook can distinguish materially different communication profiles.
+Conditional NA logic is handled explicitly, especially for `safety_boundary`.
 
-For example, the long-form breathing article has:
-- high evidence traceability;
-- high actionability;
-- explicit self-assessment and behaviour-change instructions;
-- but also strong causal/physiological wording and only partial safety calibration around higher-risk breathing practices.
+If kappa is non-estimable because a variable has no category variation, agreement is still reported and the non-estimability is documented.
 
-The Coursepack communication draft has:
-- clear purpose and actionability;
-- strong safety/referral boundaries;
-- low causal-claim strength;
-- but evidence traceability is not applicable because it is primarily a product/communication description rather than a substantive health-science argument.
+## Governance boundary
 
-These observations are **codebook-development notes**, not study findings.
+Current phase uses only SISFIT-authored public content.
 
-## Next stage
+Excluded:
+- user comments
+- private messages
+- private groups
+- client records
+- health records
+- identifiable user data
+- inferred audience outcomes
 
-Before this becomes a portfolio research output:
+Any later linkage to users, comments, private analytics or intervention outcomes requires a separate governance/ethics decision.
 
-1. assemble a real sampling frame of public SISFIT content;
-2. select a stratified sample across format/topic/time;
-3. train two independent coders on practice items excluded from the study sample;
-4. double-code an initial reliability set;
-5. calculate agreement and Cohen's kappa;
-6. revise ambiguous variables if reliability is inadequate;
-7. only then code the larger corpus and report descriptive/co-occurrence analyses.
+## Release boundary
 
-## Ethics / governance boundary
+This project is a **research-development artifact**, not yet a completed reliability study.
 
-Phase 1 codes only content authored/published by SISFIT.
-
-It does not analyse:
-- user comments;
-- direct messages;
-- private community data;
-- individual health data;
-- identifiable users;
-- health outcomes.
-
-Any later linkage to platform analytics, comments, users or intervention outcomes would require a separate governance/ethics decision.
+Promotion to a finished portfolio research output requires:
+1. both human coder files locked before discussion;
+2. reliability calculated before adjudication;
+3. underperforming variables reviewed;
+4. a fresh reliability set if codebook definitions materially change;
+5. final corpus and downstream analysis documented.
