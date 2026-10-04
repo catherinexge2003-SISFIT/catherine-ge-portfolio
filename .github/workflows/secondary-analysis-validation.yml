@@ -1,7 +1,15 @@
 name: Validate secondary analyses
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - add-secondary-analysis-portfolio
+    paths:
+      - "projects/hints6-hints7-trends/src/**"
+      - "projects/hints6-hints7-trends/requirements.txt"
+      - "projects/nhanes-pam-self-report/src/**"
+      - "projects/nhanes-pam-self-report/requirements.txt"
+      - ".github/workflows/secondary-analysis-validation.yml"
 
 permissions:
   contents: write
@@ -37,7 +45,7 @@ jobs:
           r-version: "release"
       - name: Install NHANES dependencies
         run: |
-          Rscript -e 'install.packages(c("haven","dplyr","tidyr","survey","broom","jsonlite"), repos="https://cloud.r-project.org")'
+          Rscript -e 'install.packages(c("haven","dplyr","survey","jsonlite"), repos="https://cloud.r-project.org")'
       - name: Run NHANES analysis
         run: Rscript projects/nhanes-pam-self-report/src/analysis.R
       - name: Upload NHANES outputs
