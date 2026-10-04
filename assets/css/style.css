@@ -416,6 +416,27 @@ p.lead {
 
 .catherine-profile #about .visual-content {
     padding: 1.5rem;
+    min-width: 0;
+}
+
+.catherine-profile #about .code-block,
+.catherine-profile #about .code-block pre,
+.catherine-profile #about .code-block code {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.catherine-profile #about .code-block pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.catherine-profile #about .code-block code {
+    display: block;
+    font-size: 0.86rem;
+    line-height: 1.65;
 }
 
 .catherine-profile .research-metrics-grid {
