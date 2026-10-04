@@ -1,10 +1,30 @@
 {
   "design": "NHANES 2013-2014 cross-sectional complex survey",
-  "n": 4722,
-  "valid_day_rule": "PAXVMD >= 1200 minutes; >= 4 days",
-  "device_metric": "mean PAXMTSD / PAXVMD",
-  "self_report_metric": "leisure MET-min/week from GPAQ items",
+  "population": "Adults age 20+",
+  "n": 4726,
+  "survey_design_df": 15,
+  "valid_day_rule": "PAXVMD >= 1200 valid minutes; >= 4 qualifying days",
+  "valid_day_rule_status": "analyst-defined completeness rule, not a CDC standard",
+  "device_metric": "mean daily PAXMTSD / PAXVMD (MIMS per valid minute)",
+  "self_report_metric": "leisure MET-min/week from GPAQ recreational items",
   "survey_weight": "WTMEC2YR",
   "strata": "SDMVSTRA",
-  "psu": "SDMVPSU"
+  "psu": "SDMVPSU",
+  "primary_formula": "log1p(device movement density) ~ log1p(leisure MET-min/week) + age + sex + BMI",
+  "primary_log_leisure": {
+    "estimate": 0.0088,
+    "std_error": 0.0025,
+    "statistic": 3.5304,
+    "p_value": 0.003,
+    "conf_low": 0.0035,
+    "conf_high": 0.014,
+    "df": 15
+  },
+  "unweighted_descriptives": {
+    "leisure_met_min_week_median": 40,
+    "leisure_met_min_week_q25": 0,
+    "leisure_met_min_week_q75": 960,
+    "movement_density_median": 8.4073,
+    "valid_days_median": 7
+  }
 }
