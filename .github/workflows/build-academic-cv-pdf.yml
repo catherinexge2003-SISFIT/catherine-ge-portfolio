@@ -1,44 +1,32 @@
-name: Build academic CV PDF
+name: Validate academic CV PDF build
 
 on:
-  push:
-    branches:
-      - add-academic-cv-pdf
-    paths:
-      - "cv/Catherine_Ge_Academic_CV_2026.html"
-      - ".github/workflows/build-academic-cv-pdf.yml"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: add-academic-cv-pdf
       - name: Check Chrome
         run: google-chrome --version
       - name: Render PDF
         run: |
-          mkdir -p assets/docs
+          mkdir -p /tmp/cv-build
           google-chrome \
             --headless \
             --disable-gpu \
             --no-sandbox \
             --disable-dev-shm-usage \
-            --print-to-pdf="$GITHUB_WORKSPACE/assets/docs/Catherine_Ge_Academic_CV_2026.pdf" \
+            --print-to-pdf="/tmp/cv-build/Catherine_Ge_Academic_CV_2026.pdf" \
             --no-pdf-header-footer \
             "file://$GITHUB_WORKSPACE/cv/Catherine_Ge_Academic_CV_2026.html"
-          test -s assets/docs/Catherine_Ge_Academic_CV_2026.pdf
-      - name: Commit generated PDF
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/docs/Catherine_Ge_Academic_CV_2026.pdf
-          if ! git diff --cached --quiet; then
-            git commit -m "Generate Academic CV PDF [skip ci]"
-            git push origin HEAD:add-academic-cv-pdf
-          fi
+          test -s /tmp/cv-build/Catherine_Ge_Academic_CV_2026.pdf
+      - name: Upload validation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Catherine-Ge-Academic-CV-2026
+          path: /tmp/cv-build/Catherine_Ge_Academic_CV_2026.pdf
