@@ -2,7 +2,7 @@
 
 ## Research question
 
-Among U.S. adults in NHANES 2013–2014, how is self-reported leisure-time physical activity associated with device-measured movement, and does that relationship vary by age group?
+Among U.S. adults age 20+ in NHANES 2013–2014, how is self-reported leisure-time physical activity associated with device-measured movement, and does that relationship vary by age group?
 
 ## Why this project
 
@@ -39,7 +39,9 @@ where:
 
 Primary participant-level device metric:
 
-mean movement density across days with at least 1,200 valid minutes, requiring at least 4 valid days.
+mean movement density across days with at least 1,200 valid minutes, requiring at least 4 qualifying days.
+
+Sensitivity analyses vary the valid-minute threshold, minimum number of days, and use a stricter wear-classified-minute rule.
 
 The 1,200-minute threshold is an analyst-defined completeness rule for this project and is reported explicitly rather than presented as a CDC standard.
 
@@ -61,11 +63,13 @@ NHANES MEC examination weights are used because PAM and BMI are examination-deri
 
 Primary model:
 
-`log1p(device movement density) ~ log1p(leisure MET-min/week) + age group + sex + race/ethnicity + education + BMI`
+`log1p(device movement density) ~ log1p(leisure MET-min/week) + age + sex + BMI`
 
-Secondary model adds:
+Secondary age-heterogeneity model:
 
-`log1p(leisure MET-min/week) × age group`
+`log1p(device movement density) ~ log1p(leisure MET-min/week) × age group + sex + BMI`
+
+Race/ethnicity and education are added in a separate socioeconomic sensitivity model rather than overloading the primary design-based model. Inference uses denominator degrees of freedom equal to the survey design degrees of freedom (PSUs minus strata), as supported by the `survey` package for individual-level covariates.
 
 ## Interpretation limits
 
