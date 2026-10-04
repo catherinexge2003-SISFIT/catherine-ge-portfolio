@@ -1,47 +1,67 @@
-# Two-Coder Procedure
+# Formal Human Two-Coder Procedure
 
-## Before coding
+This directory contains the formal 30-item human reliability workflow.
 
-Each coder should:
+The earlier AI/agent scoring exercise is **not** a human coder and is documented separately in `../ai_rehearsal_audit.md`.
 
-1. read `codebook.md` in full;
-2. review the same practice examples;
-3. code independently;
-4. avoid discussing borderline cases until the reliability file has been saved.
+## Frozen set
 
-The two coders should not see each other's completed score sheets before reliability is calculated.
+- IDs: `PUB-001` through `PUB-030`
+- Manifest: `human_reliability_manifest.csv`
+- Codebook: `../codebook.md` — v0.2
+- Frozen codebook Git blob: `665b9cd11ba17b053cee2f11b9fefb1bfcadc6c2`
 
-## File workflow
+## Human coders
 
-Create two files:
+- Catherine
+- Starr
 
-- `coding/coder1.csv`
-- `coding/coder2.csv`
+Each coder must independently code all 30 artifacts.
 
-Use the same columns and content IDs as `coder2_template.csv`.
+Start from:
+- `coder_catherine_template.csv`
+- `coder_starr_template.csv`
 
-Run:
+The corresponding content bodies remain in the audited local frozen reliability bundle and are identified by content ID.
+
+## Rules
+
+1. Read the codebook before coding.
+2. Do not inspect the other coder's scores.
+3. Do not discuss borderline items before both raw files are locked.
+4. Do not edit codebook v0.2 during formal coding.
+5. Read each artifact once without scoring.
+6. Score on the second pass.
+7. Record borderline evidence in `coder_note`.
+8. Save raw independent files before reliability calculation.
+9. Calculate reliability before adjudication.
+10. Never overwrite the raw independent files after discussion.
+
+Full protocol: `HUMAN_RELIABILITY_PROTOCOL.md`.
+
+## Locked filenames
+
+After completion, save copies as:
+
+- `coder_catherine_raw.csv`
+- `coder_starr_raw.csv`
+
+## Reliability command
+
+From `projects/sisfit-content-measurement/`:
 
 ```bash
-python src/reliability.py --coder1 coding/coder1.csv --coder2 coding/coder2.csv
+python src/reliability.py \
+  --coder-a coding/coder_catherine_raw.csv \
+  --coder-b coding/coder_starr_raw.csv \
+  --manifest coding/human_reliability_manifest.csv \
+  --output-dir results/human_reliability
 ```
 
-## What counts as a disagreement
+The script validates the entire 30-ID set before calculating reliability.
 
-A disagreement is any non-identical valid score on the same variable/content pair.
+Outputs:
+- `results/human_reliability/reliability_by_variable.csv`
+- `results/human_reliability/reliability_report.md`
 
-`NA` is excluded pairwise for variables where NA is allowed.
-
-If one coder uses NA and the other uses a score, record that mismatch separately during adjudication because it usually indicates a definition problem.
-
-## Reliability sequence
-
-1. save the raw independent files;
-2. calculate reliability;
-3. archive the reliability output;
-4. identify variables below the project threshold;
-5. discuss disagreements;
-6. revise codebook wording if needed;
-7. if definitions materially change, code a fresh reliability set.
-
-Do not overwrite the original independent coding files after adjudication.
+Do not create adjudicated scores until these pre-adjudication outputs are archived.
