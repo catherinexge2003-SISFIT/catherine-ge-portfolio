@@ -28,28 +28,28 @@ GitHub Actions executed the full pipeline successfully against the official NCI 
 
 Verified analytic sample:
 
-- HINTS 6: n=4,912
-- HINTS 7: n=5,926
-- pooled: n=10,838
+- HINTS 6: n = 4,912
+- HINTS 7: n = 5,926
+- pooled: n = 10,838
 
 All 100 replicate regressions completed successfully.
 
 ## Primary calculation spot-check
 
-Primary year-interaction estimate:
+Primary survey-year interaction:
 
 - beta = 0.1820
 - SE = 0.1859
 - OR = 1.20
 - 95% CI = 0.83–1.73
 - t = 0.9793
-- two-sided p = 0.330 using df=98
+- two-sided p = 0.330 using df = 98
 
 The p-value was independently recomputed from the saved t statistic and df.
 
 ## Weighted prevalence spot-check
 
-Using social-media information for health decisions:
+Use of social-media information for personal health decisions:
 
 - 2022, no difficulty judging: 13.4% (95% CI 9.8%–17.0%)
 - 2022, difficulty judging: 18.8% (15.8%–21.7%)
