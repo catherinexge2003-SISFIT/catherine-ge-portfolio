@@ -2,77 +2,117 @@
 
 ## Overall assessment
 
-**Measurement framework ready for a two-coder pilot.**
+**Measurement framework and formal human-reliability workflow are ready. Human reliability results are pending.**
 
-It is **not** yet a completed research output and should not be added to the public PhD portfolio as a finished study.
+This is not yet a completed reliability study and must not be described as a validated measurement instrument.
 
-## Question and scope
+## Research-development question
 
-The project asks whether recurring features of SISFIT's public-facing health-education content can be operationalised and coded reproducibly.
+Can recurring communication, safety and behaviour-support features of SISFIT's public-facing digital health-education content be operationalised and coded reproducibly?
 
 The current phase evaluates the measurement framework itself, not audience response or health outcomes.
 
 ## Framework grounding
 
-The codebook is custom but conceptually informed by:
+The custom framework is conceptually informed by:
 
-- AHRQ PEMAT: understandability and actionability;
-- CDC Clear Communication Index: main message, plain language, state of science, behavioural recommendations, numbers and risk.
+- AHRQ Patient Education Materials Assessment Tool (PEMAT), especially understandability and actionability;
+- CDC Clear Communication Index, including main message, plain language, state of science, behavioural recommendations and risk communication.
 
-No claim is made that the custom SISFIT codebook is a validated version of either instrument.
+The SISFIT codebook is not presented as a validated version or derivative of either instrument.
 
-## Data / corpus review
+## Development history
 
-Current pilot sources:
+### Feasibility stage
 
-- one published long-form SISFIT health-education article;
-- one public repository communication draft used as an edge-case test.
+A small feasibility pilot exposed the need to:
+- keep evidence traceability separate from evidence quality;
+- separate uncertainty calibration from causal-claim strength;
+- distinguish risk relevance from safety-boundary quality;
+- permit explicit NA handling.
 
-Only the published article is provisionally eligible for the future main corpus.
+### AI rehearsal stage
 
-The current two-item pilot is deliberately too small for prevalence estimates, subgroup comparisons or reliability inference.
+A 30-item agent-produced Coder 2 rehearsal was used only to stress-test codebook definitions.
 
-## Codebook review
+It is **not** treated as:
+- a human second coder;
+- formal inter-rater reliability;
+- evidence that the coding instrument is reliable.
 
-Strengths:
-- variables are defined at the content-artifact level;
-- outcome inference is explicitly prohibited;
-- evidence traceability is separated from evidence quality;
-- uncertainty calibration is separated from causal-claim strength;
-- safety relevance is separated from safety-boundary quality;
-- NA handling is explicit;
-- commercial CTA is treated as context rather than quality.
+The rehearsal exposed four main issues:
+1. `purpose_clear` had near-zero/zero variation;
+2. actionability and behaviour-change support needed sharper separation;
+3. uncertainty calibration and causal-claim strength needed independent definitions;
+4. risk relevance needed a clearer low-risk boundary.
 
-Main reliability risks to test:
-1. uncertainty calibration vs causal-claim strength;
-2. safety-boundary scoring;
-3. evidence-traceability NA decisions;
-4. behaviour-change-support scoring.
+These issues were addressed before freezing codebook v0.2.
 
-## Pilot interpretation review
+## Formal human reliability stage
 
-The single-coder pilot demonstrates feasibility only.
+Frozen materials:
 
-It must not be described as:
-- inter-rater reliability;
-- a representative sample of SISFIT content;
-- evidence that SISFIT content is high or low quality;
-- evidence of behaviour change;
-- evidence of health outcomes.
+- Codebook: v0.2
+- Codebook Git blob SHA: `665b9cd11ba17b053cee2f11b9fefb1bfcadc6c2`
+- Human reliability set: `PUB-001`–`PUB-030`
+- n = 30
+- Human coders: Catherine and Starr
+- No discussion/adjudication permitted before both raw files are locked.
 
-## Statistical / reliability plan
+The 30 content bodies remain in the audited local frozen sample bundle. The repository stores the sample manifest, protocol and analysis code.
+
+## Statistical plan
 
 Binary variables:
-- ordinary Cohen's kappa;
-- percent agreement.
+- exact percent agreement
+- ordinary Cohen's kappa
 
 Ordinal variables:
-- linearly weighted Cohen's kappa;
-- percent agreement.
+- exact percent agreement
+- linearly weighted Cohen's kappa on the fixed 0–1–2 codebook scale
 
-Project development thresholds are pre-specified in the codebook and are explicitly labelled as internal decision rules rather than universal methodological standards.
+### Conditional missingness
 
-## Ethics / governance review
+`evidence_traceability`:
+- pairwise complete primary calculation;
+- one-sided NA use is separately reported.
+
+`safety_boundary`:
+- reliability is calculated only where both coders independently assign `risk_relevant=1`;
+- low-risk structural NA rows are excluded;
+- risk-gate disagreements are reported separately.
+
+### Non-estimable kappa
+
+If both coders use only one category, kappa may be undefined despite 100% agreement. The workflow reports this explicitly rather than treating undefined kappa as poor reliability.
+
+## Internal development rules
+
+Pre-specified in codebook v0.2:
+
+- kappa >= 0.70: retain unless qualitative review finds a systematic problem;
+- 0.60–0.69: review definition/examples;
+- < 0.60: revise/drop before main coding;
+- non-estimable: inspect agreement and category variation.
+
+These are internal development rules, not universal psychometric standards.
+
+## Automated QA
+
+The repository reliability implementation currently verifies:
+
+- percent-agreement calculation;
+- ordinary kappa with category variation;
+- non-estimable kappa under zero variation;
+- linearly weighted ordinal kappa on a fixed 0–1–2 scale;
+- structural exclusion of `safety_boundary` when both coders mark low risk;
+- explicit logging of risk-gate disagreement;
+- explicit logging of evidence-traceability NA mismatch;
+- exact 30-ID frozen manifest.
+
+GitHub Actions validation passed before this report was updated.
+
+## Governance
 
 Current phase uses only SISFIT-authored public artifacts.
 
@@ -82,18 +122,20 @@ Excluded:
 - private groups;
 - client records;
 - health records;
-- identifiable user data.
+- identifiable audience data;
+- inferred audience outcomes.
 
-If a future phase links content features to platform analytics or audience/user data, a new governance and ethics assessment is required.
+Any future linkage to private analytics, individual users or outcomes requires a separate governance/ethics assessment.
 
-## Release recommendation
+## Current release decision
 
-Current status: **retain as Draft research-development project**.
+**Retain as Draft research-development project until formal human double coding is complete.**
 
-Promotion criteria:
-1. a retrievable content sampling frame exists;
-2. at least 30 eligible items can be independently double-coded;
-3. reliability results are calculated before adjudication;
-4. underperforming variables are revised/dropped;
-5. a fresh reliability set is used if definitions materially change;
-6. final corpus selection and analysis are documented.
+Remaining promotion gates:
+
+1. Catherine completes and locks all 30 ratings.
+2. Starr completes and locks all 30 ratings independently.
+3. Pre-adjudication reliability outputs are generated and archived.
+4. Variables below the internal development rules are reviewed.
+5. If codebook definitions change materially, a fresh reliability set is used.
+6. Only after the measurement stage is stable should a larger corpus be coded and analysed.
