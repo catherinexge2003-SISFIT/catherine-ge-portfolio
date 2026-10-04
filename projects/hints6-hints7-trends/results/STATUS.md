@@ -1,12 +1,27 @@
 # Execution Status
 
-**Status: analysis contract and executable pipeline prepared; numerical results not yet promoted.**
+**Status: Ready to share with caveats.**
 
-The pipeline requires the official HINTS 6 and HINTS 7 public-use STATA ZIP files. The repository script downloads these files directly from the NCI HINTS site at runtime.
+The complete HINTS 6 + HINTS 7 pipeline executed successfully against the official NCI public-use files.
 
-No effect estimate or trend claim should be published on Catherine's public profile until:
+## Validation completed
 
-1. the script executes successfully end-to-end;
-2. response coding is checked against both cycle codebooks;
-3. the 100-weight Rizzo construction is reconciled against the official HINTS merging tool;
-4. headline outputs are independently spot-checked.
+- HINTS 6 and HINTS 7 focal items were confirmed comparable in wording, response coding and eligibility.
+- The merged survey design used the official NCI Rizzo logic:
+  - 100 pooled replicate weights
+  - jackknife multiplier 0.98
+  - 98 degrees of freedom
+- All 100 replicate model fits completed.
+- Weighted prevalence cells, the primary interaction model and the additive model produced finite results.
+- The primary interaction p-value was independently recomputed from the saved t statistic and df.
+
+## Primary inference
+
+- pooled analytic n = **10,838**
+- interaction OR = **1.20**
+- 95% CI = **0.83–1.73**
+- p = **0.330**
+
+The analysis does **not** provide clear evidence that the association between difficulty judging truthfulness and using social-media information for health decisions changed between HINTS 6 (2022) and HINTS 7 (2024).
+
+Public reporting must retain the repeated-cross-sectional, non-longitudinal and non-causal caveats.
