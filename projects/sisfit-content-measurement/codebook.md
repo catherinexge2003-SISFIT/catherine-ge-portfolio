@@ -1,4 +1,4 @@
-# SISFIT Content Measurement Codebook v0.1
+# SISFIT Content Measurement Codebook v0.2
 
 ## General rule
 
@@ -44,6 +44,8 @@ Does the artifact make its main purpose or central message clear?
 
 Do not judge whether the purpose is scientifically correct.
 
+**Reliability note:** if both coders assign the same category to every item, Cohen's kappa is not estimable because there is no between-item variation. In that case, report percent agreement and mark kappa as not estimable. If this variable remains near-constant in the formal reliability set, treat it as descriptive/contextual rather than a discriminating main-study measure.
+
 ## 2. plain_language — ordinal 0–2
 
 How accessible is the language to a general audience?
@@ -87,20 +89,24 @@ This is **not** an evidence-quality score.
 
 ## 6. causal_claim_strength — ordinal 0–2
 
-What is the strongest causal/diagnostic/treatment claim made?
+What is the **type/strength of the strongest causal, diagnostic or treatment claim**, independent of whether the wording is appropriately qualified?
 
-- 0 = no causal/diagnostic/treatment claim, or explicitly non-causal/descriptive framing
-- 1 = mechanism or causal interpretation suggested with qualification
-- 2 = unqualified causal, diagnostic, treatment, or deterministic language
+- 0 = descriptive/associational content only; no causal, diagnostic or treatment claim
+- 1 = a causal or mechanistic relationship is proposed/stated, but the content does not make a deterministic diagnosis, treatment claim or universal causal conclusion
+- 2 = strong deterministic causal wording, diagnostic assignment, treatment-effect claim, root-cause claim, or language implying that one factor explains/produces the outcome as a general rule
+
+**Important:** do not lower this score merely because the article later adds caveats. Qualification belongs under `uncertainty_calibration`. The same artifact can therefore receive a high causal-claim score and also a high uncertainty-calibration score if strong claims are carefully bounded.
 
 Higher values do not mean better communication.
 
 ## 7. risk_relevant — binary
 
-Does the artifact contain advice, self-testing, exercise, symptom interpretation, special-population guidance or another element for which inappropriate use could plausibly matter?
+Does the artifact contain advice, self-testing, exercise, symptom interpretation, special-population guidance or another element where misuse, overexertion, delayed referral or inappropriate self-management could plausibly matter?
 
-- 0 = no meaningful safety/referral relevance
-- 1 = safety/referral relevance exists
+- 0 = descriptive education or very low-load awareness content where inappropriate use is unlikely to create a meaningful safety/referral issue
+- 1 = the artifact gives actionable exercise/self-test/symptom-management/special-population guidance, or otherwise creates a meaningful need for safety/referral boundaries
+
+**Decision rule:** score the presence of meaningful safety/referral relevance, not simply the presence of any movement or body-awareness instruction.
 
 ## 8. safety_boundary — ordinal 0–2 or NA
 
@@ -127,11 +133,16 @@ This variable is descriptive; it does not imply the self-test is valid.
 
 ## 10. behavior_change_support — ordinal 0–2
 
-Beyond information provision, does the artifact contain structured support for doing something differently?
+Beyond telling the reader **what action to perform**, does the artifact include mechanisms intended to support starting, repeating, monitoring or maintaining behaviour?
 
-- 0 = information only
-- 1 = one support element, such as a prompt, practice instruction, planning cue or self-monitoring task
-- 2 = multiple coordinated support elements, such as self-assessment + explicit practice + repetition/monitoring/planning
+- 0 = no behaviour-change support beyond information or a one-off instruction
+- 1 = one distinct support mechanism, such as self-monitoring, goal/planning cue, repetition schedule, prompt/cue, feedback rule, progress check or implementation reminder
+- 2 = two or more coordinated support mechanisms, for example self-monitoring + a repetition plan, or goal setting + feedback/adjustment rules
+
+**Separation from `actionability`:**
+- `actionability` asks whether the reader can identify and perform the recommended next step.
+- `behavior_change_support` asks whether the artifact contains additional structure that helps the reader initiate, repeat, monitor or maintain that behaviour.
+- A clearly explained one-off exercise can score `actionability=2` and `behavior_change_support=0`.
 
 Do not infer behaviour change actually occurred.
 
