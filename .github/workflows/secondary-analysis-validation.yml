@@ -1,0 +1,55 @@
+name: Validate secondary analyses
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  hints:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install HINTS dependencies
+        run: pip install -r projects/hints6-hints7-trends/requirements.txt
+      - name: Run HINTS 6 + 7 analysis
+        run: python projects/hints6-hints7-trends/src/analysis.py
+      - name: Upload HINTS outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: hints6-hints7-results
+          path: |
+            projects/hints6-hints7-trends/results/summary.json
+            projects/hints6-hints7-trends/results/weighted_prevalence.csv
+            projects/hints6-hints7-trends/results/primary_interaction_model.csv
+            projects/hints6-hints7-trends/results/additive_model.csv
+
+  nhanes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "release"
+      - name: Install NHANES dependencies
+        run: |
+          Rscript -e 'install.packages(c("haven","dplyr","survey","jsonlite"), repos="https://cloud.r-project.org")'
+      - name: Run NHANES analysis
+        run: Rscript projects/nhanes-pam-self-report/src/analysis.R
+      - name: Upload NHANES outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nhanes-pam-results
+          path: |
+            projects/nhanes-pam-self-report/results/summary.json
+            projects/nhanes-pam-self-report/results/primary_model.csv
+            projects/nhanes-pam-self-report/results/age_interaction_model.csv
+            projects/nhanes-pam-self-report/results/ses_sensitivity_model.csv
+            projects/nhanes-pam-self-report/results/no_bmi_sensitivity_model.csv
+            projects/nhanes-pam-self-report/results/threshold_sensitivity.csv
+            projects/nhanes-pam-self-report/results/qa_counts.csv
+            projects/nhanes-pam-self-report/results/valid_day_distribution.csv
