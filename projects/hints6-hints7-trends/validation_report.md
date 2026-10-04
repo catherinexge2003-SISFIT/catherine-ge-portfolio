@@ -2,37 +2,67 @@
 
 ## Overall Assessment
 
-**Pre-execution: methodologically ready; numerical claims pending execution.**
+**Ready to share with caveats.**
 
-## Source compatibility checks
+## Methodology review
 
-Verified against official NCI HINTS documentation:
+The project uses official NCI HINTS 6 (2022) and HINTS 7 (2024) public-use data as independent repeated cross-sectional samples.
 
-- HINTS 6 = 2022, n=6,252.
-- HINTS 7 = 2024, n=7,278.
-- `SocMed_MakeDecisions` appears in both HINTS 6 and HINTS 7.
-- `SocMed_TrueFalse` appears in both HINTS 6 and HINTS 7.
-- Both use the same four response categories:
-  1. Strongly agree
-  2. Somewhat agree
-  3. Somewhat disagree
-  4. Strongly disagree
-- Both are asked of social-media users.
-- The official HINTS merging guidance supports combining repeated cross-sectional cycles to examine trends over time.
-- For two cycles, the official merging tool generates 100 Rizzo replicate weights and specifies jackknife multiplier 0.98 with 98 df.
+The focal variables are directly comparable across both cycles:
 
-## Main methodological risk addressed
+- `SocMed_TrueFalse`
+- `SocMed_MakeDecisions`
 
-A naive append using only 50 replicate weights would under-specify the merged survey variance structure. The project instead constructs cycle-specific 50-weight blocks within a 100-replicate pooled design.
+Both use the same four agreement response categories and are asked of social-media users.
 
-## Remaining validation gates
+The pooled variance structure follows the official NCI HINTS merging-tool logic:
 
-1. Execute against the August 2025 public-use files.
-2. Confirm exact variable names after lower-casing.
-3. Reconcile one generated respondent's 100 replicate weights against the NCI tool logic.
-4. Confirm prevalence and regression outputs are finite across all 100 replicates.
-5. Independently recompute the headline interaction estimate before publication.
+- 100 Rizzo replicate weights for two cycles
+- jackknife multiplier = 0.98
+- df = 98
+- MSE replicate variance
 
-## Publication status
+## Execution verification
 
-Do not add numerical HINTS 6+7 results to the public site until all gates pass.
+GitHub Actions executed the full pipeline successfully against the official NCI files.
+
+Verified analytic sample:
+
+- HINTS 6: n=4,912
+- HINTS 7: n=5,926
+- pooled: n=10,838
+
+All 100 replicate regressions completed successfully.
+
+## Primary calculation spot-check
+
+Primary year-interaction estimate:
+
+- beta = 0.1820
+- SE = 0.1859
+- OR = 1.20
+- 95% CI = 0.83–1.73
+- t = 0.9793
+- two-sided p = 0.330 using df=98
+
+The p-value was independently recomputed from the saved t statistic and df.
+
+## Weighted prevalence spot-check
+
+Using social-media information for health decisions:
+
+- 2022, no difficulty judging: 13.4% (95% CI 9.8%–17.0%)
+- 2022, difficulty judging: 18.8% (15.8%–21.7%)
+- 2024, no difficulty judging: 15.1% (12.5%–17.8%)
+- 2024, difficulty judging: 24.2% (21.8%–26.6%)
+
+## Interpretation
+
+The descriptive gap is larger in HINTS 7, but the formal interaction test is not statistically significant. The evidence therefore does not establish that the exposure–outcome association changed between survey cycles.
+
+## Required caveats
+
+- repeated cross-sectional, not longitudinal
+- no causal inference
+- no within-person change
+- a single HINTS item is not presented as a validated digital-health-literacy scale
