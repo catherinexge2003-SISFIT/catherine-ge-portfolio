@@ -1,0 +1,10 @@
+{
+  "design": "NHANES 2013-2014 cross-sectional complex survey",
+  "n": 4722,
+  "valid_day_rule": "PAXVMD >= 1200 minutes; >= 4 days",
+  "device_metric": "mean PAXMTSD / PAXVMD",
+  "self_report_metric": "leisure MET-min/week from GPAQ items",
+  "survey_weight": "WTMEC2YR",
+  "strata": "SDMVSTRA",
+  "psu": "SDMVPSU"
+}
