@@ -9,7 +9,6 @@ on:
       - "projects/hints6-hints7-trends/requirements.txt"
       - "projects/nhanes-pam-self-report/src/**"
       - "projects/nhanes-pam-self-report/requirements.txt"
-      - ".github/workflows/secondary-analysis-validation.yml"
 
 permissions:
   contents: write
@@ -32,7 +31,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: hints6-hints7-results
-          path: projects/hints6-hints7-trends/results/
+          path: |
+            projects/hints6-hints7-trends/results/summary.json
+            projects/hints6-hints7-trends/results/weighted_prevalence.csv
+            projects/hints6-hints7-trends/results/primary_interaction_model.csv
+            projects/hints6-hints7-trends/results/additive_model.csv
 
   nhanes:
     runs-on: ubuntu-latest
@@ -52,7 +55,15 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: nhanes-pam-results
-          path: projects/nhanes-pam-self-report/results/
+          path: |
+            projects/nhanes-pam-self-report/results/summary.json
+            projects/nhanes-pam-self-report/results/primary_model.csv
+            projects/nhanes-pam-self-report/results/age_interaction_model.csv
+            projects/nhanes-pam-self-report/results/ses_sensitivity_model.csv
+            projects/nhanes-pam-self-report/results/no_bmi_sensitivity_model.csv
+            projects/nhanes-pam-self-report/results/threshold_sensitivity.csv
+            projects/nhanes-pam-self-report/results/qa_counts.csv
+            projects/nhanes-pam-self-report/results/valid_day_distribution.csv
 
   persist-results:
     needs: [hints, nhanes]
