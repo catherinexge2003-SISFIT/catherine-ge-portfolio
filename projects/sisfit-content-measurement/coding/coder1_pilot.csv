@@ -1,0 +1,3 @@
+content_id,title,artifact_type,topic,eligible_for_main_study,purpose_clear,plain_language,evidence_traceability,actionability,uncertainty_calibration,causal_claim_strength,risk_relevant,safety_boundary,self_monitoring_prompt,behavior_change_support,commercial_call_to_action
+PUB-001,"为何你越深呼吸，身体越紧张？",long_form_article,breathing_and_tension,1,1,2,2,2,0,2,1,1,1,2,0
+PUB-002,"身体教育主题课包生成器：小红书发布文案",public_repository_draft,health_education_product_communication,0,1,2,NA,2,2,0,1,2,0,1,1
