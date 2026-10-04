@@ -529,6 +529,10 @@ p.lead {
     margin-left: 0;
 }
 
+.catherine-profile .project-action-row {
+    margin-top: 1.4rem;
+}
+
 .catherine-profile .practice-evidence-card {
     padding: 1rem;
     border-radius: 16px;
