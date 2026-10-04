@@ -1,0 +1,38 @@
+name: Validate content measurement pilot
+
+on:
+  push:
+    branches:
+      - sisfit-content-human-reliability
+    paths:
+      - "projects/sisfit-content-measurement/src/**"
+      - "projects/sisfit-content-measurement/tests/**"
+      - "projects/sisfit-content-measurement/codebook.md"
+      - "projects/sisfit-content-measurement/coding/HUMAN_RELIABILITY_PROTOCOL.md"
+      - ".github/workflows/validate-content-measurement.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: sisfit-content-human-reliability
+      - name: Run reliability unit tests
+        working-directory: projects/sisfit-content-measurement
+        run: python -m unittest discover -s tests -v
+      - name: Verify frozen manifest size
+        working-directory: projects/sisfit-content-measurement
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          path = Path("coding/human_reliability_manifest.csv")
+          rows = list(csv.DictReader(path.open(encoding="utf-8")))
+          assert len(rows) == 30, len(rows)
+          assert [r["content_id"] for r in rows] == [f"PUB-{i:03d}" for i in range(1,31)]
+          print("Frozen human reliability manifest: 30/30 IDs verified")
+          PY
