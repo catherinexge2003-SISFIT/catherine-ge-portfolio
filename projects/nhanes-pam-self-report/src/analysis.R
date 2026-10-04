@@ -19,7 +19,14 @@ urls <- list(
   bmx = paste0(base, "/BMX_H.xpt")
 )
 
-out_dir <- file.path(dirname(dirname(normalizePath(sys.frame(1)$ofile %||% "src/analysis.R"))), "results")
+args_all <- commandArgs(trailingOnly = FALSE)
+file_arg <- args_all[grepl("^--file=", args_all)]
+script_path <- if (length(file_arg) > 0) {
+  normalizePath(sub("^--file=", "", file_arg[[1]]))
+} else {
+  normalizePath("projects/nhanes-pam-self-report/src/analysis.R")
+}
+out_dir <- file.path(dirname(dirname(script_path)), "results")
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
 read_xpt_url <- function(url) {
@@ -79,7 +86,7 @@ demo <- read_xpt_url(urls$demo) %>%
     age = as.numeric(RIDAGEYR),
     sex = factor(RIAGENDR),
     race = factor(RIDRETH3),
-    education = factor(DMDEDUC2),
+    education_raw = as.numeric(DMDEDUC2),
     WTMEC2YR = as.numeric(WTMEC2YR),
     SDMVSTRA = as.numeric(SDMVSTRA),
     SDMVPSU = as.numeric(SDMVPSU)
@@ -97,10 +104,13 @@ dat <- demo %>%
     !is.na(leisure_met_min_week),
     !is.na(mean_mims_per_valid_min),
     !is.na(bmi),
+    !is.na(education),
     !is.na(WTMEC2YR),
     WTMEC2YR > 0
   ) %>%
   mutate(
+    education = ifelse(education_raw %in% c(7, 9), NA, education_raw),
+    education = factor(education),
     age_group = cut(
       age,
       breaks = c(18, 35, 50, 65, Inf),
