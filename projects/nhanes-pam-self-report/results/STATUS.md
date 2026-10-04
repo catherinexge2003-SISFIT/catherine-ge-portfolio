@@ -1,13 +1,49 @@
 # Execution Status
 
-**Status: analysis contract and executable pipeline prepared; numerical results not yet promoted.**
+**Status: Ready to share with caveats.**
 
-The analysis uses official CDC/NCHS public-use XPT files downloaded at runtime.
+The NHANES 2013–2014 pipeline executed successfully end-to-end against official CDC/NCHS public-use XPT files.
 
-No association estimate should be published on Catherine's public profile until:
+## Validation completed
 
-1. the R script executes end-to-end;
-2. the participant-level PAM aggregation is independently checked;
-3. the survey design object is confirmed to use MEC weights, masked strata and PSU correctly;
-4. special PAQ response codes and zero-contribution logic are spot-checked;
-5. the valid-day completeness rule is reported as analyst-defined.
+- official PAXDAY, PAQ, DEMO and BMX files downloaded and read successfully;
+- device outcome uses `PAXMTSD / PAXVMD` and is described as MIMS movement density, not MVPA;
+- self-reported leisure activity uses GPAQ recreational items with 8 METs for vigorous and 4 METs for moderate activity;
+- survey design uses `WTMEC2YR`, `SDMVSTRA` and `SDMVPSU`;
+- coefficient inference uses 15 survey design degrees of freedom;
+- primary valid-day rule is explicitly analyst-defined;
+- five valid-day/wear sensitivity specifications were run;
+- BMI, socioeconomic and age-heterogeneity sensitivity models were run.
+
+## Primary inference
+
+Population: adults age 20+.
+
+Primary analytic n = **4,726**.
+
+For the model
+
+`log1p(device movement density) ~ log1p(leisure MET-min/week) + age + sex + BMI`
+
+the focal self-report coefficient was:
+
+- beta = **0.00876**
+- SE = **0.00248**
+- 95% CI = **0.00347–0.01404**
+- p = **0.0030**
+
+Higher self-reported leisure physical activity was positively associated with higher device-measured movement density.
+
+## Robustness
+
+The focal coefficient remained positive across every prespecified valid-day/wear sensitivity:
+
+- beta range: **0.00754–0.00876**
+- all p <= 0.0034
+
+Additional model checks:
+
+- without BMI: beta = 0.01050, p < 0.001
+- adding collapsed race/ethnicity and education: beta = 0.01077, p < 0.001
+
+Public reporting must retain the cross-sectional, non-causal and measurement-non-equivalence caveats.
