@@ -4,7 +4,7 @@
 
 Primary analysis:
 
-- age >= 18 years
+- age >= 20 years (matching the adult education variable used in socioeconomic sensitivity analysis)
 - valid NHANES MEC weight
 - non-missing self-reported leisure PA
 - non-missing BMI and selected covariates
@@ -37,11 +37,13 @@ Primary transformation: `log1p(leisure_MET_min_week)`.
 
 Survey-weighted linear regression using `survey::svyglm` in R:
 
-`log_device ~ log_leisure + age_group + sex + race + education + BMI`
+`log_device ~ log_leisure + age + sex + BMI`
 
 ## Secondary model
 
-Add `log_leisure × age_group`.
+Add `log_leisure × age_group`, retaining sex and BMI.
+
+A separate socioeconomic sensitivity model adds collapsed race/ethnicity and education categories.
 
 ## Descriptive outputs
 
@@ -53,10 +55,11 @@ Add `log_leisure × age_group`.
 
 ## Sensitivity
 
-- valid-day completeness threshold
-- minimum number of qualifying PAM days
+- valid-minute completeness threshold (1,000 vs 1,200 minutes)
+- minimum number of qualifying PAM days (3, 4, 5)
+- alternative wear-classified-minute rule
 - model without BMI
-- categorical self-report exposure (zero / low / medium / high) if continuous relationship is strongly nonlinear
+- socioeconomic sensitivity model with collapsed race/ethnicity and education
 
 ## Claims allowed
 
@@ -69,3 +72,8 @@ Add `log_leisure × age_group`.
 - validation of one measure against the other as a gold standard
 - causal effect
 - device-measured MVPA unless a validated MIMS intensity algorithm is explicitly introduced
+
+
+## Survey inference degrees of freedom
+
+For coefficient inference, the R `survey` package is instructed to use `df.resid = degf(design)` (PSUs minus strata) rather than the more conservative default subtraction of model rank. This is appropriate to report explicitly because the covariates are individual-level rather than PSU-level.
