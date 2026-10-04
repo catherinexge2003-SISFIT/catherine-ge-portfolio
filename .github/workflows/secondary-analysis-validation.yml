@@ -1,13 +1,7 @@
 name: Validate secondary analyses
 
 on:
-  push:
-    branches:
-      - add-secondary-analysis-portfolio
-    paths:
-      - "projects/hints6-hints7-trends/**"
-      - "projects/nhanes-pam-self-report/**"
-      - ".github/workflows/secondary-analysis-validation.yml"
+  workflow_dispatch:
 
 permissions:
   contents: write
