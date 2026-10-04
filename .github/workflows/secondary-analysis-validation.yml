@@ -1,0 +1,78 @@
+name: Validate secondary analyses
+
+on:
+  push:
+    branches:
+      - add-secondary-analysis-portfolio
+    paths:
+      - "projects/hints6-hints7-trends/**"
+      - "projects/nhanes-pam-self-report/**"
+      - ".github/workflows/secondary-analysis-validation.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  hints:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: add-secondary-analysis-portfolio
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install HINTS dependencies
+        run: pip install -r projects/hints6-hints7-trends/requirements.txt
+      - name: Run HINTS 6 + 7 analysis
+        run: python projects/hints6-hints7-trends/src/analysis.py
+      - name: Upload HINTS outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: hints6-hints7-results
+          path: projects/hints6-hints7-trends/results/
+
+  nhanes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: add-secondary-analysis-portfolio
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "release"
+      - name: Install NHANES dependencies
+        run: |
+          Rscript -e 'install.packages(c("haven","dplyr","tidyr","survey","broom","jsonlite"), repos="https://cloud.r-project.org")'
+      - name: Run NHANES analysis
+        run: Rscript projects/nhanes-pam-self-report/src/analysis.R
+      - name: Upload NHANES outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: nhanes-pam-results
+          path: projects/nhanes-pam-self-report/results/
+
+  persist-results:
+    needs: [hints, nhanes]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: add-secondary-analysis-portfolio
+      - uses: actions/download-artifact@v4
+        with:
+          name: hints6-hints7-results
+          path: projects/hints6-hints7-trends/results/
+      - uses: actions/download-artifact@v4
+        with:
+          name: nhanes-pam-results
+          path: projects/nhanes-pam-self-report/results/
+      - name: Commit executed results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add projects/hints6-hints7-trends/results projects/nhanes-pam-self-report/results
+          if ! git diff --cached --quiet; then
+            git commit -m "Add executed secondary-analysis results [skip ci]"
+            git push origin HEAD:add-secondary-analysis-portfolio
+          fi
