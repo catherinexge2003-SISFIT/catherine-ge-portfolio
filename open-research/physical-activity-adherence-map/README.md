@@ -40,6 +40,7 @@ This is a **descriptive convenience micro-map** for structural comparison and co
 - `PATTERN_SUMMARY_v0.1.md` — descriptive patterns and candidate v0.2 question
 - `CITATION.cff` — machine-readable citation metadata
 - `VERSION` — release identifier
+- `LICENSE.md` — CC BY 4.0 license notice
 - `ZENODO_DEPOSIT_METADATA.md` — prepared metadata for a manual Zenodo deposit
 
 ## Version status
@@ -68,6 +69,14 @@ Until a DOI is minted, cite:
 > Ge, C., & Choi, S. (2026). *Physical Activity Adherence — Digital Intervention Micro Map* (Version 0.1) [Data set]. SISFIT Open Research. https://sisfit.cn/open-research/physical-activity-adherence-map/
 
 A DOI field will be added only after a real archival deposit has been completed.
+
+## License
+
+This project is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+
+https://creativecommons.org/licenses/by/4.0/
+
+See `LICENSE.md` for the project license notice. Third-party publications and linked source material remain under their own rights and licenses.
 
 ## Corrections
 
