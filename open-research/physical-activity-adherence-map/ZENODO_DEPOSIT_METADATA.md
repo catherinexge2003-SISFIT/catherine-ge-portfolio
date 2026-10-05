@@ -39,7 +39,9 @@ https://sisfit.cn/open-research/physical-activity-adherence-map/
 Use the contents of `releases/v0.1/` as the archival deposit package.
 
 ## License
-**Pending explicit maintainer choice.** Do not assign a license automatically.
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Zenodo license identifier: `cc-by-4.0`
 
 ## DOI
 **Not yet minted.** Replace this line only after Zenodo returns a real DOI.
