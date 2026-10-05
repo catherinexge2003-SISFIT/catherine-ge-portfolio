@@ -22,3 +22,6 @@ This directory is the archival v0.1 snapshot. Corrections discovered after relea
 
 ## DOI status
 No DOI has been minted as of release. A DOI should only be added after an actual archival deposit is created.
+
+## License
+CC BY 4.0 was confirmed by the joint maintainers before archival deposit. Research content and coding were not changed by this metadata finalization.
