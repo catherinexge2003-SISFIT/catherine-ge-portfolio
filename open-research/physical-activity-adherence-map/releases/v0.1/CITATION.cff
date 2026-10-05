@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use or refer to this micro-map, please cite it using the metadata below."
+title: "Physical Activity Adherence — Digital Intervention Micro Map"
+version: "0.1"
+date-released: 2026-10-05
+url: "https://sisfit.cn/open-research/physical-activity-adherence-map/"
+authors:
+  - family-names: "Ge"
+    given-names: "Catherine"
+  - family-names: "Choi"
+    given-names: "Starr"
+keywords:
+  - "physical activity"
+  - "digital health"
+  - "behaviour change"
+  - "behavior change"
+  - "self-monitoring"
+  - "feedback"
+  - "adherence"
+  - "maintenance"
+abstract: "A descriptive micro-map of 10 selected adult digital physical-activity intervention studies, structured around populations, target behaviours, intervention components, behaviour-change mechanisms, duration, outcomes, time points, and maintenance."
