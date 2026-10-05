@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physical Activity Adherence — Digital Intervention Micro Map v0.1 | SISFIT Open Research</title>
+<meta name="description" content="A descriptive open micro-map of 10 adult digital physical-activity intervention studies, focused on feedback loops, behaviour change and maintenance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+.map-wrap{max-width:1100px;margin:0 auto}
+.map-flow{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#111827;color:#fff;padding:1rem 1.2rem;border-radius:12px;overflow:auto}
+.map-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.map-card{padding:1.2rem;border:1px solid var(--glass-border);border-radius:14px;background:var(--glass-bg)}
+.map-table{width:100%;border-collapse:collapse;font-size:.84rem}
+.map-table th,.map-table td{padding:.8rem .65rem;border-bottom:1px solid var(--glass-border);text-align:left;vertical-align:top}
+.map-table th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary)}
+.map-scroll{overflow:auto}
+.map-note{font-size:.88rem;color:var(--text-secondary)}
+@media(max-width:760px){.map-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-theme="bio">
+<nav class="navbar glass"><div class="container">
+<a href="/" class="logo">sisfit.cn<span class="dot">/OpenResearch</span></a>
+<div class="nav-links">
+<a href="/CatherineGe/">Catherine Ge</a>
+<a href="/research/">Research</a>
+<a href="/open-research/">Open Research</a>
+<a href="/" class="btn-secondary">SISFIT Academy</a>
+</div></div></nav>
+
+<header class="hero"><div class="container hero-content">
+<span class="badge">SISFIT Open Research Resource · v0.1 frozen</span>
+<h1>Physical Activity Adherence — Digital Intervention Micro Map v0.1</h1>
+<h2 style="margin-top:.5rem;">身体活动依从性 — 数字干预微地图 v0.1</h2>
+<p class="lead">A descriptive micro-map of 10 selected adult digital physical-activity intervention studies, structured around intervention components, behaviour-change mechanisms, time points and maintenance.</p>
+<p class="map-note">This resource is linked from Catherine Ge's research portfolio because it overlaps directly with her research interests in behaviour change, physical activity and digital health. It is not presented as one of Catherine's independent secondary-analysis projects.</p>
+</div><div class="hero-bg-grid"></div></header>
+
+<section class="about-section"><div class="container map-wrap">
+<span class="tag-line">Working Model</span>
+<h2>From measurement to repeated action</h2>
+<div class="map-flow">measurement → personal feedback → goal / reference → prompt / support → repeat</div>
+<p>The v0.1 map suggests that the more useful design question is not simply whether an intervention includes tracking, but what happens after measurement and whether the resulting feedback loop stays behaviorally salient during maintenance.</p>
+</div></section>
+
+<section class="research-section"><div class="container map-wrap">
+<span class="tag-line">Patterns Visible in v0.1</span>
+<h2>Six recurring design issues</h2>
+<div class="map-grid">
+<div class="map-card"><strong>Self-monitoring + feedback recur</strong><p>Tracking technologies vary, but monitoring-linked feedback is a common backbone across this set.</p></div>
+<div class="map-card"><strong>More contact is not reliably more value</strong><p>Extra SMS, social comparison or prolonged app exposure did not consistently add durable benefit.</p></div>
+<div class="map-card"><strong>Acquisition ≠ maintenance</strong><p>Several early between-group differences diminished or disappeared at later time points.</p></div>
+<div class="map-card"><strong>Relative advantage ≠ absolute increase</strong><p>A group can look better because it declines less from baseline.</p></div>
+<div class="map-card"><strong>Behaviour ≠ physiological capacity</strong><p>More walking or leisure-time activity does not automatically imply improved fitness outcomes.</p></div>
+<div class="map-card"><strong>Packages create attribution problems</strong><p>Multi-component trials often cannot identify which component actually produced the observed difference.</p></div>
+</div>
+</div></section>
+
+<section class="about-section"><div class="container map-wrap">
+<span class="tag-line">10-Study Map</span>
+<h2>Selected digital physical-activity interventions</h2>
+<div class="map-scroll"><table class="map-table">
+<thead><tr><th>ID</th><th>Study</th><th>Digital contrast</th><th>Key coded result</th><th>Source</th></tr></thead>
+<tbody>
+<tr id="PA001"><td><strong>PA001</strong></td><td>Fanning et al. (2017)</td><td>Smartphone self-monitoring + factorial goal/points modules</td><td>Points-based feedback associated with higher MVPA; all groups increased MVPA.</td><td><a href="https://doi.org/10.1007/s10865-017-9838-y" target="_blank" rel="noopener">DOI</a></td></tr>
+<tr id="PA002"><td><strong>PA002</strong></td><td>Carr et al. (2013)</td><td>Enhanced web intervention vs standard PA website</td><td>Advantage at 3 months; no significant between-group difference at 6 months.</td><td><a href="https://doi.org/10.1037/a0028962" target="_blank" rel="noopener">DOI</a></td></tr>
+<tr id="PA003"><td><strong>PA003</strong></td><td>Zhou et al. (2018)</td><td>Adaptive personalized step goals vs fixed 10,000-step goal</td><td>Adaptive goals had a better relative trajectory while absolute steps declined in both groups.</td><td><a href="https://doi.org/10.2196/mhealth.9117" target="_blank" rel="noopener">DOI</a></td></tr>
+<tr id="PA004"><td><strong>PA004</strong></td><td>Slootmaker et al. (2009)</td><td>Activity monitor + tailored web advice</td><td>No significant PA effect at intervention end or follow-up.</td><td><a href="https://doi.org/10.2196/jmir.1139" target="_blank" rel="noopener">DOI</a></td></tr>
+<tr id="PA005"><td><strong>PA005</strong></td><td>Hurling et al. (2007)</td><td>Internet/mobile program + real-time activity feedback</td><td>Intervention favored moderate PA by accelerometer and self-report.</td><td><a href="https://doi.org/10.2196/jmir.9.2.e7" target="_blank" rel="noopener">DOI</a></td></tr>
+<tr id="PA006"><td><strong>PA006</strong></td><td>Wang et al. (2015)</td><td>Fitbit self-monitoring + SMS vs Fitbit only</td><td>Early week-1 SMS advantage did not persist to week 6.</td><td><a href="https://doi.org/10.1089/tmj.2014.0176" target="_blank" rel="noopener">DOI</a></td></tr>
+<tr id="PA007"><td><strong>PA007</strong></td><td>Gell & Wadsworth (2015)</td><td>Targeted SMS for working women</td><td>12-week group difference was not significant at 24 weeks and largely reflected less decline.</td><td><a href="https://doi.org/10.1123/jpah.2013-0144" target="_blank" rel="noopener">DOI</a></td></tr>
+<tr id="PA008"><td><strong>PA008</strong></td><td>Maddison et al. (2015)</td><td>Personalized mHealth cardiac rehabilitation</td><td>Walking/leisure PA increased; peak VO₂ did not improve vs usual care.</td><td><a href="https://doi.org/10.1177/2047487314535076" target="_blank" rel="noopener">DOI</a></td></tr>
+<tr id="PA009"><td><strong>PA009</strong></td><td>Harries et al. (2016)</td><td>Personal feedback vs added social comparison</td><td>Feedback beat no feedback; social comparison did not significantly beat personal feedback.</td><td><a href="https://doi.org/10.1186/s12889-016-3593-9" target="_blank" rel="noopener">DOI</a></td></tr>
+<tr id="PA010"><td><strong>PA010</strong></td><td>Fukuoka et al. (2019)</td><td>App + counseling acquisition phase; app continuation for maintenance</td><td>Initial PA gains were significant; prolonged app use did not improve maintenance vs accelerometer only.</td><td><a href="https://doi.org/10.1001/jamanetworkopen.2019.4281" target="_blank" rel="noopener">DOI</a></td></tr>
+</tbody></table></div>
+</div></section>
+
+<section class="research-section"><div class="container map-wrap">
+<span class="tag-line">Method Boundary</span>
+<h2>What v0.1 does and does not claim</h2>
+<p>This is a convenience micro-map for structural comparison and correction. It is <strong>not</strong> a systematic review, meta-analysis or intervention-effectiveness ranking. Mechanism labels remain descriptive; BCTTv1 numeric codes are not inferred; null findings are retained; and time point, absolute direction and between-group contrast are kept distinct.</p>
+<p><strong>Candidate v0.2 question:</strong> Under what conditions does a digital self-monitoring + feedback loop remain behaviorally salient long enough to support physical-activity maintenance?</p>
+<div class="cta-group" style="justify-content:flex-start;margin-top:1.5rem;">
+<a href="https://starrchaige.github.io/projects/physical-activity-adherence-map/micro_map_manifest.csv" class="btn-secondary" target="_blank" rel="noopener">Download CSV</a>
+<a href="https://starrchaige.github.io/projects/physical-activity-adherence-map/coding_notes.md" class="btn-secondary" target="_blank" rel="noopener">Coding Notes</a>
+<a href="https://starrchaige.github.io/projects/physical-activity-adherence-map/inclusion_rules.md" class="btn-secondary" target="_blank" rel="noopener">Inclusion Rules</a>
+</div>
+<p class="map-note" style="margin-top:1rem;">Source snapshot maintained by Starr Choi / SISFIT. Corrections are intended to be transparent and versioned.</p>
+</div></section>
+
+<footer class="footer"><div class="container"><div class="footer-content">
+<a href="/" class="logo">sisfit.cn</a>
+<p>SISFIT open research resource linked to Catherine Ge's research-development portfolio.</p>
+</div><div class="copyright">&copy; 2026 SISFIT Academy.</div></div></footer>
+<script>lucide.createIcons();</script>
+</body></html>
