@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use or refer to this micro-map, please cite it using the metadata below."
 title: "Physical Activity Adherence — Digital Intervention Micro Map"
 version: "0.1"
+license: "CC-BY-4.0"
 date-released: 2026-10-05
 url: "https://sisfit.cn/open-research/physical-activity-adherence-map/"
 authors:
