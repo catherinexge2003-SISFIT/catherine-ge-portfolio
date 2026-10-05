@@ -50,6 +50,8 @@ Corrections should be recorded transparently and incorporated into a later versi
 
 Release date: **2026-10-05**
 
+Frozen snapshot: [releases/v0.1/](./releases/v0.1/)
+
 ## Authorship and maintenance
 
 Co-maintained by:
