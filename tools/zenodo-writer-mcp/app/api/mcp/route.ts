@@ -1,4 +1,6 @@
-import { createMcpHandler } from "mcp-handler";
+import { verifyClerkToken } from "@clerk/mcp-tools/next";
+import { auth } from "@clerk/nextjs/server";
+import { createMcpHandler, withMcpAuth } from "mcp-handler";
 import { z } from "zod";
 import {
   createDeposit,
@@ -176,4 +178,16 @@ const handler = createMcpHandler((server) => {
   );
 });
 
-export { handler as GET, handler as POST };
+const authHandler = withMcpAuth(
+  handler,
+  async (_, token) => {
+    const clerkAuth = await auth({ acceptsToken: "oauth_token" });
+    return verifyClerkToken(clerkAuth, token);
+  },
+  {
+    required: true,
+    resourceMetadataPath: "/.well-known/oauth-protected-resource/api/mcp"
+  }
+);
+
+export { authHandler as GET, authHandler as POST };
