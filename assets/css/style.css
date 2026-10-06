@@ -1154,3 +1154,111 @@ p.lead {
         flex: 0 0 auto;
     }
 }
+
+
+/* Research evidence card system */
+.evidence-card {
+    display: block;
+    position: relative;
+    min-width: 0;
+    padding: 1.55rem 1.65rem;
+    border-radius: 14px;
+    box-shadow: none;
+}
+
+.evidence-card.evidence-analysis {
+    border-left: 3px solid var(--accent-secondary);
+}
+
+.evidence-card.evidence-open {
+    border-left: 3px solid var(--accent-primary);
+}
+
+.evidence-card.evidence-training {
+    border-left: 3px solid var(--text-secondary);
+}
+
+.evidence-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.55rem 1rem;
+    margin-bottom: 0.9rem;
+}
+
+.evidence-type {
+    font-size: 0.7rem;
+    line-height: 1.35;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.evidence-status {
+    display: inline-flex;
+    align-items: center;
+    min-height: 26px;
+    padding: 0.26rem 0.62rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    font-size: 0.7rem;
+    line-height: 1.2;
+    font-weight: 700;
+    white-space: normal;
+    text-align: center;
+}
+
+.evidence-status-complete {
+    color: var(--accent-secondary);
+    border-color: rgba(74, 124, 117, 0.28);
+    background: rgba(74, 124, 117, 0.07);
+}
+
+.evidence-status-working {
+    color: var(--accent-primary);
+    border-color: rgba(233, 139, 104, 0.32);
+    background: rgba(233, 139, 104, 0.07);
+}
+
+.evidence-card h2,
+.evidence-card h3 {
+    margin-top: 0;
+}
+
+.evidence-card p:last-child {
+    margin-bottom: 0;
+}
+
+.evidence-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 1.25rem;
+}
+
+.evidence-actions .btn-primary,
+.evidence-actions .btn-secondary {
+    margin-left: 0;
+}
+
+@media (max-width: 480px) {
+    .evidence-card {
+        padding: 1.25rem;
+    }
+
+    .evidence-card-header {
+        display: block;
+    }
+
+    .evidence-status {
+        margin-top: 0.45rem;
+    }
+
+    .evidence-actions .btn-primary,
+    .evidence-actions .btn-secondary {
+        width: 100%;
+    }
+}
