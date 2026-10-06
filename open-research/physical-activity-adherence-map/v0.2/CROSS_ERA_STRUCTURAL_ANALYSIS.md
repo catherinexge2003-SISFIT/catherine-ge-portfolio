@@ -91,7 +91,7 @@ A more plausible working interpretation is:
 
 `adaptation quality × experienced relevance × continued exposure`
 
-matters more than the label “personalized” or “adaptive” alone.
+is a useful working interpretation of the observed cross-study pattern, without implying a validated causal model. It matters more for hypothesis generation than the label “personalized” or “adaptive” alone.
 
 ---
 
@@ -146,7 +146,7 @@ A better working rule is:
 
 ---
 
-# 6. Engagement/exposure is not a side metric; it is part of the mechanism
+# 6. Engagement/exposure is not a side metric; it constrains interpretation
 
 The unified manifest makes a distinction that the original v0.1 could not:
 
@@ -163,12 +163,12 @@ Examples:
 
 ### Implication
 
-A maintenance failure can arise at at least two different layers:
+A null or attenuated behavioral result can arise under at least two different evidential states:
 
-1. the mechanism is ineffective despite adequate exposure;
-2. the intended mechanism is never consistently experienced because exposure/engagement decays.
+1. intervention receipt/exposure is documented, but there is no incremental behavioral effect;
+2. intervention receipt/exposure is weak or uncertain, limiting what can be inferred about the behavioral pathway.
 
-Those should not be coded as the same failure.
+Those states should not be coded as equivalent. Unless a mechanism of action is directly measured, the public interpretation should remain at the level of documented exposure and observed behavioral effect.
 
 ---
 
@@ -256,7 +256,7 @@ This pattern survives the era transition.
 - **PA008:** leisure-time PA/walking improved without an advantage in peak VO₂.
 - **PA015:** PA improved without additional weight loss.
 
-The mechanistic chain should remain:
+The outcome chain should remain:
 
 `digital exposure → behavior → sustained behavioral dose → physiological/clinical adaptation`
 
