@@ -1503,3 +1503,5 @@ section[id] {
         width: 100%;
     }
 }
+
+.supervisor-brief-link{margin-top:.85rem;font-size:.84rem}.supervisor-brief-link a{color:var(--accent-secondary);font-weight:700;text-decoration:none}.supervisor-brief-link a:hover,.supervisor-brief-link a:focus-visible{text-decoration:underline;text-underline-offset:.2em}

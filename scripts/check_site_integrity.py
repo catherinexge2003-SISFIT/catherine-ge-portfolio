@@ -16,6 +16,9 @@ PRIMARY_NAV = [
 ]
 
 REQUIRED_FILES = [
+    ROOT / "supervisor-brief/index.html",
+    ROOT / "sitemap.xml",
+    ROOT / "robots.txt",
     ROOT / "open-research/index.html",
     ROOT / "open-research/physical-activity-adherence-map/index.html",
     ROOT / "assets/css/style.css",
@@ -45,6 +48,22 @@ for path in PRIMARY_NAV:
     text = path.read_text(encoding="utf-8")
     if 'href="/open-research/"' not in text and 'href="./open-research/"' not in text:
         fail(f"Open Research navigation missing from {path.relative_to(ROOT)}")
+    if 'rel="canonical"' not in text:
+        fail(f"canonical URL missing from {path.relative_to(ROOT)}")
+
+brief = (ROOT / "supervisor-brief/index.html").read_text(encoding="utf-8")
+for marker in ("Research direction", "Current research evidence", "Research Portfolio", "Academic CV (PDF)"):
+    if marker not in brief:
+        fail(f"supervisor brief missing required content: {marker}")
+
+sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+for url in ("https://www.sisfit.cn/CatherineGe/","https://www.sisfit.cn/research/","https://www.sisfit.cn/open-research/","https://www.sisfit.cn/open-research/physical-activity-adherence-map/"):
+    if url not in sitemap:
+        fail(f"sitemap missing required URL: {url}")
+
+robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
+if "Sitemap: https://www.sisfit.cn/sitemap.xml" not in robots:
+    fail("robots.txt missing sitemap declaration")
 
 catherine = (ROOT / "CatherineGe/index.html").read_text(encoding="utf-8")
 for marker in ('id="recent-updates"', 'id="contact"', 'Research Enquiries & Availability'):
