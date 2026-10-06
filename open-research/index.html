@@ -12,13 +12,28 @@
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261006-0733"><script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="../assets/css/style.css?v=20261006-1930"><script src="https://unpkg.com/lucide@latest"></script>
 </head><body data-theme="bio">
 <a class="skip-link" href="#main-content">Skip to content</a>
-<nav class="navbar glass"><div class="container">
-<a href="/CatherineGe/" class="logo">sisfit.cn<span class="dot">/CatherineGe</span></a>
-<div class="nav-links"><a href="/research/">Research</a><a href="/open-research/" aria-current="page">Open Research</a><a href="/cv/">CV</a><a href="/" class="btn-secondary">SISFIT Academy</a></div>
-</div></nav>
+<nav class="navbar glass site-navbar">
+<div class="container">
+<a href="/" class="logo site-logo"><img src="/assets/images/sisfit_logo_graygold.png" alt="SISFIT Logo">SISFIT<span class="dot">Academy</span></a>
+<div class="nav-links site-nav-links">
+<a href="/about/">About</a>
+<details class="nav-dropdown">
+<summary aria-current="page">Research</summary>
+<div class="nav-dropdown-menu">
+<a href="/research/">Research Portfolio</a>
+<a href="/open-research/" aria-current="page">Open Research</a>
+<a href="/research-training/">Research Training</a>
+</div>
+</details>
+<a href="/practice/">Practice</a>
+<a href="/outputs/">Outputs</a>
+<a href="/CatherineGe/" class="btn-primary">Catherine Ge</a>
+</div>
+</div>
+</nav>
 <header id="main-content" class="hero" tabindex="-1"><div class="container hero-content">
 <span class="badge">Evidence Registry</span>
 <h1>Open Research <span class="gradient-text">& Evidence</span></h1>
@@ -134,4 +149,10 @@
 </div></section>
 
 <footer class="footer"><div class="container"><div class="footer-content"><a href="/CatherineGe/" class="logo">sisfit.cn<span class="dot">/CatherineGe</span></a></div><div class="copyright">&copy; 2026 Catherine Ge.</div></div></footer>
-<script>lucide.createIcons();</script></body></html>
+<script>lucide.createIcons();</script><script>
+document.querySelectorAll('.nav-dropdown').forEach(function(menu){
+  document.addEventListener('click', function(e){
+    if(menu.open && !menu.contains(e.target)) menu.removeAttribute('open');
+  });
+});
+</script></body></html>
