@@ -62,11 +62,11 @@ This joint project is methodologically distinct from Catherine Ge's independent 
 
 ## How to cite
 
-Until a DOI is minted, cite:
+Reserved Zenodo DOI: **10.5281/zenodo.23178043**
 
-> Ge, C., & Choi, S. (2026). *Physical Activity Adherence — Digital Intervention Micro Map* (Version 0.1) [Data set]. SISFIT Open Research. https://sisfit.cn/open-research/physical-activity-adherence-map/
+> Ge, C., & Choi, S. (2026). *Physical Activity Adherence — Digital Intervention Micro Map* (Version 0.1) [Data set]. SISFIT Open Research. https://doi.org/10.5281/zenodo.23178043
 
-A DOI field will be added only after a real archival deposit has been completed.
+The DOI is reserved for Zenodo record 23178043 and will resolve after publication.
 
 ## License
 
