@@ -38,10 +38,13 @@ Use plain-language categories:
 
 - none / NR
 - static tailoring
+- dynamic algorithmic adaptation
 - contextual / JITAI tailoring
 - response-adaptive sequencing
 
 Add a short factual description when needed.
+
+Use **dynamic algorithmic adaptation** when parameters such as goals are repeatedly recalculated from prior behavior but the intervention is not a JITAI and does not rerandomize treatment stages.
 
 Do not infer a more sophisticated adaptive mechanism than the paper states.
 
