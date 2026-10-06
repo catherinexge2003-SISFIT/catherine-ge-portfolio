@@ -49,11 +49,13 @@ Use **dynamic algorithmic adaptation** when parameters such as goals are repeate
 Do not infer a more sophisticated adaptive mechanism than the paper states.
 
 ### `engagement_or_exposure`
-Observed use, wear, message exposure, adherence, data completeness, or other direct evidence that the intervention was actually received.
+Observed use, wear, message exposure, adherence, or other direct evidence that the intervention was actually received.
 
-Use `NR` when not reported.
+Data completeness may be recorded as an **interpretation constraint**, but missing outcome/sensor data alone must not be treated as proof of low intervention engagement unless the study directly links that missingness to intervention use/exposure.
 
-Do not treat intervention delivery as equivalent to intervention exposure.
+Use `NR` when exposure/engagement is not reported.
+
+Do not treat intervention delivery as equivalent to intervention receipt or exposure.
 
 ### `maintenance_interpretation`
 One concise classification plus detail:
