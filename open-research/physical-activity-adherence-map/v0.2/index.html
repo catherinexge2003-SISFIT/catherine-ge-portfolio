@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physical Activity Adherence — Digital Intervention Micro Map v0.2 | SISFIT Open Research</title>
+<meta name="description" content="Working v0.2 map of 15 selected digital physical-activity intervention studies, structured by phase, active comparator, adaptation, exposure and maintenance interpretation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+.map-wrap{max-width:1180px;margin:0 auto}
+.map-note{font-size:.88rem;color:var(--text-secondary)}
+.map-flow{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#111827;color:#fff;padding:1rem 1.2rem;border-radius:12px;overflow:auto}
+.map-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.map-card{padding:1.2rem;border:1px solid var(--glass-border);border-radius:14px;background:var(--glass-bg)}
+.status-strip{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}
+.status-pill{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .7rem;border:1px solid var(--glass-border);border-radius:999px;font-size:.78rem;background:var(--glass-bg)}
+.map-controls{display:grid;grid-template-columns:2fr 1fr 1fr;gap:.75rem;margin:1.2rem 0}
+.map-controls input,.map-controls select{width:100%;box-sizing:border-box;padding:.72rem .8rem;border:1px solid var(--glass-border);border-radius:10px;background:var(--glass-bg);color:var(--text-primary);font:inherit}
+.map-scroll{overflow:auto;border:1px solid var(--glass-border);border-radius:14px}
+.map-table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:1120px}
+.map-table th,.map-table td{padding:.78rem .62rem;border-bottom:1px solid var(--glass-border);text-align:left;vertical-align:top;line-height:1.45}
+.map-table th{position:sticky;top:0;background:var(--bg-color);font-size:.69rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary);z-index:1}
+.map-table tr:last-child td{border-bottom:0}
+.study-id{font-weight:700;white-space:nowrap}
+.study-title{min-width:170px}
+.phase{min-width:150px}
+.backbone{min-width:220px}
+.adaptation{min-width:170px}
+.exposure{min-width:230px}
+.maintenance{min-width:230px}
+.cta-group{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.75rem;align-items:stretch}
+.cta-group .btn-secondary{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:100%;min-width:0;min-height:48px;margin:0;padding:.72rem 1rem;white-space:normal;line-height:1.2;text-align:center}
+.result-count{font-size:.82rem;color:var(--text-secondary);margin:.3rem 0 .8rem}
+.warning-box{padding:1rem 1.1rem;border-left:3px solid var(--accent-primary);background:var(--glass-bg);border-radius:8px}
+@media(max-width:820px){
+  .map-grid{grid-template-columns:1fr}
+  .map-controls{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body data-theme="bio">
+<nav class="navbar glass"><div class="container">
+<a href="/" class="logo">sisfit.cn<span class="dot">/OpenResearch</span></a>
+<div class="nav-links">
+<a href="/CatherineGe/">Catherine Ge</a>
+<a href="/research/">Research</a>
+<a href="/open-research/">Open Research</a>
+<a href="../" class="btn-secondary">Frozen v0.1</a>
+</div></div></nav>
+
+<header class="hero"><div class="container hero-content">
+<span class="badge">Joint Open Research Project · Catherine Ge + Starr Choi · v0.2 working draft</span>
+<h1>Physical Activity Adherence — Digital Intervention Micro Map v0.2</h1>
+<h2 style="margin-top:.5rem;">身体活动依从性 — 数字干预微地图 v0.2</h2>
+<p class="lead">A working 15-study structural map of selected adult digital physical-activity interventions, extending v0.1 with phase, active-comparator structure, adaptation, engagement/exposure and maintenance interpretation.</p>
+<div class="status-strip">
+<span class="status-pill">15 selected studies</span>
+<span class="status-pill">PA001–PA015</span>
+<span class="status-pill">Internal development complete</span>
+<span class="status-pill">External validation pending</span>
+</div>
+</div><div class="hero-bg-grid"></div></header>
+
+<section class="about-section"><div class="container map-wrap">
+<span class="tag-line">Working Model</span>
+<h2>From digital support to durable incremental value</h2>
+<div class="map-flow">support available → support noticed → support relevant → support actionable → action repeated → behaviour preserved</div>
+<p>This sequence is a hypothesis-generating bridge, not a validated causal model. v0.2 asks what the digital layer adds beyond an already active self-monitoring or feedback backbone, whether participants meaningfully receive that added support, and how the result changes across acquisition, continuous treatment and maintenance phases.</p>
+</div></section>
+
+<section class="research-section"><div class="container map-wrap">
+<span class="tag-line">What v0.2 Adds</span>
+<h2>Five structural fields beyond v0.1</h2>
+<div class="map-grid">
+<div class="map-card"><strong>Phase structure</strong><p>Separates acquisition, continuous active treatment, explicit maintenance and post-intervention follow-up.</p></div>
+<div class="map-card"><strong>Shared backbone / active comparator</strong><p>Shows what both groups already receive before attributing value to the incremental digital component.</p></div>
+<div class="map-card"><strong>Adaptation / personalization</strong><p>Distinguishes fixed packages, static tailoring, dynamic goal adaptation, JITAI and response-adaptive sequencing.</p></div>
+<div class="map-card"><strong>Engagement / exposure</strong><p>Records evidence that support was actually used, read, worn or otherwise received; missingness alone is not treated as proof of disengagement.</p></div>
+<div class="map-card"><strong>Maintenance interpretation</strong><p>Separates sustained gain, preserved behaviour, attenuation, no maintenance advantage and designs that do not actually test maintenance.</p></div>
+<div class="map-card"><strong>Incremental effect language</strong><p>Null findings are described at the level supported by the study. “No incremental behavioral effect despite documented exposure” is preferred over unmeasured claims that a mechanism failed.</p></div>
+</div>
+</div></section>
+
+<section class="about-section"><div class="container map-wrap">
+<span class="tag-line">15-Study Working Map</span>
+<h2>Selected digital physical-activity interventions</h2>
+<p class="map-note">The table is rendered directly from the canonical working manifest <code>micro_map_manifest_v0.2.csv</code>. Filters affect display only; they do not modify the dataset.</p>
+<div class="map-controls">
+<input id="mapSearch" type="search" placeholder="Search study, intervention, outcome, exposure…">
+<select id="phaseFilter"><option value="">All phases</option></select>
+<select id="adaptationFilter"><option value="">All adaptation types</option></select>
+</div>
+<div id="resultCount" class="result-count">Loading 15-study map…</div>
+<div class="map-scroll">
+<table class="map-table">
+<thead><tr>
+<th>ID</th>
+<th>Study</th>
+<th>Phase</th>
+<th>Shared backbone / active comparator</th>
+<th>Adaptation</th>
+<th>Engagement / exposure</th>
+<th>Maintenance interpretation</th>
+<th>Source</th>
+</tr></thead>
+<tbody id="mapBody"><tr><td colspan="8">Loading canonical working manifest…</td></tr></tbody>
+</table>
+</div>
+<noscript><p class="warning-box">JavaScript is required for the interactive table. The canonical CSV remains available below.</p></noscript>
+</div></section>
+
+<section class="research-section"><div class="container map-wrap">
+<span class="tag-line">Cross-Era Structural Reading</span>
+<h2>Current working patterns</h2>
+<div class="map-grid">
+<div class="map-card"><strong>Self-monitoring remains the backbone</strong><p>The more informative contrast is increasingly what is added around monitoring and feedback, not whether monitoring exists at all.</p></div>
+<div class="map-card"><strong>Innovation moved toward adaptation</strong><p>Recent rows include contextual JITAI and response-adaptive SMART designs, while earlier rows more often vary fixed components or static tailoring.</p></div>
+<div class="map-card"><strong>Active comparators reduce incremental headroom</strong><p>When both groups already receive substantial monitoring, feedback or counseling, a null incremental result has a narrower meaning.</p></div>
+<div class="map-card"><strong>Exposure constrains interpretation</strong><p>Delivered support is not equivalent to received support. Weak or uncertain exposure limits what can be inferred from a null behavioral result.</p></div>
+<div class="map-card"><strong>Maintenance may mean preventing decline</strong><p>Preserved activity relative to a declining comparator is kept distinct from continued gain.</p></div>
+<div class="map-card"><strong>Behaviour and downstream outcomes can diverge</strong><p>Changes in walking or activity do not automatically imply corresponding changes in fitness, weight or other physiological outcomes.</p></div>
+</div>
+</div></section>
+
+<section class="about-section"><div class="container map-wrap">
+<span class="tag-line">External Validation Gate</span>
+<h2>What remains open</h2>
+<div class="warning-box">
+<p><strong>v0.2 is publicly browsable but not frozen.</strong> Its internal development is complete; external methodological validation is still pending.</p>
+<p>The current expert check asks whether the operational mapping of PA006, PA010, PA012 and PA013 onto implementation/exposure versus incremental behavioral-effect failure is defensible, and whether <em>preserved behavior</em> is a useful descriptive maintenance outcome category.</p>
+</div>
+<div class="cta-group" style="margin-top:1.5rem;">
+<a href="micro_map_manifest_v0.2.csv" class="btn-secondary" target="_blank" rel="noopener">Canonical Working CSV</a>
+<a href="MECHANISM_PHASE_FAILURE_MATRIX.md" class="btn-secondary" target="_blank" rel="noopener">Failure / Constraint Matrix</a>
+<a href="TERMINOLOGY_CROSSWALK.md" class="btn-secondary" target="_blank" rel="noopener">Terminology Crosswalk</a>
+<a href="FAILURE_MODE_EXPERT_CHECK_PACKET.md" class="btn-secondary" target="_blank" rel="noopener">Expert Check Packet</a>
+<a href="V0.2_RELEASE_READINESS.md" class="btn-secondary" target="_blank" rel="noopener">Release Readiness</a>
+<a href="https://github.com/catherinexge2003-SISFIT/catherine-ge-portfolio/issues/13" class="btn-secondary" target="_blank" rel="noopener">Open Expert Check</a>
+</div>
+</div></section>
+
+<section class="research-section"><div class="container map-wrap">
+<span class="tag-line">Method Boundary</span>
+<h2>What this map does and does not claim</h2>
+<p>This is a selected-study structural map for comparison, correction and hypothesis generation. It is <strong>not</strong> a systematic review, meta-analysis, causal model, risk-of-bias assessment or intervention-effectiveness ranking.</p>
+<p>The working construct <strong>behavioral salience</strong> is used only as a bridge for hypothesis generation. It is not presented as an established validated theory.</p>
+<div class="cta-group" style="margin-top:1.5rem;">
+<a href="README.md" class="btn-secondary" target="_blank" rel="noopener">v0.2 README</a>
+<a href="SCHEMA.md" class="btn-secondary" target="_blank" rel="noopener">Schema</a>
+<a href="ADJUDICATION_LOG.md" class="btn-secondary" target="_blank" rel="noopener">Adjudication Log</a>
+<a href="CROSS_ERA_STRUCTURAL_ANALYSIS.md" class="btn-secondary" target="_blank" rel="noopener">Cross-Era Analysis</a>
+<a href="../" class="btn-secondary">Frozen v0.1 Map</a>
+<a href="https://doi.org/10.5281/zenodo.23178043" class="btn-secondary" target="_blank" rel="noopener">v0.1 Zenodo DOI</a>
+</div>
+<p class="map-note" style="margin-top:1rem;">Co-maintained by Catherine Ge and Starr Choi / SISFIT Open Research. Frozen v0.1 remains unchanged.</p>
+</div></section>
+
+<footer class="footer"><div class="container"><div class="footer-content">
+<a href="/" class="logo">sisfit.cn</a>
+<p>Joint SISFIT open research project maintained by Catherine Ge and Starr Choi.</p>
+</div><div class="copyright">&copy; 2026 SISFIT Academy.</div></div></footer>
+
+<script>
+function parseCSV(text){
+  const rows=[]; let row=[], field='', quoted=false;
+  for(let i=0;i<text.length;i++){
+    const ch=text[i];
+    if(quoted){
+      if(ch==='"'){
+        if(text[i+1]==='"'){field+='"';i++;}
+        else quoted=false;
+      }else field+=ch;
+    }else{
+      if(ch==='"') quoted=true;
+      else if(ch===','){row.push(field);field='';}
+      else if(ch==='\n'){row.push(field);rows.push(row);row=[];field='';}
+      else if(ch!=='\r') field+=ch;
+    }
+  }
+  if(field.length||row.length){row.push(field);rows.push(row);}
+  const header=rows.shift()||[];
+  return rows.filter(r=>r.some(v=>v!=='')).map(r=>Object.fromEntries(header.map((h,i)=>[h,r[i]||''])));
+}
+function esc(value){
+  return String(value||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+function shortCitation(c){
+  const m=String(c||'').match(/^([^\.]+)\. \((\d{4})\)/);
+  return m ? m[1]+' ('+m[2]+')' : c;
+}
+function doiFrom(result){
+  const m=String(result||'').match(/https:\/\/doi\.org\/([^\s"<>]+)/);
+  return m ? 'https://doi.org/'+m[1] : '';
+}
+(async function(){
+  const body=document.getElementById('mapBody');
+  const count=document.getElementById('resultCount');
+  try{
+    const res=await fetch('micro_map_manifest_v0.2.csv',{cache:'no-store'});
+    if(!res.ok) throw new Error('CSV request failed: '+res.status);
+    const data=parseCSV(await res.text());
+    const phase=document.getElementById('phaseFilter');
+    const adaptation=document.getElementById('adaptationFilter');
+    [...new Set(data.map(d=>d.phase_structure).filter(Boolean))].sort().forEach(v=>{
+      const o=document.createElement('option');o.value=v;o.textContent=v;phase.appendChild(o);
+    });
+    [...new Set(data.map(d=>d.adaptation_or_personalization).filter(Boolean))].sort().forEach(v=>{
+      const o=document.createElement('option');o.value=v;o.textContent=v;adaptation.appendChild(o);
+    });
+    function render(){
+      const q=document.getElementById('mapSearch').value.trim().toLowerCase();
+      const p=phase.value, a=adaptation.value;
+      const rows=data.filter(d=>{
+        const hay=Object.values(d).join(' ').toLowerCase();
+        return (!q||hay.includes(q))&&(!p||d.phase_structure===p)&&(!a||d.adaptation_or_personalization===a);
+      });
+      count.textContent=rows.length+' of '+data.length+' studies shown';
+      body.innerHTML=rows.map(d=>{
+        const doi=doiFrom(d.result_and_DOI);
+        return '<tr id="'+esc(d.study_id)+'">'+
+          '<td class="study-id">'+esc(d.study_id)+'</td>'+
+          '<td class="study-title">'+esc(shortCitation(d.citation))+'</td>'+
+          '<td class="phase">'+esc(d.phase_structure)+'</td>'+
+          '<td class="backbone">'+esc(d.shared_backbone_or_active_comparator)+'</td>'+
+          '<td class="adaptation">'+esc(d.adaptation_or_personalization)+'</td>'+
+          '<td class="exposure">'+esc(d.engagement_or_exposure)+'</td>'+
+          '<td class="maintenance">'+esc(d.maintenance_interpretation)+'</td>'+
+          '<td>'+(doi?'<a href="'+esc(doi)+'" target="_blank" rel="noopener">DOI</a>':'—')+'</td>'+
+        '</tr>';
+      }).join('') || '<tr><td colspan="8">No studies match the current filters.</td></tr>';
+    }
+    document.getElementById('mapSearch').addEventListener('input',render);
+    phase.addEventListener('change',render);
+    adaptation.addEventListener('change',render);
+    render();
+  }catch(err){
+    count.textContent='Map data could not be loaded.';
+    body.innerHTML='<tr><td colspan="8">The working manifest is temporarily unavailable. Use the Canonical Working CSV link below.</td></tr>';
+  }
+  if(window.lucide) lucide.createIcons();
+})();
+</script>
+</body>
+</html>
