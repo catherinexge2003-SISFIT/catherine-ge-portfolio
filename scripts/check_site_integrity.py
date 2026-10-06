@@ -105,6 +105,18 @@ for marker in ("Research direction", "Current research evidence", "Research Port
     if marker not in brief:
         fail(f"supervisor brief missing required content: {marker}")
 
+degree_pages = [
+    ROOT / "cv/index.html",
+    ROOT / "cv/Catherine_Ge_Academic_CV_2026.html",
+    ROOT / "supervisor-brief/index.html",
+]
+for path in degree_pages:
+    text = path.read_text(encoding="utf-8")
+    if "Master of Teaching" not in text or "University of South Australia" not in text:
+        fail(f"formal degree-awarding institution missing from {path.relative_to(ROOT)}")
+    if "foundation university of Adelaide University" not in text:
+        fail(f"foundation-university wording missing from {path.relative_to(ROOT)}")
+
 sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
 for url in ("https://www.sisfit.cn/CatherineGe/","https://www.sisfit.cn/research/","https://www.sisfit.cn/open-research/","https://www.sisfit.cn/open-research/physical-activity-adherence-map/"):
     if url not in sitemap:
