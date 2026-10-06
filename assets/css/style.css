@@ -1087,3 +1087,70 @@ p.lead {
         margin-top: 2rem !important;
     }
 }
+
+
+/* Catherine quick-review path */
+.catherine-profile .quick-review-path {
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+    background: rgba(255,255,255,0.55);
+}
+
+.catherine-profile .quick-review-path .container {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    min-height: 54px;
+}
+
+.catherine-profile .quick-review-label {
+    flex: 0 0 auto;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.catherine-profile .quick-review-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.1rem;
+}
+
+.catherine-profile .quick-review-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+.catherine-profile .quick-review-links a:hover {
+    color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+    .catherine-profile .quick-review-path .container {
+        display: block;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .catherine-profile .quick-review-label {
+        display: block;
+        margin-bottom: 0.45rem;
+    }
+
+    .catherine-profile .quick-review-links {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 0.15rem;
+        scrollbar-width: thin;
+    }
+
+    .catherine-profile .quick-review-links a {
+        flex: 0 0 auto;
+    }
+}
