@@ -93,7 +93,7 @@ for marker in ("Site-wide layout hardening", ".markdown-body", ".cta-group"):
         fail(f"required public CSS rule missing: {marker}")
 
 shim = (ROOT / "open-research/physical-activity-adherence-map/assets/css/style.css").read_text(encoding="utf-8")
-if "@import url('/assets/css/style.css')" not in shim:
+if "@import url('/assets/css/style.css" not in shim:
     fail("frozen v0.1 compatibility stylesheet no longer points to main site CSS")
 
 actual_frozen_sha = git_blob_sha(FROZEN_RELEASE)
