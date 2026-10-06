@@ -1,0 +1,39 @@
+name: Check public-site integrity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.html"
+      - "assets/css/**"
+      - "open-research/**"
+      - "scripts/check_site_integrity.py"
+      - "AGENTS.md"
+      - ".github/workflows/site-integrity.yml"
+  pull_request:
+    paths:
+      - "**/*.html"
+      - "assets/css/**"
+      - "open-research/**"
+      - "scripts/check_site_integrity.py"
+      - "AGENTS.md"
+      - ".github/workflows/site-integrity.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-integrity-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify stable public routes and layout contract
+        run: python scripts/check_site_integrity.py
