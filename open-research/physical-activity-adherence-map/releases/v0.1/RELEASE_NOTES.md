@@ -21,7 +21,7 @@ v0.1 is a descriptive convenience micro-map. It is not a systematic review, meta
 This directory is the archival v0.1 snapshot. Corrections discovered after release should be documented and incorporated into a later version rather than silently changing this snapshot.
 
 ## DOI status
-No DOI has been minted as of release. A DOI should only be added after an actual archival deposit is created.
+Zenodo reserved DOI **10.5281/zenodo.23178043** for record **23178043** on 2026-10-06. The DOI will resolve after publication.
 
 ## License
 CC BY 4.0 was confirmed by the joint maintainers before archival deposit. Research content and coding were not changed by this metadata finalization.
