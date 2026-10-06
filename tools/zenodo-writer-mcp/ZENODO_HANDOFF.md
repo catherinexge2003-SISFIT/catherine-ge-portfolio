@@ -85,24 +85,28 @@ and the upload is complete.
 - Report validation warnings / missing fields
 - Report draft URL / record ID if shown
 
-## Forbidden actions now
+## Publication authorization
 
-Do not:
-
-- Publish
-- Reserve DOI
-- Delete draft
-- Create another draft
-- Modify or regenerate the ZIP
-- Replace the ZIP
-- Change other Zenodo records
-- Expand OAuth / Clerk / Vercel / MCP infrastructure
-
-The exact publish confirmation string remains:
+Starr explicitly provided the exact confirmation string:
 
 `PUBLISH_ZENODO_RECORD`
 
-Publication must not occur unless Starr explicitly provides that exact confirmation.
+Publication is now authorized for the existing Zenodo draft **23178043** only.
+
+Allowed publication action:
+- Open the existing draft `https://zenodo.org/uploads/23178043`
+- Confirm the final pre-publish audit still matches the recorded values
+- Click **Publish** once
+- Wait for Zenodo to confirm publication
+- Stop immediately after publication and report the final record URL, DOI resolution status, file count/name/size/checksum shown, and any warnings
+
+Still forbidden:
+- Creating another draft
+- Deleting any record
+- Changing metadata before publication unless a new validation error requires it
+- Replacing or modifying the DOI-aware ZIP
+- Publishing any other record
+- Expanding OAuth / Clerk / Vercel / MCP infrastructure
 
 ## After the draft is saved
 
