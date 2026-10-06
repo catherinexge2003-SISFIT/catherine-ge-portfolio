@@ -853,6 +853,11 @@ p.lead {
 }
 
 @media (max-width: 768px) {
+    .academy-home .hero-title {
+        font-size: clamp(2.45rem, 11vw, 3.2rem);
+        line-height: 1.08;
+    }
+
     .container {
         padding-left: 1.25rem;
         padding-right: 1.25rem;
