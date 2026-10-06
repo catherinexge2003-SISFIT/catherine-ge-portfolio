@@ -35,7 +35,7 @@
     </script>
 
     <!-- CSS (Point to father assets) -->
-    <link rel="stylesheet" href="../assets/css/style.css?v=20261006-0733">
+    <link rel="stylesheet" href="../assets/css/style.css?v=20261006-1930">
 
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -45,27 +45,25 @@
 <a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- Navigation -->
-    <nav class="navbar glass">
-        <div class="container">
-            <a href="/CatherineGe/" class="logo" aria-current="page">sisfit.cn<span class="dot">/CatherineGe</span></a>
-            <div class="nav-links">
-                <a href="/research/">Research</a>
-                <a href="/open-research/">Open Research</a>
-                <a href="/cv/">CV</a>
-                <details class="page-section-nav nav-utility">
-                    <summary>Sections</summary>
-                    <div class="page-section-menu">
-                        <a href="#research-profile">Research Profile</a>
-                        <a href="#research-evidence">Research Evidence</a>
-                        <a href="#methods-preparation">Methods & Preparation</a>
-                        <a href="#background-context">Background & Context</a>
-                        <a href="#updates-contact">Updates & Contact</a>
-                    </div>
-                </details>
-                <a href="/" class="btn-secondary">SISFIT Academy</a>
-            </div>
-        </div>
-    </nav>
+    <nav class="navbar glass site-navbar">
+<div class="container">
+<a href="/" class="logo site-logo"><img src="/assets/images/sisfit_logo_graygold.png" alt="SISFIT Logo">SISFIT<span class="dot">Academy</span></a>
+<div class="nav-links site-nav-links">
+<a href="/about/">About</a>
+<details class="nav-dropdown">
+<summary>Research</summary>
+<div class="nav-dropdown-menu">
+<a href="/research/">Research Portfolio</a>
+<a href="/open-research/">Open Research</a>
+<a href="/research-training/">Research Training</a>
+</div>
+</details>
+<a href="/practice/">Practice</a>
+<a href="/outputs/">Outputs</a>
+<a href="/CatherineGe/" class="btn-primary" aria-current="page">Catherine Ge</a>
+</div>
+</div>
+</nav>
 
     <!-- Hero Section -->
     <header id="main-content" class="hero" tabindex="-1">
@@ -546,6 +544,12 @@ Research Focus:
     <script>
         lucide.createIcons();
     </script>
-</body>
+<script>
+document.querySelectorAll('.nav-dropdown').forEach(function(menu){
+  document.addEventListener('click', function(e){
+    if(menu.open && !menu.contains(e.target)) menu.removeAttribute('open');
+  });
+});
+</script></body>
 
 </html>
