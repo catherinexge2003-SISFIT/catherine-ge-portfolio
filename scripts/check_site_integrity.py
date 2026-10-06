@@ -129,10 +129,14 @@ if "Sitemap: https://www.sisfit.cn/sitemap.xml" not in robots:
 catherine = (ROOT / "CatherineGe/index.html").read_text(encoding="utf-8")
 research_page = (ROOT / "research/index.html").read_text(encoding="utf-8")
 for label, page in (("Catherine profile", catherine), ("Research page", research_page)):
-    if '<details class="page-section-nav' not in page or '<summary>Sections</summary>' not in page:
-        fail(f"Sections dropdown missing from {label}")
+    if '<div class="hero-page-tools">' not in page or '<summary>Page contents</summary>' not in page:
+        fail(f"Page-contents control missing from {label}")
     if '<nav class="page-section-nav"' in page:
         fail(f"legacy mid-page On-this-page navigation remains in {label}")
+    nav_start = page.find('<nav class="navbar')
+    nav_end = page.find('</nav>', nav_start)
+    if nav_start >= 0 and nav_end >= 0 and '<summary>Page contents</summary>' in page[nav_start:nav_end]:
+        fail(f"page-local contents control leaked into global navigation in {label}")
 
 for marker in ('id="recent-updates"', 'id="contact"', 'Research Enquiries & Availability'):
     if marker not in catherine:
