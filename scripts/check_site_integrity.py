@@ -46,6 +46,11 @@ for path in PRIMARY_NAV:
     if 'href="/open-research/"' not in text and 'href="./open-research/"' not in text:
         fail(f"Open Research navigation missing from {path.relative_to(ROOT)}")
 
+catherine = (ROOT / "CatherineGe/index.html").read_text(encoding="utf-8")
+for marker in ('id="recent-updates"', 'id="contact"', 'Research Enquiries & Availability'):
+    if marker not in catherine:
+        fail(f"Catherine profile missing required public section: {marker}")
+
 open_research = (ROOT / "open-research/index.html").read_text(encoding="utf-8")
 if '/open-research/physical-activity-adherence-map/' not in open_research:
     fail("micro-map entry missing from open-research/index.html")
