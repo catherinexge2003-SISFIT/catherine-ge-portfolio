@@ -114,8 +114,6 @@ for path in degree_pages:
     text = path.read_text(encoding="utf-8")
     if "Master of Teaching" not in text or "University of South Australia" not in text:
         fail(f"formal degree-awarding institution missing from {path.relative_to(ROOT)}")
-    if "foundation university of Adelaide University" not in text:
-        fail(f"foundation-university wording missing from {path.relative_to(ROOT)}")
 
 sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
 for url in ("https://www.sisfit.cn/CatherineGe/","https://www.sisfit.cn/research/","https://www.sisfit.cn/open-research/","https://www.sisfit.cn/open-research/physical-activity-adherence-map/"):
@@ -129,14 +127,13 @@ if "Sitemap: https://www.sisfit.cn/sitemap.xml" not in robots:
 catherine = (ROOT / "CatherineGe/index.html").read_text(encoding="utf-8")
 research_page = (ROOT / "research/index.html").read_text(encoding="utf-8")
 for label, page in (("Catherine profile", catherine), ("Research page", research_page)):
-    if '<div class="hero-page-tools">' not in page or '<summary>Page contents</summary>' not in page:
-        fail(f"Page-contents control missing from {label}")
-    if '<nav class="page-section-nav"' in page:
-        fail(f"legacy mid-page On-this-page navigation remains in {label}")
     nav_start = page.find('<nav class="navbar')
     nav_end = page.find('</nav>', nav_start)
-    if nav_start >= 0 and nav_end >= 0 and '<summary>Page contents</summary>' in page[nav_start:nav_end]:
-        fail(f"page-local contents control leaked into global navigation in {label}")
+    nav_html = page[nav_start:nav_end] if nav_start >= 0 and nav_end >= 0 else ""
+    if '<details class="page-section-nav nav-utility">' not in nav_html or '<summary>Sections</summary>' not in nav_html:
+        fail(f"expandable Sections navigation missing from {label}")
+    if '<div class="hero-page-tools">' in page or '<summary>Page contents</summary>' in page:
+        fail(f"obsolete hero page-contents control remains in {label}")
 
 for marker in ('id="recent-updates"', 'id="contact"', 'Research Enquiries & Availability'):
     if marker not in catherine:

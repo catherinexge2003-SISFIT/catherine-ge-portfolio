@@ -1585,37 +1585,3 @@ section[id] {
         border-left: 0;
     }
 }
-
-/* Page-local contents control */
-.hero-page-tools {
-    display: flex;
-    justify-content: flex-end;
-    margin: -1.1rem 0 1.4rem;
-}
-
-.hero-page-tools .page-section-nav {
-    flex: 0 0 auto;
-}
-
-.hero-page-tools .page-section-nav summary {
-    color: var(--text-secondary);
-    background: transparent;
-    border: 1px solid var(--glass-border);
-}
-
-.hero-page-tools .page-section-nav[open] summary,
-.hero-page-tools .page-section-nav summary:hover {
-    color: var(--text-primary);
-    background: rgba(74,124,117,0.055);
-}
-
-@media (max-width: 768px) {
-    .hero-page-tools {
-        justify-content: flex-start;
-        margin: 0 0 1rem;
-    }
-
-    .hero-page-tools .page-section-nav {
-        width: auto;
-    }
-}
