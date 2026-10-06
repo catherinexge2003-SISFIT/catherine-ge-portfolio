@@ -49,11 +49,23 @@
         <div class="container">
             <a href="/" class="logo" aria-current="page">sisfit.cn<span class="dot">/CatherineGe</span></a>
             <div class="nav-links">
-                <a href="#about">About</a>
+                <details class="page-section-nav">
+                    <summary>On this page</summary>
+                    <div class="page-section-menu">
+                        <a href="#about">Research Focus</a>
+                        <a href="#selected-research">Selected Evidence</a>
+                        <a href="#open-resource">Open Research Resource</a>
+                        <a href="#methods-evidence">Methods & Evidence</a>
+                        <a href="#training">Research Training</a>
+                        <a href="#research">Doctoral Direction</a>
+                        <a href="#recent-updates">Recent Updates</a>
+                        <a href="#living-lab">Practice Context</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </details>
                 <a href="/research/">Research</a>
                 <a href="/research-training/">Research Training</a>
                 <a href="/open-research/">Open Research</a>
-                <a href="#living-lab">Practice Context</a>
                 <a href="/" class="btn-secondary">SISFIT Academy</a>
             </div>
         </div>
@@ -95,23 +107,6 @@
         </div>
         <div class="hero-bg-grid"></div>
     </header>
-
-    <nav class="page-section-nav" aria-label="On this page">
-        <div class="container">
-            <span class="page-section-label">On this page</span>
-            <div class="page-section-links">
-                <a href="#about">Research Focus</a>
-                <a href="#selected-research">Selected Evidence</a>
-                <a href="#open-resource">Open Research Resource</a>
-                <a href="#methods-evidence">Methods & Evidence</a>
-                <a href="#training">Research Training</a>
-                <a href="#research">Doctoral Direction</a>
-                <a href="#recent-updates">Recent Updates</a>
-                <a href="#living-lab">Practice Context</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
 
     <!-- About Section -->
     <section id="about" class="about-section">
@@ -506,6 +501,16 @@ Research Focus:
   if(visible) setActive(visible.target.id);
  },{rootMargin:'-18% 0px -65% 0px',threshold:[0.01,0.25,0.5]});
  targets.forEach(t=>observer.observe(t));
+})();
+</script>
+<script>
+(function(){
+  const menu=document.querySelector('details.page-section-nav');
+  if(!menu) return;
+  menu.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',()=>menu.removeAttribute('open')));
+  document.addEventListener('click',event=>{
+    if(menu.open && !menu.contains(event.target)) menu.removeAttribute('open');
+  });
 })();
 </script>
     <script>

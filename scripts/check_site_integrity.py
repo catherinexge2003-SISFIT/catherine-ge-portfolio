@@ -66,6 +66,13 @@ if "Sitemap: https://www.sisfit.cn/sitemap.xml" not in robots:
     fail("robots.txt missing sitemap declaration")
 
 catherine = (ROOT / "CatherineGe/index.html").read_text(encoding="utf-8")
+research_page = (ROOT / "research/index.html").read_text(encoding="utf-8")
+for label, page in (("Catherine profile", catherine), ("Research page", research_page)):
+    if '<details class="page-section-nav">' not in page or '<summary>On this page</summary>' not in page:
+        fail(f"On-this-page dropdown missing from {label}")
+    if '<nav class="page-section-nav"' in page:
+        fail(f"legacy mid-page On-this-page navigation remains in {label}")
+
 for marker in ('id="recent-updates"', 'id="contact"', 'Research Enquiries & Availability'):
     if marker not in catherine:
         fail(f"Catherine profile missing required public section: {marker}")
