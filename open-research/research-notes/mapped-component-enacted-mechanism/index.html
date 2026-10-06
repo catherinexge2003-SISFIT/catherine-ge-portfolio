@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Mapped Component to Enacted Mechanism | SISFIT Open Research</title>
+<meta name="description" content="A research note on digital intervention logic models, BCT availability, user enactment and real-world implementation in Alice Berry's getUBetter research.">
+<link rel="canonical" href="https://www.sisfit.cn/open-research/research-notes/mapped-component-enacted-mechanism/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="From Mapped Component to Enacted Mechanism">
+<meta property="og:description" content="When does a BCT mapped into a digital intervention become an implemented mechanism rather than merely an available component?">
+<meta property="og:url" content="https://www.sisfit.cn/open-research/research-notes/mapped-component-enacted-mechanism/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+.note-wrap{max-width:900px;margin:0 auto}
+.note-kicker{font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-secondary);font-weight:700}
+.note-meta{display:flex;gap:.65rem;flex-wrap:wrap;margin-top:1.2rem}
+.note-pill{display:inline-flex;padding:.38rem .65rem;border:1px solid var(--glass-border);border-radius:999px;font-size:.76rem;background:#fff}
+.note-section{padding:2.8rem 0;border-top:1px solid var(--glass-border)}
+.note-section:first-child{border-top:0}
+.note-section h2{font-size:clamp(1.75rem,3vw,2.2rem)}
+.note-section p{margin:0 0 1rem}
+.note-source{padding:1rem 1.15rem;border-left:3px solid var(--accent-secondary);background:#fff;border-radius:8px;margin:1.25rem 0}
+.note-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.25rem 0}
+.note-card{padding:1.15rem;border:1px solid var(--glass-border);border-radius:8px;background:#fff}
+.note-card strong{display:block;margin-bottom:.35rem}
+.note-table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+.note-table th,.note-table td{padding:.8rem .7rem;border-bottom:1px solid var(--glass-border);text-align:left;vertical-align:top}
+.note-table th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary)}
+.note-flow{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#111827;color:#fff;padding:1rem 1.15rem;border-radius:10px;overflow:auto;line-height:1.7}
+.note-question{padding:1.35rem 1.45rem;border:1px solid rgba(74,124,117,.3);background:rgba(74,124,117,.055);border-radius:10px;font-size:1.05rem;line-height:1.65}
+.note-boundary{padding:1rem 1.15rem;border-left:3px solid var(--accent-primary);background:#fff;border-radius:8px}
+.note-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
+.note-actions .btn-secondary{margin-left:0}
+@media(max-width:720px){.note-grid{grid-template-columns:1fr}.note-table{display:block;overflow-x:auto}}
+</style>
+</head>
+<body data-theme="bio">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="navbar glass"><div class="container">
+<a href="/" class="logo">sisfit.cn<span class="dot">/OpenResearch</span></a>
+<div class="nav-links">
+<a href="/CatherineGe/">Catherine Ge</a>
+<a href="/research/">Research</a>
+<a href="/open-research/" aria-current="page">Open Research</a>
+<a href="/open-research/physical-activity-adherence-map/v0.2/" class="btn-secondary">PA Map v0.2</a>
+</div></div></nav>
+
+<header id="main-content" class="hero" tabindex="-1"><div class="container hero-content">
+<span class="badge">Research Note · Working interpretation</span>
+<h1>From Mapped Component to Enacted Mechanism</h1>
+<p class="hero-subtitle">When does a behaviour change technique that is present in a digital intervention become an implemented mechanism in real-world care?</p>
+<p class="lead">A structural reading of Alice Berry's getUBetter logic-model and intervention-mapping work, focused on the gap between intervention content, user exposure, BCT enactment and implementation context.</p>
+<div class="note-meta">
+<span class="note-pill">Digital health</span>
+<span class="note-pill">Implementation</span>
+<span class="note-pill">Logic model</span>
+<span class="note-pill">Behaviour change techniques</span>
+<span class="note-pill">COM-B</span>
+<span class="note-pill">MSK self-management</span>
+</div>
+</div><div class="hero-bg-grid"></div></header>
+
+<main class="container note-wrap">
+<section class="note-section">
+<div class="note-kicker">Evidence chain</div>
+<h2>The logic model makes intervention content unusually explicit</h2>
+<div class="note-source">
+<strong>Berry A, McClellan C, Wanless B, Walsh N.</strong> <em>A Tailored App for the Self-management of Musculoskeletal Conditions: Evidencing a Logic Model of Behavior Change.</em> <em>JMIR Formative Research</em>. 2022;6(3):e32669. DOI: <a href="https://doi.org/10.2196/32669" target="_blank" rel="noopener">10.2196/32669</a>.
+</div>
+<p>The study used the Behaviour Change Wheel, COM-B, the Behaviour Change Technique Taxonomy and persuasive systems design to map getUBetter's content and functionality. Twenty-five BCTs were identified after iterative mapping, including instruction, self-monitoring, goal setting, prompts, graded tasks, social support and verbal persuasion about capability.</p>
+<p>The resulting logic model connects target COM-B domains, intervention functions, BCT groups, digital delivery features and intended outcomes. This is a stronger starting point than describing a digital intervention as a single black box.</p>
+<div class="note-flow">target behavioural problem
+→ COM-B / theoretical domain
+→ intervention function
+→ BCT
+→ app feature / persuasive design
+→ intended behavioural or clinical outcome</div>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">A second mapping layer</div>
+<h2>Intervention mapping makes the hypothesised route to physical activity explicit</h2>
+<div class="note-source">
+<strong>Berry A, McCabe CS, Muir S, Walsh N.</strong> <em>Systematic co-development and testing of a digital behaviour change intervention for osteoarthritis and physical activity: Theoretical mapping and acceptability study.</em> <em>Digital Health</em>. 2023;9:20552076231204425. DOI: <a href="https://doi.org/10.1177/20552076231204425" target="_blank" rel="noopener">10.1177/20552076231204425</a>.
+</div>
+<p>This study used intervention mapping to move from a logic model of the problem to programme objectives, change objectives and practical intervention content. Self-efficacy and autonomous motivation were selected as important determinants of physical-activity engagement, and BCTs were mapped onto the practical materials intended to influence them.</p>
+<p>Both studies therefore solve an important design problem: they show <em>why a component is there</em> and <em>what it is intended to change</em>. They do not, by design, establish that every mapped component is encountered or enacted when the intervention is deployed in routine care.</p>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">The implementation gap</div>
+<h2>“Present in the app” is not the same state as “active in the user”</h2>
+<p>A BCT can be coded as present because the intervention contains a feature capable of delivering it. But a real-world causal chain contains several additional transitions.</p>
+<div class="note-flow">feature present
+→ user reaches feature
+→ content is noticed / understood
+→ BCT is enacted
+→ intended determinant changes
+→ self-management behaviour changes
+→ clinical / activity outcome changes</div>
+<p>Failure at any earlier transition prevents later parts of the logic model from being activated. For example, a goal-setting function cannot affect self-regulation if a user never reaches it; a reminder cannot act as a prompt if notifications are disabled or ignored; an exercise video cannot build capability if it is viewed but not attempted.</p>
+<div class="note-boundary"><strong>Working distinction:</strong> BCT availability is an intervention-content property. BCT enactment is a participant-level event. They are related but not interchangeable evidence.</div>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Implementation context</div>
+<h2>Routine-care conditions may determine whether the theoretical mechanism is ever exposed</h2>
+<p>Alice Berry's current getUBetter implementation programme explicitly examines uptake, app use, clinician implementation, pathway position and the contexts in which the technology works for different people. That creates a bridge between the earlier logic model and real-world mechanism testing.</p>
+<table class="note-table">
+<thead><tr><th>Implementation condition</th><th>Possible effect on the causal chain</th></tr></thead>
+<tbody>
+<tr><td>Clinician recommendation</td><td>Changes initial trust, uptake and perceived relevance</td></tr>
+<tr><td>Point in the care pathway</td><td>Changes whether content arrives when a patient is ready to act</td></tr>
+<tr><td>Local service configuration</td><td>Changes what the app supplements, replaces or redirects toward</td></tr>
+<tr><td>Digital access and literacy</td><td>Changes exposure to interactive features and BCTs</td></tr>
+<tr><td>Reminders / prompting</td><td>Changes repeated exposure and re-engagement</td></tr>
+</tbody>
+</table>
+<p>These variables are often classified as implementation context. But if they determine whether the user ever encounters and enacts a mapped BCT, they also sit upstream of the proposed mechanism of action.</p>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">A possible logic-model extension</div>
+<h2>Implementation could be represented as a causal condition for enactment</h2>
+<p>One option is to extend the conventional content-to-outcome model by inserting exposure and enactment explicitly.</p>
+<div class="note-flow">implementation context
+        ↓
+feature available
+→ feature encountered
+→ BCT enacted
+→ determinant changed
+→ behaviour changed
+→ outcome
+
+implementation context may act at several arrows,
+not only outside the model</div>
+<p>This would make it possible to distinguish at least three explanations for a null outcome: the component was not available as intended; it was available but not meaningfully encountered or enacted; or it was enacted but did not change the hypothesised determinant or behaviour.</p>
+<p>The distinction matters particularly for digital interventions because software can record availability and some forms of exposure at high resolution, while still leaving interpretation, enactment and transfer into daily behaviour partly unobserved.</p>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Open methodological question</div>
+<h2>When does a mapped BCT become an implemented mechanism?</h2>
+<div class="note-question">When a digital intervention's logic model maps a feature to a BCT and then to a target determinant, what evidence is needed before that BCT can be treated as an <em>implemented mechanism</em> rather than only an <em>available intervention component</em>? Would you distinguish feature present → feature encountered → BCT recognised or enacted → determinant changed → behaviour changed, and which of those transitions need direct measurement in a real-world implementation study?</div>
+<p>A related question is whether clinician recommendation, pathway position, timing and local service configuration should appear inside the logic model as causal conditions for BCT enactment, rather than being represented only as external implementation context.</p>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Current research context</div>
+<h2>The question connects directly to an active implementation programme</h2>
+<p>The current NIHR-funded evaluation of getUBetter for non-specific low back pain examines users and non-users across an Integrated Care System, interviews patients and healthcare professionals about decisions to use or stop using the app, and aims to refine programme theories about what works, for whom and under what circumstances.</p>
+<p>That makes the distinction between <em>logic-model specification</em> and <em>mechanism enactment in context</em> empirically testable rather than purely conceptual.</p>
+<div class="note-actions">
+<a href="https://github.com/catherinexge2003-SISFIT/catherine-ge-portfolio/issues/19" target="_blank" rel="noopener" class="btn-secondary">Open correction / discussion</a>
+<a href="https://doi.org/10.2196/32669" target="_blank" rel="noopener" class="btn-secondary">Read logic-model study</a>
+<a href="https://doi.org/10.1177/20552076231204425" target="_blank" rel="noopener" class="btn-secondary">Read intervention-mapping study</a>
+<a href="/open-research/physical-activity-adherence-map/v0.2/" class="btn-secondary">Working PA Map v0.2</a>
+</div>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Connection to the PA adherence map</div>
+<h2>A supervisor-oriented research note, not PA016</h2>
+<p>This note extends the exposure distinction in the <a href="/open-research/physical-activity-adherence-map/v0.2/">Physical Activity Adherence — Digital Intervention Micro Map v0.2</a>. A support component being technically available does not establish that its intended behavioural function was received or enacted.</p>
+<div class="note-flow">support available
+→ support encountered
+→ behavioural function enacted
+→ proximal determinant changes
+→ behaviour changes
+→ behaviour maintained</div>
+<p>It does <strong>not</strong> add a study to the PA001–PA015 canonical manifest and does not modify the frozen v0.1 release.</p>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Method boundary</div>
+<h2>What this note is</h2>
+<p>This is a research-development note for structural interpretation and external correction. It is not a re-analysis of getUBetter, a claim that its BCTs are not enacted, or a formal implementation evaluation.</p>
+<p>The original studies and current implementation research remain authoritative for their methods and findings. Corrections from the study authors or relevant implementation researchers should be recorded transparently and used to revise this working interpretation.</p>
+</section>
+</main>
+
+<footer class="footer"><div class="container"><div class="footer-content">
+<a href="/" class="logo">sisfit.cn</a>
+<p>Open research and research-development materials in Catherine Ge's portfolio.</p>
+</div><div class="copyright">&copy; 2026 SISFIT Academy.</div></div></footer>
+<script>lucide.createIcons();</script>
+</body>
+</html>
