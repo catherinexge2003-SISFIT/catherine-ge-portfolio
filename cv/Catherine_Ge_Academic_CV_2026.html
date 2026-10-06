@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Catherine Ge - Academic CV 2026</title>
 <meta name="robots" content="noindex, nofollow">
 <style>
@@ -64,13 +65,63 @@ li { margin:1.5px 0; padding-left:0; }
 .method { margin:2px 0; }
 .method strong { font-weight:700; }
 .footer {
-  position: fixed;
-  bottom: 5mm;
-  left:0;
-  right:0;
   text-align:center;
   color:#687984;
   font-size:8pt;
+}
+@media print {
+  .footer {
+    position: fixed;
+    bottom: 5mm;
+    left:0;
+    right:0;
+  }
+}
+@media screen {
+  body {
+    background:#f2f5f6;
+    padding:32px 20px 40px;
+  }
+  .page {
+    max-width:210mm;
+    margin:0 auto;
+    padding:14mm 16mm;
+    background:#fff;
+    box-shadow:0 1px 12px rgba(0,0,0,0.08);
+  }
+  .page-2 {
+    break-before:auto;
+    page-break-before:auto;
+    margin-top:24px;
+  }
+  .footer {
+    max-width:210mm;
+    margin:18px auto 0;
+  }
+}
+@media screen and (max-width:640px) {
+  body {
+    padding:12px;
+    font-size:9.6pt;
+  }
+  .page {
+    padding:18px 16px;
+  }
+  .links {
+    line-height:1.5;
+    overflow-wrap:anywhere;
+  }
+  .interests,
+  .interests tbody,
+  .interests tr,
+  .interests td {
+    display:block;
+    width:100%;
+  }
+  .interests td {
+    margin-bottom:2px;
+    text-align:left;
+  }
 }
 </style>
 </head>
