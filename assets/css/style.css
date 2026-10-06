@@ -1271,3 +1271,112 @@ section[id] {
         width: 100%;
     }
 }
+
+
+/* Academic portfolio visual refinement */
+[data-theme="bio"] .navbar.glass {
+    background: rgba(250, 251, 250, 0.96);
+    backdrop-filter: none;
+}
+
+[data-theme="bio"] .glass {
+    background: #ffffff;
+    border-color: rgba(74, 124, 117, 0.16);
+    backdrop-filter: none;
+    border-radius: 10px;
+}
+
+[data-theme="bio"] .gradient-text {
+    background: none;
+    color: var(--accent-secondary);
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: currentColor;
+}
+
+[data-theme="bio"] .hero-bg-grid {
+    width: 38%;
+    opacity: 0.12;
+    background-size: 48px 48px;
+}
+
+[data-theme="bio"] .badge {
+    padding: 0;
+    margin-bottom: 1.15rem;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+}
+
+[data-theme="bio"] .btn-primary,
+[data-theme="bio"] .btn-secondary {
+    border-radius: 8px;
+    padding: 0.72rem 1.1rem;
+}
+
+[data-theme="bio"] .btn-primary:hover {
+    transform: none;
+    opacity: 0.9;
+}
+
+[data-theme="bio"] .btn-secondary:hover {
+    background: rgba(74, 124, 117, 0.055);
+}
+
+[data-theme="bio"] .stat-card {
+    transition: border-color 0.2s, background 0.2s;
+}
+
+[data-theme="bio"] .stat-card:hover {
+    transform: none;
+    border-color: rgba(74, 124, 117, 0.28);
+}
+
+[data-theme="bio"] .stat-card h3 {
+    background: none;
+    color: var(--text-primary);
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: currentColor;
+}
+
+[data-theme="bio"] .tag {
+    background: rgba(74, 124, 117, 0.08);
+    color: var(--accent-secondary);
+    border: 1px solid rgba(74, 124, 117, 0.16);
+    border-radius: 4px;
+}
+
+[data-theme="bio"] .evidence-card {
+    background: #ffffff;
+    border-top: 1px solid rgba(74, 124, 117, 0.14);
+    border-right: 1px solid rgba(74, 124, 117, 0.14);
+    border-bottom: 1px solid rgba(74, 124, 117, 0.14);
+    border-radius: 8px;
+}
+
+[data-theme="bio"] .research-metric,
+[data-theme="bio"] .result-visual,
+[data-theme="bio"] .trajectory-card,
+[data-theme="bio"] .practice-evidence-card {
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+[data-theme="bio"] .page-section-nav {
+    background: #ffffff;
+}
+
+[data-theme="bio"] .page-section-links a {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    [data-theme="bio"] .hero-bg-grid {
+        display: none;
+    }
+}
