@@ -48,6 +48,9 @@ for path in PRIMARY_NAV:
     text = path.read_text(encoding="utf-8")
     if 'href="/open-research/"' not in text and 'href="./open-research/"' not in text:
         fail(f"Open Research navigation missing from {path.relative_to(ROOT)}")
+    for nav_url in ('href="/research/"', 'href="/open-research/"', 'href="/cv/"'):
+        if nav_url not in text:
+            fail(f"academic global navigation missing {nav_url} from {path.relative_to(ROOT)}")
     if 'rel="canonical"' not in text:
         fail(f"canonical URL missing from {path.relative_to(ROOT)}")
 
@@ -68,8 +71,8 @@ if "Sitemap: https://www.sisfit.cn/sitemap.xml" not in robots:
 catherine = (ROOT / "CatherineGe/index.html").read_text(encoding="utf-8")
 research_page = (ROOT / "research/index.html").read_text(encoding="utf-8")
 for label, page in (("Catherine profile", catherine), ("Research page", research_page)):
-    if '<details class="page-section-nav">' not in page or '<summary>On this page</summary>' not in page:
-        fail(f"On-this-page dropdown missing from {label}")
+    if '<details class="page-section-nav">' not in page or '<summary>Sections</summary>' not in page:
+        fail(f"Sections dropdown missing from {label}")
     if '<nav class="page-section-nav"' in page:
         fail(f"legacy mid-page On-this-page navigation remains in {label}")
 

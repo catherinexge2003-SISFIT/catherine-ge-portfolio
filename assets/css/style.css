@@ -1545,3 +1545,43 @@ section[id] {
 }
 
 .supervisor-brief-link{margin-top:.85rem;font-size:.84rem}.supervisor-brief-link a{color:var(--accent-secondary);font-weight:700;text-decoration:none}.supervisor-brief-link a:hover,.supervisor-brief-link a:focus-visible{text-decoration:underline;text-underline-offset:.2em}
+
+/* Academic navigation hierarchy */
+.nav-utility {
+    margin-left: 0.15rem;
+    padding-left: 0.9rem;
+    border-left: 1px solid var(--glass-border);
+}
+
+.hero-utility-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.9rem;
+    font-size: 0.84rem;
+}
+
+.hero-utility-links a {
+    color: var(--accent-secondary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-utility-links a:hover,
+.hero-utility-links a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.nav-links a[aria-current="location"] {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .nav-utility {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: 0;
+    }
+}
