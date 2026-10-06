@@ -977,3 +977,113 @@ p.lead {
         text-align: center;
     }
 }
+
+
+/* Vertical rhythm refinement */
+.about-section,
+.research-section,
+.stats-section {
+    padding: 3.5rem 0;
+}
+
+.stats-grid {
+    margin-top: 2rem;
+}
+
+.footer {
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+.catherine-profile .about-section,
+.catherine-profile .research-section,
+.catherine-profile .stats-section {
+    padding: 3.5rem 0;
+}
+
+.catherine-profile .section-header {
+    margin-bottom: 1.75rem;
+}
+
+.academy-home .bridge-section {
+    padding: 5.5rem 0;
+}
+
+.academy-home #events {
+    padding: 5.25rem 0 !important;
+}
+
+.academy-home #about .section-header {
+    margin-bottom: 3.25rem !important;
+}
+
+.academy-home .journey-timeline {
+    margin-bottom: 5rem !important;
+}
+
+.academy-home .journey-timeline > h3 {
+    margin-bottom: 2.75rem !important;
+}
+
+.academy-home .timeline-container > div[style*="display: flex"] {
+    margin-bottom: 3rem !important;
+}
+
+.academy-home .curriculum-grid {
+    margin-top: 2.5rem !important;
+}
+
+.academy-home .research-flow {
+    margin-top: 2.5rem !important;
+}
+
+.academy-home .data-evidence {
+    margin-top: 2.75rem !important;
+}
+
+@media (max-width: 768px) {
+    .about-section,
+    .research-section,
+    .stats-section,
+    .catherine-profile .about-section,
+    .catherine-profile .research-section,
+    .catherine-profile .stats-section {
+        padding: 2.75rem 0;
+    }
+
+    .stats-grid {
+        margin-top: 1.5rem;
+    }
+
+    .footer {
+        padding: 2.5rem 0;
+        margin-top: 2.5rem;
+    }
+
+    .academy-home .bridge-section,
+    .academy-home #events {
+        padding: 3.5rem 0 !important;
+    }
+
+    .academy-home #about .section-header {
+        margin-bottom: 2.25rem !important;
+    }
+
+    .academy-home .journey-timeline {
+        margin-bottom: 3.5rem !important;
+    }
+
+    .academy-home .journey-timeline > h3 {
+        margin-bottom: 2rem !important;
+    }
+
+    .academy-home .timeline-container > div[style*="display: flex"] {
+        margin-bottom: 2.25rem !important;
+    }
+
+    .academy-home .curriculum-grid,
+    .academy-home .research-flow,
+    .academy-home .data-evidence {
+        margin-top: 2rem !important;
+    }
+}
