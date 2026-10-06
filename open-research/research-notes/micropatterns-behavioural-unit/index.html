@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changing the Behavioural Unit Instead of Adding More Digital Support | SISFIT Open Research</title>
+<meta name="description" content="A research note on Bissett et al.'s co-designed micropatterns intervention: separating the behavioural target from digital and social support intensity.">
+<link rel="canonical" href="https://www.sisfit.cn/open-research/research-notes/micropatterns-behavioural-unit/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Changing the Behavioural Unit Instead of Adding More Digital Support">
+<meta property="og:description" content="A methodological reading of a co-designed micropatterns intervention: what would identify the effect of changing the behavioural target itself?">
+<meta property="og:url" content="https://www.sisfit.cn/open-research/research-notes/micropatterns-behavioural-unit/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+.note-wrap{max-width:900px;margin:0 auto}
+.note-kicker{font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-secondary);font-weight:700}
+.note-meta{display:flex;gap:.65rem;flex-wrap:wrap;margin-top:1.2rem}
+.note-pill{display:inline-flex;padding:.38rem .65rem;border:1px solid var(--glass-border);border-radius:999px;font-size:.76rem;background:#fff}
+.note-section{padding:2.8rem 0;border-top:1px solid var(--glass-border)}
+.note-section:first-child{border-top:0}
+.note-section h2{font-size:clamp(1.75rem,3vw,2.2rem)}
+.note-section h3{margin:1.4rem 0 .55rem}
+.note-section p{margin:0 0 1rem}
+.note-source{padding:1rem 1.15rem;border-left:3px solid var(--accent-secondary);background:#fff;border-radius:8px;margin:1.25rem 0}
+.note-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.25rem 0}
+.note-card{padding:1.15rem;border:1px solid var(--glass-border);border-radius:8px;background:#fff}
+.note-card strong{display:block;margin-bottom:.35rem}
+.note-table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+.note-table th,.note-table td{padding:.8rem .7rem;border-bottom:1px solid var(--glass-border);text-align:left;vertical-align:top}
+.note-table th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary)}
+.note-flow{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#111827;color:#fff;padding:1rem 1.15rem;border-radius:10px;overflow:auto;line-height:1.7}
+.note-question{padding:1.35rem 1.45rem;border:1px solid rgba(74,124,117,.3);background:rgba(74,124,117,.055);border-radius:10px;font-size:1.05rem;line-height:1.65}
+.note-boundary{padding:1rem 1.15rem;border-left:3px solid var(--accent-primary);background:#fff;border-radius:8px}
+.note-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
+.note-actions .btn-secondary{margin-left:0}
+@media(max-width:720px){.note-grid{grid-template-columns:1fr}.note-table{display:block;overflow-x:auto}}
+</style>
+</head>
+<body data-theme="bio">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="navbar glass"><div class="container">
+<a href="/" class="logo">sisfit.cn<span class="dot">/OpenResearch</span></a>
+<div class="nav-links">
+<a href="/CatherineGe/">Catherine Ge</a>
+<a href="/research/">Research</a>
+<a href="/open-research/" aria-current="page">Open Research</a>
+<a href="/open-research/physical-activity-adherence-map/v0.2/" class="btn-secondary">PA Map v0.2</a>
+</div></div></nav>
+
+<header id="main-content" class="hero" tabindex="-1"><div class="container hero-content">
+<span class="badge">Research Note · Working interpretation</span>
+<h1>Changing the Behavioural Unit Instead of Adding More Digital Support</h1>
+<p class="hero-subtitle">A methodological reading of Bissett et al.'s co-designed micropatterns intervention.</p>
+<p class="lead">The intervention makes an unusually consequential design move before the digital layer is added: it shifts the target from planned exercise sessions toward very brief bouts of incidental moderate-to-vigorous activity embedded in everyday routines. This note asks how a later trial could identify the value of that target shift itself.</p>
+<div class="note-meta">
+<span class="note-pill">Physical activity</span>
+<span class="note-pill">Micropatterns</span>
+<span class="note-pill">Co-design</span>
+<span class="note-pill">Behaviour change</span>
+<span class="note-pill">Digital intervention</span>
+<span class="note-pill">Active comparator</span>
+</div>
+</div><div class="hero-bg-grid"></div></header>
+
+<main class="container note-wrap">
+<section class="note-section">
+<div class="note-kicker">Source study</div>
+<h2>The intervention starts by redefining what counts as the target behaviour</h2>
+<div class="note-source">
+<strong>Bissett M, Koemel NA, Ahmadi M, et al.</strong> <em>Boosting Everyday Movement: Co-designing a digital micropatterns intervention with socioeconomically diverse UK and Australian communities.</em> <em>Journal of Physical Activity and Health</em>. Accepted for publication, 2026. Preprint: <a href="https://doi.org/10.1101/2025.10.29.25339035" target="_blank" rel="noopener">10.1101/2025.10.29.25339035</a>.
+</div>
+<p>The study used three co-design workshops in Glasgow and Sydney and was guided by COM-B / the Behaviour Change Wheel, the MRC framework for complex interventions, and 6SQuID. Participants explored barriers and facilitators to vigorous or moderate-to-vigorous intermittent lifestyle physical activity (VILPA / MV-ILPA), then helped prioritise modifiable factors and intervention components.</p>
+<p>The core behavioural proposal is not simply “exercise with an app”. It is to make brief, intense everyday actions — brisk walking, stairs, carrying loads, energetic household or transport activity — the object of behaviour change.</p>
+<div class="note-boundary"><strong>Analytic term:</strong> this note uses <em>behavioural unit</em> as shorthand for the granularity and form of the target behaviour. It is not terminology used by the authors.</div>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Intervention logic</div>
+<h2>Lowering the coordination cost of action may be part of the intervention</h2>
+<div class="note-grid">
+<div class="note-card"><strong>Conventional structured activity</strong>Usually requires a protected block of time, preparation, a place or route, and a decision to “exercise”.</div>
+<div class="note-card"><strong>Micropattern target</strong>Can be embedded inside existing routines and accumulated through very short bouts with minimal equipment or planning.</div>
+</div>
+<p>The co-design data support this distinction. Participants highlighted adaptability, dual-purpose activities, minimal time commitment, routine integration and short manageable movement as facilitators. Barriers included lack of knowledge, concerns about ability and safety, low mood, sociocultural constraints and environmental constraints.</p>
+<p>This suggests a mechanism that is upstream of digital engagement: the target action itself may require less coordination, fewer resources and less dedicated time than structured exercise. If so, changing the behavioural unit could reduce the amount of support required to make action feasible.</p>
+<div class="note-flow">structured exercise target
+→ dedicated time + preparation + opportunity
+→ digital support attempts to help execution
+
+micropattern target
+→ action embedded in an existing routine
+→ digital support may only need to make the opportunity visible, safe and repeatable</div>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Co-designed support package</div>
+<h2>The behavioural target and the support package were developed together</h2>
+<p>The final six-week programme did not rely on the target shift alone. It combined education, training, goal setting and VILPA/MV-ILPA tracking. The co-design process identified thirteen intervention components spanning seven Behaviour Change Wheel functions: education, persuasion, training, environmental restructuring, modelling, incentivisation and enablement.</p>
+<table class="note-table">
+<thead><tr><th>Layer</th><th>Examples in the programme</th><th>What it could contribute</th></tr></thead>
+<tbody>
+<tr><td>Behavioural target</td><td>Brief incidental MVPA / VILPA embedded in everyday routines</td><td>Changes the practical unit of action</td></tr>
+<tr><td>Education / training</td><td>Benefits, possible activities, intensity recognition, safety guidance</td><td>Capability and confidence</td></tr>
+<tr><td>Goal setting</td><td>Customisable starting goals and progressive increments</td><td>Self-regulation</td></tr>
+<tr><td>Tracking</td><td>Phone data or wearable-linked monitoring</td><td>Feedback and reinforcement</td></tr>
+<tr><td>Social support</td><td>Online forum and, in one delivery mode, in-person workshops</td><td>Accountability, modelling and shared learning</td></tr>
+</tbody>
+</table>
+<p>The digital component therefore does not replace the behavioural redesign. It sits around it.</p>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Delivery mechanisms</div>
+<h2>The planned comparison varies support intensity within the same micropattern target</h2>
+<p>Because participants valued social components but expressed mixed views about digital accessibility, the intervention was configured for three delivery mechanisms: app only; app plus wearable; and app plus wearable plus two in-person workshops. All three retained the same micropattern behavioural target.</p>
+<div class="note-flow">same target: brief everyday micropatterns
+
+APP
+vs
+APP + wearable
+vs
+APP + wearable + community workshops
+
+→ varies delivery/support
+→ does not vary the behavioural target itself</div>
+<p>This is a useful design for asking how much technology and social contact are needed once micropatterns are already the target. It is not designed to estimate whether micropatterns are easier to adopt than a conventional structured-activity target under otherwise matched support.</p>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Linked feasibility study</div>
+<h2>The next-phase results sharpen the question, but do not answer it</h2>
+<div class="note-source">
+<strong>Koemel NA, Bissett M, Ryde GC, et al.</strong> <em>Multi-Centre Randomised Controlled Feasibility Testing of a Physical Activity Micropattern Intervention Among Socioeconomically Diverse Women.</em> medRxiv. 2025. DOI: <a href="https://doi.org/10.1101/2025.10.28.25339013" target="_blank" rel="noopener">10.1101/2025.10.28.25339013</a>.
+</div>
+<p>The linked six-week feasibility study randomised participants to app only, app plus wearable, or app plus wearable plus community support. Completion was high overall, and the community-supported arm had no withdrawals. The largest observed increase in MVPA was also in that arm, but the sample was small and the study was designed for feasibility rather than powered efficacy comparisons.</p>
+<p>The pattern is therefore compatible with several explanations: the micropattern target may itself be accessible; community support may add value; wearable feedback may or may not help in isolation; or these elements may interact. The current design cannot separate the first explanation from the others because all arms use the same target.</p>
+<div class="note-boundary"><strong>Important boundary:</strong> the co-design paper does not establish that “intervention burden causes declining engagement”. That premise would overstate the evidence. The narrower, testable issue is whether changing the target behaviour reduces participation burden independently of the support package.</div>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Methodological hinge</div>
+<h2>What contrast would identify the value of changing the behavioural unit?</h2>
+<p>If the scientific question is whether micropatterns lower the practical burden of becoming active, then the causal contrast has to hold support intensity as constant while changing the target behaviour.</p>
+<div class="note-grid">
+<div class="note-card"><strong>Micropattern arm</strong>Brief incidental MVPA target + matched education + matched goal setting + matched tracking + matched contact.</div>
+<div class="note-card"><strong>Structured-MVPA comparator</strong>Conventional planned MVPA target + the same education dose + goal-setting structure + tracking + contact intensity.</div>
+</div>
+<p>A factorial design could go further by varying both target type and support intensity, allowing estimation of whether micropatterns reduce the marginal need for digital or social support. But that may not be the relevant estimand if the intended public-health intervention is deliberately a package rather than a separable mechanism.</p>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Open methodological question</div>
+<h2>Would a matched-support active comparator be necessary?</h2>
+<div class="note-question">If a future definitive trial wanted to estimate the value of changing the behavioural target itself — from structured exercise to brief everyday micropatterns — what comparator would be needed to separate that effect from the effects of digital and social support? Would a matched-support active comparator promoting conventional structured MVPA be necessary, or is the more meaningful estimand the effectiveness of the co-designed package as a whole?</div>
+<p>This question is deliberately framed so that the authors can correct the premise. If the intervention theory treats the behavioural target and support architecture as inseparable, then attempting to isolate a “micropattern effect” may be methodologically neat but scientifically less relevant.</p>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Connection to the PA adherence map</div>
+<h2>A supervisor-oriented research note, not PA016</h2>
+<p>This note extends the same structural discipline used in the <a href="/open-research/physical-activity-adherence-map/v0.2/">Physical Activity Adherence — Digital Intervention Micro Map v0.2</a>: define the intervention contrast before interpreting engagement or behavioural outcomes.</p>
+<div class="note-flow">target behaviour selected
+→ support package layered around it
+→ support actually received
+→ action repeated
+→ behavioural effect observed
+→ maintenance tested</div>
+<p>It does <strong>not</strong> add a study to the canonical PA001–PA015 manifest and does not alter the frozen v0.1 release or the working v0.2 dataset.</p>
+<div class="note-actions">
+<a href="https://github.com/catherinexge2003-SISFIT/catherine-ge-portfolio/issues/15" target="_blank" rel="noopener" class="btn-secondary">Open correction / discussion</a>
+<a href="https://doi.org/10.1101/2025.10.29.25339035" target="_blank" rel="noopener" class="btn-secondary">Read source preprint</a>
+<a href="/open-research/physical-activity-adherence-map/v0.2/" class="btn-secondary">Working PA Map v0.2</a>
+</div>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Method boundary</div>
+<h2>What this note is</h2>
+<p>This is a research-development note for structural interpretation and external correction. It is not a trial re-analysis, causal mediation study, formal process evaluation, or claim that micropatterns are superior to structured exercise.</p>
+<p>The original articles remain authoritative for their methods and results. Any correction from the study authors or relevant method experts should be recorded transparently and used to revise this working interpretation.</p>
+</section>
+</main>
+
+<footer class="footer"><div class="container"><div class="footer-content">
+<a href="/" class="logo">sisfit.cn</a>
+<p>Open research and research-development materials in Catherine Ge's portfolio.</p>
+</div><div class="copyright">&copy; 2026 SISFIT Academy.</div></div></footer>
+<script>lucide.createIcons();</script>
+</body>
+</html>
