@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When Usual Care Already Contains the Mechanism | SISFIT Open Research</title>
+<meta name="description" content="A research note on e-coachER and the interpretation of digital add-on trials when usual care already contains overlapping behaviour-change functions.">
+<link rel="canonical" href="https://www.sisfit.cn/open-research/research-notes/digital-add-on-active-comparator/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="When Usual Care Already Contains the Mechanism">
+<meta property="og:description" content="What does a digital add-on trial identify when the active comparator already delivers overlapping behaviour-change functions?">
+<meta property="og:url" content="https://www.sisfit.cn/open-research/research-notes/digital-add-on-active-comparator/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+.note-wrap{max-width:900px;margin:0 auto}
+.note-kicker{font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-secondary);font-weight:700}
+.note-meta{display:flex;gap:.65rem;flex-wrap:wrap;margin-top:1.2rem}
+.note-pill{display:inline-flex;padding:.38rem .65rem;border:1px solid var(--glass-border);border-radius:999px;font-size:.76rem;background:#fff}
+.note-section{padding:2.8rem 0;border-top:1px solid var(--glass-border)}
+.note-section:first-child{border-top:0}
+.note-section h2{font-size:clamp(1.75rem,3vw,2.2rem)}
+.note-section p{margin:0 0 1rem}
+.note-source{padding:1rem 1.15rem;border-left:3px solid var(--accent-secondary);background:#fff;border-radius:8px;margin:1.25rem 0}
+.note-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.25rem 0}
+.note-card{padding:1.15rem;border:1px solid var(--glass-border);border-radius:8px;background:#fff}
+.note-card strong{display:block;margin-bottom:.35rem}
+.note-table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
+.note-table th,.note-table td{padding:.8rem .7rem;border-bottom:1px solid var(--glass-border);text-align:left;vertical-align:top}
+.note-table th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary)}
+.note-flow{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#111827;color:#fff;padding:1rem 1.15rem;border-radius:10px;overflow:auto;line-height:1.7}
+.note-question{padding:1.35rem 1.45rem;border:1px solid rgba(74,124,117,.3);background:rgba(74,124,117,.055);border-radius:10px;font-size:1.05rem;line-height:1.65}
+.note-boundary{padding:1rem 1.15rem;border-left:3px solid var(--accent-primary);background:#fff;border-radius:8px}
+.note-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
+.note-actions .btn-secondary{margin-left:0}
+@media(max-width:720px){.note-grid{grid-template-columns:1fr}.note-table{display:block;overflow-x:auto}}
+</style>
+</head>
+<body data-theme="bio">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="navbar glass"><div class="container">
+<a href="/" class="logo">sisfit.cn<span class="dot">/OpenResearch</span></a>
+<div class="nav-links">
+<a href="/CatherineGe/">Catherine Ge</a>
+<a href="/research/">Research</a>
+<a href="/open-research/" aria-current="page">Open Research</a>
+<a href="/open-research/physical-activity-adherence-map/v0.2/" class="btn-secondary">PA Map v0.2</a>
+</div></div></nav>
+
+<header id="main-content" class="hero" tabindex="-1"><div class="container hero-content">
+<span class="badge">Research Note · Working interpretation</span>
+<h1>When Usual Care Already Contains the Mechanism</h1>
+<p class="hero-subtitle">What does a digital add-on trial identify when the active comparator already delivers overlapping behaviour-change functions?</p>
+<p class="lead">A structural reading of the e-coachER programme, focused on incremental value, comparator overlap and what needs to be measured before a weak add-on effect is interpreted as evidence about the digital component itself.</p>
+<div class="note-meta">
+<span class="note-pill">Digital health</span>
+<span class="note-pill">Physical activity</span>
+<span class="note-pill">Exercise referral</span>
+<span class="note-pill">Active comparator</span>
+<span class="note-pill">Behaviour change techniques</span>
+<span class="note-pill">Process evaluation</span>
+</div>
+</div><div class="hero-bg-grid"></div></header>
+
+<main class="container note-wrap">
+<section class="note-section">
+<div class="note-kicker">Evidence chain</div>
+<h2>e-coachER is an augmentation trial, not a digital-versus-nothing trial</h2>
+<div class="note-source">
+<strong>Taylor AH, et al.</strong> <em>Randomised controlled trial of an augmented exercise referral scheme using web-based behavioural support for inactive adults with chronic health conditions: the e-coachER trial.</em> <em>British Journal of Sports Medicine</em>. 2021. DOI: <a href="https://doi.org/10.1136/bjsports-2020-103121" target="_blank" rel="noopener">10.1136/bjsports-2020-103121</a>.
+</div>
+<p>The trial randomised 450 inactive adults with chronic health conditions to usual exercise-referral schemes (ERS) alone or usual ERS plus e-coachER. The added package included a pedometer, self-monitoring materials and a seven-step web programme designed to support goal setting, goal review, action planning, self-monitoring and motivational processes.</p>
+<p>The primary contrast is therefore:</p>
+<div class="note-flow">usual ERS
+vs
+usual ERS + web-based behavioural support
+
+→ both groups receive an active service
+→ the estimand is incremental value of the add-on
+→ interpretation depends on what usual ERS already does</div>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Primary result</div>
+<h2>The incremental behavioural effect was weak and uncertain</h2>
+<p>At 12 months, the estimated between-group difference in accelerometer-measured MVPA accumulated in at least 10-minute bouts was 11.8 minutes per week in favour of e-coachER, with a 95% confidence interval from −2.1 to 26.0 minutes and p=0.10. There was no clear intervention effect on the other physical-activity outcomes or on ERS attendance.</p>
+<p>Exposure to the add-on was also incomplete. Thirty-six per cent of intervention participants never registered and logged into the website; only 36% reached the prespecified fifth step, which the investigators regarded as a sufficient intervention dose to plausibly affect MVPA.</p>
+<div class="note-boundary"><strong>Conservative reading:</strong> the trial did not demonstrate a clear incremental long-term PA effect of adding e-coachER to real-world ERS. That is narrower than saying the behavioural functions embedded in e-coachER were ineffective.</div>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Process evidence</div>
+<h2>The add-on changed several processes that the comparator may also have targeted</h2>
+<div class="note-source">
+<strong>Lambert J, et al.</strong> <em>A process evaluation, with mediation analysis, of a web-based intervention to augment primary care exercise referral schemes: the e-coachER randomised controlled trial.</em> <em>International Journal of Behavioral Nutrition and Physical Activity</em>. 2022. DOI: <a href="https://doi.org/10.1186/s12966-022-01360-7" target="_blank" rel="noopener">10.1186/s12966-022-01360-7</a>.
+</div>
+<p>At four months, the e-coachER group reported stronger perceived importance of PA, confidence, competence, availability of support, action planning and self-monitoring than ERS alone. Changes in importance, action planning and self-monitoring were also identified as mediators of 12-month accelerometer-measured bouted MVPA.</p>
+<p>But the process evaluation raises a crucial comparator problem. The authors note that usual ERS professionals across the three sites may already have targeted autonomy and support, which could leave limited room for e-coachER to add further change. They also argue that augmentation studies are difficult to interpret without knowing the existing level of support in the comparison intervention.</p>
+<table class="note-table">
+<thead><tr><th>Function</th><th>e-coachER intended to add</th><th>Comparator overlap</th></tr></thead>
+<tbody>
+<tr><td>Self-monitoring</td><td>Pedometer, recording, online review</td><td>Modern ERS may already encourage activity tracking</td></tr>
+<tr><td>Goal regulation</td><td>Goal setting, action planning, goal review</td><td>ERS practitioners may already use similar regulation strategies</td></tr>
+<tr><td>Autonomy support</td><td>Choice and self-directed PA goals</td><td>Authors explicitly suggest usual ERS may already target autonomy</td></tr>
+<tr><td>Social support</td><td>Prompting participants to seek support</td><td>Face-to-face ERS inherently contains some interpersonal support</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Later qualitative evidence</div>
+<h2>The mechanism question remained active after the RCT</h2>
+<div class="note-source">
+<strong>Lambert JD, et al.</strong> <em>Mechanisms of impact of web-based support and self-monitoring to augment and maintain physical activity levels: a qualitative study exploring participants' interactions with the e-coachER.</em> <em>BMJ Open</em>. 2024. DOI: <a href="https://doi.org/10.1136/bmjopen-2023-080472" target="_blank" rel="noopener">10.1136/bmjopen-2023-080472</a>.
+</div>
+<p>The later qualitative study found that e-coachER could act as a catalyst for change and support goals, self-monitoring and motivation, while also documenting that engagement could wane over time. This helps explain how some participants used the intervention, but it still does not by itself identify which behavioural functions were genuinely additional to usual ERS.</p>
+<p>The key distinction is between <strong>effective engagement with a digital package</strong> and <strong>incremental behavioural function relative to the comparator</strong>. The former can exist even when the latter is small.</p>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Structural reading</div>
+<h2>“Usual care” is part of the intervention contrast, not background noise</h2>
+<div class="note-flow">digital add-on contains:
+self-monitoring + goals + planning + support
+
+usual ERS may already contain:
+self-monitoring + goals + autonomy/support + practitioner contact
+
+therefore:
+
+observed incremental effect
+= value of add-on functions not already supplied
++ differences in dose / delivery
++ differences in reach and engagement</div>
+<p>If the control service already delivers the same causal functions, a weak add-on effect can reflect limited mechanistic headroom rather than failure of the underlying behaviour-change functions. Conversely, simply showing that a mediator moved in the intervention arm does not prove that the digital layer created a unique causal pathway.</p>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Methodological hinge</div>
+<h2>What needs to be measured in the comparator?</h2>
+<p>A pragmatic trial can legitimately ask, “What happens if we add this package to current care?” For that estimand, natural variation in usual care is part of real-world effectiveness.</p>
+<p>But a different question — “Which behavioural functions does the digital layer add?” — requires more explicit characterisation of the active comparator. One possible design would prospectively record the behaviour-change functions and delivered dose in both arms rather than treating usual care as a single undifferentiated category.</p>
+<div class="note-grid">
+<div class="note-card"><strong>Pragmatic estimand</strong>Effect of adding e-coachER to whatever usual ERS currently provides.</div>
+<div class="note-card"><strong>Mechanistic estimand</strong>Effect of adding specific behavioural functions beyond the functions already delivered by ERS.</div>
+</div>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Open methodological question</div>
+<h2>How much comparator measurement is enough?</h2>
+<div class="note-question">In a pragmatic augmentation trial, what minimum measurement of the active comparator is needed before a null or weak incremental effect can be interpreted as evidence about the digital add-on itself? Would you want usual care characterised prospectively at the level of behaviour-change functions or BCTs and their delivered dose — for example self-monitoring, goal review, autonomy support and social support — so overlap can be modelled explicitly, or is that unnecessary when the target estimand is simply the pragmatic effect of adding the package to real-world care?</div>
+<p>The question is intentionally open to correction. A detailed BCT audit of usual care may improve mechanistic interpretation while simultaneously changing the nature, burden or external validity of a pragmatic evaluation.</p>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Connection to the PA adherence map</div>
+<h2>A supervisor-oriented research note, not PA016</h2>
+<p>This note applies the same active-comparator discipline used in the <a href="/open-research/physical-activity-adherence-map/v0.2/">Physical Activity Adherence — Digital Intervention Micro Map v0.2</a>: before attributing value to a digital layer, specify what the comparison condition already provides.</p>
+<div class="note-flow">shared service / comparator
+→ incremental digital functions
+→ delivered dose
+→ participant exposure
+→ process change
+→ incremental behaviour
+→ maintenance</div>
+<p>It does <strong>not</strong> add a study to the PA001–PA015 canonical manifest and does not modify the frozen v0.1 release.</p>
+<div class="note-actions">
+<a href="https://github.com/catherinexge2003-SISFIT/catherine-ge-portfolio/issues/16" target="_blank" rel="noopener" class="btn-secondary">Open correction / discussion</a>
+<a href="https://doi.org/10.1186/s12966-022-01360-7" target="_blank" rel="noopener" class="btn-secondary">Read process evaluation</a>
+<a href="https://doi.org/10.1136/bmjopen-2023-080472" target="_blank" rel="noopener" class="btn-secondary">Read qualitative follow-up</a>
+<a href="/open-research/physical-activity-adherence-map/v0.2/" class="btn-secondary">Working PA Map v0.2</a>
+</div>
+</section>
+
+<section class="note-section">
+<div class="note-kicker">Method boundary</div>
+<h2>What this note is</h2>
+<p>This is a research-development note for structural interpretation and external correction. It is not a re-analysis of the e-coachER trial, a formal mediation critique, a fidelity assessment of the three ERS services, or a claim that usual ERS fully reproduced the e-coachER intervention.</p>
+<p>The original articles remain authoritative for their methods and results. Corrections from study authors or relevant intervention-methods researchers should be recorded transparently and used to revise this working interpretation.</p>
+</section>
+</main>
+
+<footer class="footer"><div class="container"><div class="footer-content">
+<a href="/" class="logo">sisfit.cn</a>
+<p>Open research and research-development materials in Catherine Ge's portfolio.</p>
+</div><div class="copyright">&copy; 2026 SISFIT Academy.</div></div></footer>
+<script>lucide.createIcons();</script>
+</body>
+</html>
