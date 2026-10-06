@@ -1,6 +1,6 @@
 # Zenodo Manual Deposit Metadata — v0.1
 
-This file records the metadata for the **manual Zenodo deposit** of the frozen v0.1 snapshot. Zenodo has reserved DOI **10.5281/zenodo.23178043** for record **23178043**; the DOI will resolve after publication.
+This file records the metadata for the **manual Zenodo deposit** of the frozen v0.1 snapshot. Zenodo published record **23178043** with DOI **10.5281/zenodo.23178043** on **2026-10-06**.
 
 ## Title
 Physical Activity Adherence — Digital Intervention Micro Map
@@ -44,7 +44,7 @@ Creative Commons Attribution 4.0 International (CC BY 4.0)
 Zenodo license identifier: `cc-by-4.0`
 
 ## DOI
-Reserved DOI: **10.5281/zenodo.23178043**
+Published DOI: **10.5281/zenodo.23178043**
 
 Zenodo record ID: **23178043**
 
