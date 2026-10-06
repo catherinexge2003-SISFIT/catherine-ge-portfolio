@@ -25,7 +25,12 @@
 .map-table th,.map-table td{padding:.78rem .62rem;border-bottom:1px solid var(--glass-border);text-align:left;vertical-align:top;line-height:1.45}
 .map-table th{position:sticky;top:0;background:var(--bg-color);font-size:.69rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary);z-index:1}
 .map-table tr:last-child td{border-bottom:0}
-.study-id{font-weight:700;white-space:nowrap}
+.map-table th:first-child,.map-table td:first-child{position:sticky;left:0;background:#fff}
+.map-table th:first-child{z-index:3}
+.map-table td:first-child{z-index:1}
+.map-table tbody tr:hover td{background:rgba(74,124,117,.045)}
+.map-table tbody tr:hover td:first-child{background:#f5f9f8}
+.study-id{font-weight:700;white-space:nowrap;color:var(--accent-secondary)}
 .study-title{min-width:170px}
 .phase{min-width:150px}
 .backbone{min-width:220px}
@@ -35,10 +40,18 @@
 .cta-group{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.75rem;align-items:stretch}
 .cta-group .btn-secondary{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:100%;min-width:0;min-height:48px;margin:0;padding:.72rem 1rem;white-space:normal;line-height:1.2;text-align:center}
 .result-count{font-size:.82rem;color:var(--text-secondary);margin:.3rem 0 .8rem}
+.source-link{display:inline-flex;align-items:center;justify-content:center;padding:.18rem .45rem;border:1px solid var(--glass-border);border-radius:5px;text-decoration:none;font-size:.72rem;font-weight:700;color:var(--accent-secondary);white-space:nowrap}
+.artifact-resource-groups{display:grid;gap:.85rem;margin-top:1.5rem}
+.artifact-resource-group{display:grid;grid-template-columns:105px minmax(0,1fr);gap:1rem;align-items:start;padding-top:.85rem;border-top:1px solid var(--glass-border)}
+.artifact-resource-label{padding-top:.65rem;font-size:.69rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary)}
+.artifact-resource-links{display:flex;flex-wrap:wrap;gap:.55rem}
+.artifact-resource-links .btn-secondary{margin:0;padding:.58rem .78rem;min-height:0;font-size:.78rem}
 .warning-box{padding:1rem 1.1rem;border-left:3px solid var(--accent-primary);background:var(--glass-bg);border-radius:8px}
 @media(max-width:820px){
   .map-grid{grid-template-columns:1fr}
   .map-controls{grid-template-columns:1fr}
+  .artifact-resource-group{grid-template-columns:1fr;gap:.35rem}
+  .artifact-resource-label{padding-top:0}
 }
 </style>
 </head>
@@ -57,10 +70,11 @@
 <h1>Physical Activity Adherence — Digital Intervention Micro Map v0.2</h1>
 <h2 style="margin-top:.5rem;">身体活动依从性 — 数字干预微地图 v0.2</h2>
 <p class="lead">A working 15-study structural map of selected adult digital physical-activity interventions, extending v0.1 with phase, active-comparator structure, adaptation, engagement/exposure and maintenance interpretation.</p>
-<div class="status-strip">
-<span class="status-pill">15 selected studies</span>
-<span class="status-pill">PA001–PA015</span>
-<span class="status-pill">Internal development complete</span>
+<div class="status-strip" aria-label="Project summary">
+<span class="status-pill">15 studies · PA001–PA015</span>
+<span class="status-pill">2007–2026</span>
+<span class="status-pill">Adult digital PA interventions</span>
+<span class="status-pill">Working structural map</span>
 <span class="status-pill">External validation pending</span>
 </div>
 </div><div class="hero-bg-grid"></div></header>
@@ -133,14 +147,21 @@
 <p><strong>v0.2 is publicly browsable but not frozen.</strong> Its internal development is complete; external methodological validation is still pending.</p>
 <p>The current expert check asks whether the operational mapping of PA006, PA010, PA012 and PA013 onto implementation/exposure versus incremental behavioral-effect failure is defensible, and whether <em>preserved behavior</em> is a useful descriptive maintenance outcome category.</p>
 </div>
-<div class="cta-group" style="margin-top:1.5rem;">
-<a href="micro_map_manifest_v0.2.csv" class="btn-secondary" target="_blank" rel="noopener">Canonical Working CSV</a>
+<div class="artifact-resource-groups" aria-label="Working v0.2 resources">
+<div class="artifact-resource-group"><span class="artifact-resource-label">Data</span><div class="artifact-resource-links"><a href="micro_map_manifest_v0.2.csv" class="btn-secondary" target="_blank" rel="noopener">Canonical Working CSV</a></div></div>
+<div class="artifact-resource-group"><span class="artifact-resource-label">Analysis</span><div class="artifact-resource-links">
 <a href="MECHANISM_PHASE_FAILURE_MATRIX.md" class="btn-secondary" target="_blank" rel="noopener">Failure / Constraint Matrix</a>
 <a href="TERMINOLOGY_CROSSWALK.md" class="btn-secondary" target="_blank" rel="noopener">Terminology Crosswalk</a>
+</div></div>
+<div class="artifact-resource-group"><span class="artifact-resource-label">Validation</span><div class="artifact-resource-links">
 <a href="FAILURE_MODE_EXPERT_CHECK_PACKET.md" class="btn-secondary" target="_blank" rel="noopener">Expert Check Packet</a>
 <a href="V0.2_RELEASE_READINESS.md" class="btn-secondary" target="_blank" rel="noopener">Release Readiness</a>
 <a href="https://github.com/catherinexge2003-SISFIT/catherine-ge-portfolio/issues/13" class="btn-secondary" target="_blank" rel="noopener">Open Expert Check</a>
+</div></div>
 </div>
+</div></section>
+
+<section class="research-section"><div class="container map-wrap"></div>
 </div></section>
 
 <section class="research-section"><div class="container map-wrap">
@@ -148,13 +169,18 @@
 <h2>What this map does and does not claim</h2>
 <p>This is a selected-study structural map for comparison, correction and hypothesis generation. It is <strong>not</strong> a systematic review, meta-analysis, causal model, risk-of-bias assessment or intervention-effectiveness ranking.</p>
 <p>The working construct <strong>behavioral salience</strong> is used only as a bridge for hypothesis generation. It is not presented as an established validated theory.</p>
-<div class="cta-group" style="margin-top:1.5rem;">
+<div class="artifact-resource-groups" aria-label="Documentation and version resources">
+<div class="artifact-resource-group"><span class="artifact-resource-label">Documentation</span><div class="artifact-resource-links">
 <a href="README.md" class="btn-secondary" target="_blank" rel="noopener">v0.2 README</a>
 <a href="SCHEMA.md" class="btn-secondary" target="_blank" rel="noopener">Schema</a>
 <a href="ADJUDICATION_LOG.md" class="btn-secondary" target="_blank" rel="noopener">Adjudication Log</a>
 <a href="CROSS_ERA_STRUCTURAL_ANALYSIS.md" class="btn-secondary" target="_blank" rel="noopener">Cross-Era Analysis</a>
+</div></div>
+<div class="artifact-resource-group"><span class="artifact-resource-label">Version</span><div class="artifact-resource-links">
 <a href="../" class="btn-secondary">Frozen v0.1 Map</a>
 <a href="https://doi.org/10.5281/zenodo.23178043" class="btn-secondary" target="_blank" rel="noopener">v0.1 Zenodo DOI</a>
+</div></div>
+</div>
 </div>
 <p class="map-note" style="margin-top:1rem;">Co-maintained by Catherine Ge and Starr Choi / SISFIT Open Research. Frozen v0.1 remains unchanged.</p>
 </div></section>
@@ -229,7 +255,7 @@ function doiFrom(result){
           '<td class="adaptation">'+esc(d.adaptation_or_personalization)+'</td>'+
           '<td class="exposure">'+esc(d.engagement_or_exposure)+'</td>'+
           '<td class="maintenance">'+esc(d.maintenance_interpretation)+'</td>'+
-          '<td>'+(doi?'<a href="'+esc(doi)+'" target="_blank" rel="noopener">DOI</a>':'—')+'</td>'+
+          '<td>'+(doi?'<a href="'+esc(doi)+'" target="_blank" rel="noopener" class="source-link">DOI</a>':'—')+'</td>'+
         '</tr>';
       }).join('') || '<tr><td colspan="8">No studies match the current filters.</td></tr>';
     }

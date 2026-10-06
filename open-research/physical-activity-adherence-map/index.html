@@ -15,17 +15,39 @@
 .map-flow{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#111827;color:#fff;padding:1rem 1.2rem;border-radius:12px;overflow:auto}
 .map-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
 .map-card{padding:1.2rem;border:1px solid var(--glass-border);border-radius:14px;background:var(--glass-bg)}
-.map-table{width:100%;border-collapse:collapse;font-size:.84rem}
+.map-table{width:100%;border-collapse:separate;border-spacing:0;font-size:.84rem;min-width:920px}
 .map-table th,.map-table td{padding:.8rem .65rem;border-bottom:1px solid var(--glass-border);text-align:left;vertical-align:top}
-.map-table th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary)}
-.map-scroll{overflow:auto}
+.map-table th{position:sticky;top:0;background:var(--bg-color);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary);z-index:2}
+.map-table th:first-child,.map-table td:first-child{position:sticky;left:0;background:#fff}
+.map-table th:first-child{z-index:3}
+.map-table td:first-child{font-weight:700;color:var(--accent-secondary);z-index:1}
+.map-table tbody tr:hover td{background:rgba(74,124,117,.045)}
+.map-table tbody tr:hover td:first-child{background:#f5f9f8}
+.map-scroll{overflow:auto;border:1px solid var(--glass-border);border-radius:10px}
 .map-note{font-size:.88rem;color:var(--text-secondary)}
+.artifact-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:1.35rem;border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border)}
+.artifact-summary-item{padding:.8rem 1rem;border-right:1px solid var(--glass-border)}
+.artifact-summary-item:first-child{padding-left:0}
+.artifact-summary-item:last-child{border-right:0}
+.artifact-summary-item strong{display:block;font-size:.84rem;color:var(--text-primary)}
+.artifact-summary-item span{display:block;margin-top:.12rem;font-size:.72rem;color:var(--text-secondary)}
+.source-link{display:inline-flex;align-items:center;justify-content:center;padding:.18rem .45rem;border:1px solid var(--glass-border);border-radius:5px;text-decoration:none;font-size:.72rem;font-weight:700;color:var(--accent-secondary);white-space:nowrap}
+.artifact-resource-groups{display:grid;gap:.85rem;margin-top:1.5rem}
+.artifact-resource-group{display:grid;grid-template-columns:92px minmax(0,1fr);gap:1rem;align-items:start;padding-top:.85rem;border-top:1px solid var(--glass-border)}
+.artifact-resource-label{padding-top:.65rem;font-size:.69rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary)}
+.artifact-resource-links{display:flex;flex-wrap:wrap;gap:.55rem}
+.artifact-resource-links .btn-secondary{margin:0;padding:.58rem .78rem;min-height:0;font-size:.78rem}
 .cta-group{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.75rem;align-items:stretch}
 .cta-group .btn-secondary{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:100%;min-width:0;min-height:48px;margin:0;padding:.72rem 1rem;white-space:normal;line-height:1.2;text-align:center}
 
 @media(max-width:760px){
   .map-grid{grid-template-columns:1fr}
   .cta-group{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .artifact-summary{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .artifact-summary-item:nth-child(2){border-right:0}
+  .artifact-summary-item:nth-child(-n+2){border-bottom:1px solid var(--glass-border)}
+  .artifact-resource-group{grid-template-columns:1fr;gap:.35rem}
+  .artifact-resource-label{padding-top:0}
 }
 @media(max-width:460px){.cta-group{grid-template-columns:1fr}}
 </style>
@@ -46,6 +68,12 @@
 <h2 style="margin-top:.5rem;">身体活动依从性 — 数字干预微地图 v0.1</h2>
 <p class="lead">A descriptive micro-map of 10 selected adult digital physical-activity intervention studies, structured around intervention components, behaviour-change mechanisms, time points and maintenance.</p>
 <p class="map-note">This project is jointly maintained by Catherine Ge and Starr Choi. It sits within SISFIT Open Research because it overlaps directly with Catherine's research interests in behaviour change, physical activity and digital health, while remaining methodologically distinct from her independent secondary-analysis projects.</p>
+<div class="artifact-summary" aria-label="Project summary">
+<div class="artifact-summary-item"><strong>10 studies</strong><span>PA001–PA010</span></div>
+<div class="artifact-summary-item"><strong>2007–2019</strong><span>Publication years</span></div>
+<div class="artifact-summary-item"><strong>Adult PA interventions</strong><span>Selected digital studies</span></div>
+<div class="artifact-summary-item"><strong>Descriptive structural map</strong><span>Not an effectiveness ranking</span></div>
+</div>
 </div><div class="hero-bg-grid"></div></header>
 
 <section class="about-section"><div class="container map-wrap">
@@ -72,18 +100,19 @@
 <span class="tag-line">10-Study Map</span>
 <h2>Selected digital physical-activity interventions</h2>
 <div class="map-scroll"><table class="map-table">
+<caption style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Ten selected digital physical-activity intervention studies in v0.1</caption>
 <thead><tr><th>ID</th><th>Study</th><th>Digital contrast</th><th>Key coded result</th><th>Source</th></tr></thead>
 <tbody>
-<tr id="PA001"><td><strong>PA001</strong></td><td>Fanning et al. (2017)</td><td>Smartphone self-monitoring + factorial goal/points modules</td><td>Points-based feedback associated with higher MVPA; all groups increased MVPA.</td><td><a href="https://doi.org/10.1007/s10865-017-9838-y" target="_blank" rel="noopener">DOI</a></td></tr>
-<tr id="PA002"><td><strong>PA002</strong></td><td>Carr et al. (2013)</td><td>Enhanced web intervention vs standard PA website</td><td>Advantage at 3 months; no significant between-group difference at 6 months.</td><td><a href="https://doi.org/10.1037/a0028962" target="_blank" rel="noopener">DOI</a></td></tr>
-<tr id="PA003"><td><strong>PA003</strong></td><td>Zhou et al. (2018)</td><td>Adaptive personalized step goals vs fixed 10,000-step goal</td><td>Adaptive goals had a better relative trajectory while absolute steps declined in both groups.</td><td><a href="https://doi.org/10.2196/mhealth.9117" target="_blank" rel="noopener">DOI</a></td></tr>
-<tr id="PA004"><td><strong>PA004</strong></td><td>Slootmaker et al. (2009)</td><td>Activity monitor + tailored web advice</td><td>No significant PA effect at intervention end or follow-up.</td><td><a href="https://doi.org/10.2196/jmir.1139" target="_blank" rel="noopener">DOI</a></td></tr>
-<tr id="PA005"><td><strong>PA005</strong></td><td>Hurling et al. (2007)</td><td>Internet/mobile program + real-time activity feedback</td><td>Intervention favored moderate PA by accelerometer and self-report.</td><td><a href="https://doi.org/10.2196/jmir.9.2.e7" target="_blank" rel="noopener">DOI</a></td></tr>
-<tr id="PA006"><td><strong>PA006</strong></td><td>Wang et al. (2015)</td><td>Fitbit self-monitoring + SMS vs Fitbit only</td><td>Early week-1 SMS advantage did not persist to week 6.</td><td><a href="https://doi.org/10.1089/tmj.2014.0176" target="_blank" rel="noopener">DOI</a></td></tr>
-<tr id="PA007"><td><strong>PA007</strong></td><td>Gell & Wadsworth (2015)</td><td>Targeted SMS for working women</td><td>12-week group difference was not significant at 24 weeks and largely reflected less decline.</td><td><a href="https://doi.org/10.1123/jpah.2013-0144" target="_blank" rel="noopener">DOI</a></td></tr>
-<tr id="PA008"><td><strong>PA008</strong></td><td>Maddison et al. (2015)</td><td>Personalized mHealth cardiac rehabilitation</td><td>Walking/leisure PA increased; peak VO₂ did not improve vs usual care.</td><td><a href="https://doi.org/10.1177/2047487314535076" target="_blank" rel="noopener">DOI</a></td></tr>
-<tr id="PA009"><td><strong>PA009</strong></td><td>Harries et al. (2016)</td><td>Personal feedback vs added social comparison</td><td>Feedback beat no feedback; social comparison did not significantly beat personal feedback.</td><td><a href="https://doi.org/10.1186/s12889-016-3593-9" target="_blank" rel="noopener">DOI</a></td></tr>
-<tr id="PA010"><td><strong>PA010</strong></td><td>Fukuoka et al. (2019)</td><td>App + counseling acquisition phase; app continuation for maintenance</td><td>Initial PA gains were significant; prolonged app use did not improve maintenance vs accelerometer only.</td><td><a href="https://doi.org/10.1001/jamanetworkopen.2019.4281" target="_blank" rel="noopener">DOI</a></td></tr>
+<tr id="PA001"><td><strong>PA001</strong></td><td>Fanning et al. (2017)</td><td>Smartphone self-monitoring + factorial goal/points modules</td><td>Points-based feedback associated with higher MVPA; all groups increased MVPA.</td><td><a href="https://doi.org/10.1007/s10865-017-9838-y" target="_blank" rel="noopener" class="source-link">DOI</a></td></tr>
+<tr id="PA002"><td><strong>PA002</strong></td><td>Carr et al. (2013)</td><td>Enhanced web intervention vs standard PA website</td><td>Advantage at 3 months; no significant between-group difference at 6 months.</td><td><a href="https://doi.org/10.1037/a0028962" target="_blank" rel="noopener" class="source-link">DOI</a></td></tr>
+<tr id="PA003"><td><strong>PA003</strong></td><td>Zhou et al. (2018)</td><td>Adaptive personalized step goals vs fixed 10,000-step goal</td><td>Adaptive goals had a better relative trajectory while absolute steps declined in both groups.</td><td><a href="https://doi.org/10.2196/mhealth.9117" target="_blank" rel="noopener" class="source-link">DOI</a></td></tr>
+<tr id="PA004"><td><strong>PA004</strong></td><td>Slootmaker et al. (2009)</td><td>Activity monitor + tailored web advice</td><td>No significant PA effect at intervention end or follow-up.</td><td><a href="https://doi.org/10.2196/jmir.1139" target="_blank" rel="noopener" class="source-link">DOI</a></td></tr>
+<tr id="PA005"><td><strong>PA005</strong></td><td>Hurling et al. (2007)</td><td>Internet/mobile program + real-time activity feedback</td><td>Intervention favored moderate PA by accelerometer and self-report.</td><td><a href="https://doi.org/10.2196/jmir.9.2.e7" target="_blank" rel="noopener" class="source-link">DOI</a></td></tr>
+<tr id="PA006"><td><strong>PA006</strong></td><td>Wang et al. (2015)</td><td>Fitbit self-monitoring + SMS vs Fitbit only</td><td>Early week-1 SMS advantage did not persist to week 6.</td><td><a href="https://doi.org/10.1089/tmj.2014.0176" target="_blank" rel="noopener" class="source-link">DOI</a></td></tr>
+<tr id="PA007"><td><strong>PA007</strong></td><td>Gell & Wadsworth (2015)</td><td>Targeted SMS for working women</td><td>12-week group difference was not significant at 24 weeks and largely reflected less decline.</td><td><a href="https://doi.org/10.1123/jpah.2013-0144" target="_blank" rel="noopener" class="source-link">DOI</a></td></tr>
+<tr id="PA008"><td><strong>PA008</strong></td><td>Maddison et al. (2015)</td><td>Personalized mHealth cardiac rehabilitation</td><td>Walking/leisure PA increased; peak VO₂ did not improve vs usual care.</td><td><a href="https://doi.org/10.1177/2047487314535076" target="_blank" rel="noopener" class="source-link">DOI</a></td></tr>
+<tr id="PA009"><td><strong>PA009</strong></td><td>Harries et al. (2016)</td><td>Personal feedback vs added social comparison</td><td>Feedback beat no feedback; social comparison did not significantly beat personal feedback.</td><td><a href="https://doi.org/10.1186/s12889-016-3593-9" target="_blank" rel="noopener" class="source-link">DOI</a></td></tr>
+<tr id="PA010"><td><strong>PA010</strong></td><td>Fukuoka et al. (2019)</td><td>App + counseling acquisition phase; app continuation for maintenance</td><td>Initial PA gains were significant; prolonged app use did not improve maintenance vs accelerometer only.</td><td><a href="https://doi.org/10.1001/jamanetworkopen.2019.4281" target="_blank" rel="noopener" class="source-link">DOI</a></td></tr>
 </tbody></table></div>
 </div></section>
 
@@ -107,17 +136,22 @@
 <h2>What v0.1 does and does not claim</h2>
 <p>This is a convenience micro-map for structural comparison and correction. It is <strong>not</strong> a systematic review, meta-analysis or intervention-effectiveness ranking. Mechanism labels remain descriptive; BCTTv1 numeric codes are not inferred; null findings are retained; and time point, absolute direction and between-group contrast are kept distinct.</p>
 <p><strong>Candidate v0.2 question:</strong> Under what conditions does a digital self-monitoring + feedback loop remain behaviorally salient long enough to support physical-activity maintenance?</p>
-<div class="cta-group" style="justify-content:flex-start;margin-top:1.5rem;">
-<a href="micro_map_manifest.csv" class="btn-secondary" target="_blank" rel="noopener">Download CSV</a>
+<div class="artifact-resource-groups" aria-label="Research resources">
+<div class="artifact-resource-group"><span class="artifact-resource-label">Data</span><div class="artifact-resource-links"><a href="micro_map_manifest.csv" class="btn-secondary" target="_blank" rel="noopener">Canonical CSV</a></div></div>
+<div class="artifact-resource-group"><span class="artifact-resource-label">Methods</span><div class="artifact-resource-links">
 <a href="coding_notes.md" class="btn-secondary" target="_blank" rel="noopener">Coding Notes</a>
 <a href="inclusion_rules.md" class="btn-secondary" target="_blank" rel="noopener">Inclusion Rules</a>
 <a href="README.md" class="btn-secondary" target="_blank" rel="noopener">README</a>
-<a href="CITATION.cff" class="btn-secondary" target="_blank" rel="noopener">CITATION.cff</a>
 <a href="PA010_EXPERT_CHECK_PACKET.md" class="btn-secondary" target="_blank" rel="noopener">PA010 Expert Check</a>
-<a href="https://github.com/catherinexge2003-SISFIT/catherine-ge-portfolio/issues/12" class="btn-secondary" target="_blank" rel="noopener">Open Correction Issue</a>
-<a href="https://doi.org/10.5281/zenodo.23178043" class="btn-secondary" target="_blank" rel="noopener">DOI</a>
-<a href="LICENSE.md" class="btn-secondary" target="_blank" rel="noopener">CC BY 4.0 License</a>
-<a href="releases/v0.1/" class="btn-secondary">Frozen v0.1 Snapshot</a>
+<a href="https://github.com/catherinexge2003-SISFIT/catherine-ge-portfolio/issues/12" class="btn-secondary" target="_blank" rel="noopener">Correction Issue</a>
+</div></div>
+<div class="artifact-resource-group"><span class="artifact-resource-label">Citation</span><div class="artifact-resource-links">
+<a href="CITATION.cff" class="btn-secondary" target="_blank" rel="noopener">CITATION.cff</a>
+<a href="https://doi.org/10.5281/zenodo.23178043" class="btn-secondary" target="_blank" rel="noopener">Zenodo DOI</a>
+<a href="LICENSE.md" class="btn-secondary" target="_blank" rel="noopener">CC BY 4.0</a>
+</div></div>
+<div class="artifact-resource-group"><span class="artifact-resource-label">Version</span><div class="artifact-resource-links"><a href="releases/v0.1/" class="btn-secondary">Frozen v0.1 Snapshot</a></div></div>
+</div>
 </div>
 <p class="map-note" style="margin-top:1rem;">Co-maintained by Catherine Ge and Starr Choi / SISFIT. Corrections are intended to be transparent and versioned.</p>
 </div></section>
