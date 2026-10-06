@@ -125,6 +125,25 @@ if "Sitemap: https://www.sisfit.cn/sitemap.xml" not in robots:
     fail("robots.txt missing sitemap declaration")
 
 catherine = (ROOT / "CatherineGe/index.html").read_text(encoding="utf-8")
+
+CATHERINE_TAXONOMY = (
+    ("research-profile", "Research Profile"),
+    ("research-evidence", "Research Evidence"),
+    ("methods-preparation", "Methods & Preparation"),
+    ("background-context", "Background & Context"),
+    ("updates-contact", "Updates & Contact"),
+)
+last_pos = -1
+for anchor_id, label in CATHERINE_TAXONOMY:
+    anchor_marker = f'id="{anchor_id}"'
+    link_marker = f'href="#{anchor_id}">{label}</a>'
+    if anchor_marker not in catherine or link_marker not in catherine:
+        fail(f"Catherine taxonomy missing: {label}")
+    pos = catherine.find(anchor_marker)
+    if pos <= last_pos:
+        fail(f"Catherine taxonomy order is incorrect at: {label}")
+    last_pos = pos
+
 research_page = (ROOT / "research/index.html").read_text(encoding="utf-8")
 for label, page in (("Catherine profile", catherine), ("Research page", research_page)):
     nav_start = page.find('<nav class="navbar')

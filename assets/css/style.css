@@ -1585,3 +1585,19 @@ section[id] {
         border-left: 0;
     }
 }
+
+
+/* Catherine portfolio taxonomy */
+.catherine-profile .portfolio-group {
+    scroll-margin-top: 108px;
+}
+
+.catherine-profile .portfolio-group + .portfolio-group {
+    border-top: 1px solid rgba(74, 124, 117, 0.08);
+}
+
+@media (max-width: 768px) {
+    .catherine-profile .portfolio-group {
+        scroll-margin-top: 150px;
+    }
+}
