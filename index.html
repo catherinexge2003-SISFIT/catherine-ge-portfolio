@@ -1,643 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SISFIT Academy | Bridging Behavioral Science and Digital Health</title>
-    <meta name="description"
-        content="SISFIT Academy is an independent health-education practice platform exploring questions in digital health literacy, behaviour change and physical activity.">
-    <link rel="canonical" href="https://www.sisfit.cn/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="SISFIT Academy | Behavioral Science & Digital Health">
-    <meta property="og:description" content="Independent health-education practice and research-development platform focused on digital health literacy, behaviour change and physical activity.">
-    <meta property="og:url" content="https://www.sisfit.cn/">
-    <meta name="twitter:card" content="summary">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SISFIT Academy | Bridging Behavioral Science and Digital Health</title>
+<meta name="description" content="SISFIT Academy connects evidence-informed health education, large-scale digital practice and research development in digital health literacy, behaviour change and physical activity.">
+<link rel="canonical" href="https://www.sisfit.cn/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SISFIT Academy | Bridging Behavioral Science and Digital Health">
+<meta property="og:description" content="SISFIT Academy connects evidence-informed health education, large-scale digital practice and research development in digital health literacy, behaviour change and physical activity.">
+<meta property="og:url" content="https://www.sisfit.cn/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=20261006-1930">
+<script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Google Fonts: Mix of Serif (Academic) and Sans-Serif (Modern) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&family=Outfit:wght@700&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20261006-0733">
-
-    <style>
-        :root {
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Inter', sans-serif;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: var(--font-serif);
-            letter-spacing: -0.02em;
-        }
-
-        .hero-title {
-            font-size: 4rem;
-            line-height: 1.1;
-            margin-bottom: 2rem;
-        }
-
-        .bridge-section {
-            padding: 8rem 0;
-            background: var(--accent-secondary);
-            /* This is #2C2C2C in Academy theme */
-            color: #ffffff;
-            /* Contrast for the dark section */
-            position: relative;
-            overflow: hidden;
-        }
-
-        .bridge-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .proof-stats {
-            display: flex;
-            gap: 4rem;
-            margin-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            padding-top: 2rem;
-        }
-
-        .proof-item h4 {
-            font-size: 2.5rem;
-            color: var(--accent-primary);
-            margin: 0;
-        }
-
-        .proof-item span {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-secondary);
-        }
-
-        .curriculum-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .curriculum-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            padding: 3rem 2rem;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .curriculum-card:hover {
-            border-color: var(--accent-primary);
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .tag-line {
-            font-family: var(--font-sans);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--accent-primary);
-            font-size: 0.8rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-    </style>
-
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
-<body data-theme="academy" class="academy-home">
+<body data-theme="academy" class="academy-home portal-home">
 <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <!-- Navigation -->
-    <nav class="navbar glass">
-        <div class="container">
-            <a href="/" class="logo" aria-current="page"
-                style="font-family: var(--font-serif); display: flex; align-items: center; gap: 10px;">
-                <img src="assets/images/sisfit_logo_graygold.png" alt="SISFIT Logo" style="height: 30px;">
-                SISFIT<span class="dot" style="color: var(--accent-primary);">Academy</span>
-            </a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="./research/">Research</a>
-                <a href="./research-training/">Research Training</a>
-                <a href="./open-research/">Open Research</a>
-                <a href="#lab">Practice Context</a>
-                <a href="#curriculum">Professional Outputs</a>
-                <a href="./CatherineGe" class="btn-primary">Catherine Ge</a>
-            </div>
+<nav class="navbar glass site-navbar">
+  <div class="container">
+    <a href="/" class="logo site-logo" aria-current="page">
+      <img src="/assets/images/sisfit_logo_graygold.png" alt="SISFIT Logo">
+      SISFIT<span class="dot">Academy</span>
+    </a>
+    <div class="nav-links site-nav-links">
+      <a href="/about/">About</a>
+      <details class="nav-dropdown">
+        <summary>Research</summary>
+        <div class="nav-dropdown-menu">
+          <a href="/research/">Research Portfolio</a>
+          <a href="/open-research/">Open Research</a>
+          <a href="/research-training/">Research Training</a>
         </div>
-    </nav>
+      </details>
+      <a href="/practice/">Practice</a>
+      <a href="/outputs/">Outputs</a>
+      <a href="/CatherineGe/" class="btn-primary">Catherine Ge</a>
+    </div>
+  </div>
+</nav>
 
-    <!-- Hero Section -->
-    <header id="main-content" class="hero" tabindex="-1">
-        <div class="container hero-content">
-            <span class="tag-line">Systems for Impact & Fit</span>
-            <h1 class="hero-title">Bridging <span class="gradient-text italic">Behavioral Science</span> & <br>Digital
-                Health at Scale.</h1>
-            <p class="lead" style="max-width: 700px; margin-left: auto; margin-right: auto;">SISFIT Academy is an independent health-education practice platform. We translate evidence-informed exercise and health knowledge for large digital audiences while developing research questions about digital health literacy, behaviour change and physical activity.</p>
-            <div class="cta-group" style="justify-content: center; margin-top: 3rem;">
-                <a href="#about" class="btn-primary">Explore Our Journey</a>
-                <a href="#lab" class="btn-secondary">Practice Context</a>
-            </div>
-        </div>
-        <div class="hero-bg-grid"></div>
-    </header>
+<header id="main-content" class="hero portal-hero" tabindex="-1">
+  <div class="container hero-content portal-hero-content">
+    <span class="tag-line">Systems for Impact & Fit</span>
+    <h1 class="hero-title">Bridging <span class="gradient-text italic">Behavioral Science</span> & Digital Health at Scale.</h1>
+    <p class="lead">SISFIT Academy is an independent health-education practice platform translating evidence-informed exercise and health knowledge for large digital audiences while developing research questions about digital health literacy, behaviour change and physical activity.</p>
+    <div class="cta-group">
+      <a href="/research/" class="btn-primary">Explore Research</a>
+      <a href="/practice/" class="btn-secondary">Explore Practice Context</a>
+    </div>
+  </div>
+  <div class="hero-bg-grid"></div>
+</header>
 
-    <!-- About Section: Journey, Founder, & Team -->
-    <section id="about" class="about-section"
-        style="background: var(--bg-color); border-bottom: 1px solid var(--glass-border);">
-        <div class="container">
-            <div class="section-header" style="text-align: center; margin-bottom: 5rem;">
-                <span class="tag-line">About SISFIT Academy</span>
-                <h2>Grounded in Science. Driven by Impact.</h2>
-                <p>From large-scale health-education practice to research questions in digital health.</p>
-            </div>
+<main>
+<section id="about" class="portal-section">
+  <div class="container">
+    <div class="section-header portal-section-header">
+      <span class="tag-line">What SISFIT Does</span>
+      <h2>Practice, research development and knowledge translation.</h2>
+      <p>SISFIT brings together three connected areas while keeping their evidence status distinct.</p>
+    </div>
+    <div class="portal-card-grid">
+      <a class="portal-card glass" href="/research/">
+        <i data-lucide="microscope" class="icon-accent"></i>
+        <h3>Research Development</h3>
+        <p>Reproducible secondary analyses, evidence synthesis, open research and prospective doctoral questions.</p>
+        <span class="portal-card-link">Explore research →</span>
+      </a>
+      <a id="lab" class="portal-card glass" href="/practice/">
+        <i data-lucide="network" class="icon-accent"></i>
+        <h3>Practice Context</h3>
+        <p>Historical platform analytics, audience reach and a longitudinal archive of public-facing health education.</p>
+        <span class="portal-card-link">View practice context →</span>
+      </a>
+      <a id="curriculum" class="portal-card glass" href="/outputs/">
+        <i data-lucide="book-open" class="icon-accent"></i>
+        <h3>Professional Outputs</h3>
+        <p>Exercise, rehabilitation and health-education materials developed through professional practice.</p>
+        <span class="portal-card-link">View outputs →</span>
+      </a>
+    </div>
+  </div>
+</section>
 
-            <!-- Explore Our Journey: Timeline -->
-            <div class="journey-timeline" style="margin-bottom: 8rem;">
-                <h3 style="text-align: center; margin-bottom: 4rem;">Explore Our Journey</h3>
-                <div class="timeline-container" style="position: relative; padding: 2rem 0;">
-                    <!-- Line -->
-                    <div
-                        style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--accent-primary); opacity: 0.3; transform: translateX(-50%);">
-                    </div>
+<section class="portal-section portal-scale-section">
+  <div class="container">
+    <div class="section-header portal-section-header">
+      <span class="tag-line">Practice Scale</span>
+      <h2>Selected context from SISFIT's public-facing work.</h2>
+    </div>
+    <div class="portal-stats">
+      <div class="portal-stat"><strong>300k+</strong><span>Cumulative cross-platform audience reach</span></div>
+      <div class="portal-stat"><strong>3,000+</strong><span>Health-education content assets</span></div>
+      <div class="portal-stat"><strong>2.75M+</strong><span>Monthly platform interactions in a historical analytics snapshot</span></div>
+    </div>
+    <p class="portal-note">These are practice and platform metrics, not research outcomes or a research cohort. <a href="/practice/">See the data context →</a></p>
+  </div>
+</section>
 
-                    <div class="timeline-item-new"
-                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem;">
-                        <div style="width: 45%; text-align: right; padding-right: 2rem;">
-                            <h4 style="color: var(--accent-primary);">Early Practice</h4>
-                            <p><strong>Professional Education Foundations</strong><br>Catherine Ge and Starr Cai developed exercise and health-education practice that later informed SISFIT Academy's public-facing work.</p>
-                        </div>
-                        <div
-                            style="width: 20px; height: 20px; background: var(--accent-primary); border-radius: 50%; z-index: 1;">
-                        </div>
-                        <div style="width: 45%;"></div>
-                    </div>
+<section class="portal-section portal-flow-section">
+  <div class="container">
+    <div class="section-header portal-section-header">
+      <span class="tag-line">Practice-to-Research Model</span>
+      <h2>From recurring practice questions to researchable problems.</h2>
+      <p>A conceptual route for turning observed communication problems into future governed research.</p>
+    </div>
+    <div class="portal-flow">
+      <div class="portal-flow-step"><span>01</span><h3>Platform Context</h3><p>Describe platform and audience environments.</p></div>
+      <div class="portal-flow-arrow">→</div>
+      <div class="portal-flow-step"><span>02</span><h3>Content Design</h3><p>Define observable content features.</p></div>
+      <div class="portal-flow-arrow">→</div>
+      <div class="portal-flow-step"><span>03</span><h3>Mechanisms</h3><p>Form testable learning and behaviour hypotheses.</p></div>
+      <div class="portal-flow-arrow">→</div>
+      <div class="portal-flow-step"><span>04</span><h3>Research Questions</h3><p>Specify candidate outcomes for future governed study.</p></div>
+    </div>
+  </div>
+</section>
 
-                    <div class="timeline-item-new"
-                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem;">
-                        <div style="width: 45%;"></div>
-                        <div
-                            style="width: 20px; height: 20px; background: var(--accent-primary); border-radius: 50%; z-index: 1;">
-                        </div>
-                        <div style="width: 45%; padding-left: 2rem;">
-                            <h4 style="color: var(--accent-primary);">2019</h4>
-                            <p><strong>Evidence-Based Outreach</strong><br>Publication of *Rehabilitation Exercises: A
-                                Self-help Handbook*, setting the stage for digital health education.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item-new"
-                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem;">
-                        <div style="width: 45%; text-align: right; padding-right: 2rem;">
-                            <h4 style="color: var(--accent-primary);">2020</h4>
-                            <p><strong>Professional Education Expansion</strong><br>Expanded curriculum development and trainer education in exercise science and youth fitness.</p>
-                        </div>
-                        <div
-                            style="width: 20px; height: 20px; background: var(--accent-primary); border-radius: 50%; z-index: 1;">
-                        </div>
-                        <div style="width: 45%;"></div>
-                    </div>
-
-                    <div class="timeline-item-new"
-                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem;">
-                        <div style="width: 45%;"></div>
-                        <div
-                            style="width: 20px; height: 20px; background: var(--accent-primary); border-radius: 50%; z-index: 1;">
-                        </div>
-                        <div style="width: 45%; padding-left: 2rem;">
-                            <h4 style="color: var(--accent-primary);">2021</h4>
-                            <p><strong>Public Health Communication</strong><br>Expanded professional education and launched free public-facing health content to promote physical-activity literacy.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item-new"
-                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem;">
-                        <div style="width: 45%; text-align: right; padding-right: 2rem;">
-                            <h4 style="color: var(--accent-primary);">2021+</h4>
-                            <p><strong>Digital Practice Archive</strong><br>Expanded the public-facing content archive across multiple platforms, documenting audience growth, reach and engagement over time.</p>
-                        </div>
-                        <div
-                            style="width: 20px; height: 20px; background: var(--accent-primary); border-radius: 50%; z-index: 1;">
-                        </div>
-                        <div style="width: 45%;"></div>
-                    </div>
-
-                    <div class="timeline-item-new"
-                        style="display: flex; justify-content: space-between; align-items: center;">
-                        <div style="width: 45%;"></div>
-                        <div
-                            style="width: 20px; height: 20px; background: var(--accent-primary); border-radius: 50%; z-index: 1;">
-                        </div>
-                        <div style="width: 45%; padding-left: 2rem;">
-                            <h4 style="color: var(--accent-primary);">2026</h4>
-                            <p><strong>Current Scale</strong><br>300k+ cumulative cross-platform audience reach, with a growing archive of public-facing health-education content and historical platform analytics.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="split-layout"
-                style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: start;">
-                <!-- Founder Bio -->
-                <div class="founder-bio">
-                    <span class="tag-line">Meet Our Founder</span>
-                    <h3>Catherine Ge</h3>
-                    <p style="font-style: italic; color: var(--accent-primary); margin-bottom: 1.5rem;">Prospective Doctoral Researcher · Digital Health & Behaviour Change</p>
-                    <p>Catherine Ge combines a Master of Teaching with years of health-education practice. Her current research interests include digital health literacy, behaviour change, physical activity, digital health interventions, implementation science and health communication.</p>
-                    <p>Through SISFIT, she has built a large-scale practice environment that generates testable questions about how people encounter, interpret and act on health information online. She is now extending this work through formal research-methods training and prospective doctoral research.</p>
-                    <a href="./CatherineGe" class="btn-secondary" style="margin-top: 1rem;">View Full Academic
-                        Profile</a>
-                </div>
-
-                <!-- Core Team -->
-                <div class="team-grid">
-                    <span class="tag-line">Core Team</span>
-                    <h3>Practice & Education</h3>
-                    <div class="glass" style="padding: 1.5rem; margin-top: 2rem;">
-                        <h5 style="margin: 0; color: var(--accent-primary);">Starr Cai</h5>
-                        <p style="font-size: 0.8rem; margin: 0.5rem 0;">Co-Founder & Education Director</p>
-                        <span style="font-size: 0.7rem; color: var(--text-secondary);">Exercise and health-education practice</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Bridge: Academic Depth vs Industry Height -->
-    <section id="mission" class="bridge-section">
-        <div class="container">
-            <div class="bridge-grid">
-                <div class="glass" style="padding: 1.5rem; border-radius: 20px; text-align: center;">
-                    <img src="assets/images/sisfit_combined_2026.png" alt="SISFIT Comprehensive 2026"
-                        style="width: 100%; border-radius: 10px; margin-bottom: 1rem; filter: grayscale(0.2);">
-                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1.5rem; gap: 1.5rem; flex-wrap: wrap;">
-                        <img src="assets/images/sisfit_academy_logo.png" alt="SISFIT Academy Logo"
-                            style="height: 25px; opacity: 0.9;">
-                        <img src="assets/images/living_lab_logo.jpg" alt="SISFIT practice archive logo"
-                            style="height: 25px; opacity: 0.9;">
-                    </div>
-                </div>
-                <div>
-                    <span class="tag-line">Practice-to-Research Model</span>
-                    <h2>A practical tension: engagement and evidence.</h2>
-                    <p>SISFIT examines a practical tension between engagement and evidence: how can health information remain accessible and compelling without losing scientific rigor? Our platform experience provides a practice context for developing and testing that question.</p>
-
-                    <div class="proof-stats">
-                        <div class="proof-item">
-                            <h4>300k+</h4>
-                            <span>Audience Reach</span>
-                        </div>
-                        <div class="proof-item">
-                            <h4>3,000+</h4>
-                            <span>Content Assets</span>
-                        </div>
-                        <div class="proof-item">
-                            <h4>Multi-platform</h4>
-                            <span>Health Education</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Selected Professional Practice -->
-    <section id="events" class="about-section" style="background: var(--bg-color); padding: 8rem 0;">
-        <div class="container">
-            <div class="split-layout" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center;">
-                <div>
-                    <span class="tag-line">Professional Practice</span>
-                    <h2>Knowledge Translation & Professional Education</h2>
-                    <p>SISFIT's practitioner background provides context for Catherine's research questions in digital health literacy, health communication and physical activity. Professional activities are presented here as practice and knowledge-translation experience, not as academic research outputs.</p>
-                </div>
-                <div class="event-list glass" style="padding: 2rem;">
-                    <div class="event-item" style="border-bottom: 1px solid var(--glass-border); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
-                        <h4 style="margin: 0.5rem 0;">Health & Exercise Education</h4>
-                        <p style="font-size: 0.85rem; margin: 0;">Development and delivery of exercise, rehabilitation and health-education materials for professional and public audiences.</p>
-                    </div>
-                    <div class="event-item" style="border-bottom: 1px solid var(--glass-border); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
-                        <h4 style="margin: 0.5rem 0;">Curriculum & Training</h4>
-                        <p style="font-size: 0.85rem; margin: 0;">Experience translating technical exercise-science guidance into structured curricula and practitioner education.</p>
-                    </div>
-                    <div class="event-item">
-                        <h4 style="margin: 0.5rem 0;">Public Health Communication</h4>
-                        <p style="font-size: 0.85rem; margin: 0;">Long-term digital communication practice across multiple platforms, creating a real-world context for future research on comprehension, engagement and behaviour.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Development -->
-    <section id="articles" class="stats-section" style="background: var(--accent-secondary); color: white;">
-        <div class="container">
-            <div class="section-header" style="text-align: center;">
-                <span class="tag-line">Research Development</span>
-                <h2>Evidence Synthesis & Formal Research Preparation</h2>
-                <p>Catherine's research portfolio distinguishes work in progress, formal training and prospective doctoral questions from SISFIT's historical practice data.</p>
-            </div>
-            <div class="curriculum-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 4rem;">
-                <div class="glass" style="padding: 2rem; background: rgba(255,255,255,0.05);">
-                    <i data-lucide="book-open" style="color: var(--accent-primary); margin-bottom: 1rem;"></i>
-                    <h4 style="margin: 1rem 0;">Systematic Evidence Synthesis</h4>
-                    <p style="font-size: 0.85rem; opacity: 0.8;">Two systematic-review projects are in progress. Public titles, identifiers and supplementary materials will be linked only when the corresponding records are ready to cite.</p>
-                    <a href="./research/" style="color: var(--accent-primary); font-size: 0.8rem; text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">Research portfolio →</a>
-                </div>
-                <div class="glass" style="padding: 2rem; background: rgba(255,255,255,0.05);">
-                    <i data-lucide="graduation-cap" style="color: var(--accent-primary); margin-bottom: 1rem;"></i>
-                    <h4 style="margin: 1rem 0;">Research Methods Training</h4>
-                    <p style="font-size: 0.85rem; opacity: 0.8;">University of Aberdeen, PU5027 Fundamentals of Research Design (Online), 2026–27 — currently in progress.</p>
-                    <a href="./research-training/" style="color: var(--accent-primary); font-size: 0.8rem; text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">Training record →</a>
-                </div>
-                <div class="glass" style="padding: 2rem; background: rgba(255,255,255,0.05);">
-                    <i data-lucide="help-circle" style="color: var(--accent-primary); margin-bottom: 1rem;"></i>
-                    <h4 style="margin: 1rem 0;">Questions Emerging from Practice</h4>
-                    <p style="font-size: 0.85rem; opacity: 0.8;">Prospective doctoral questions at the intersection of digital health literacy, health communication, physical activity and behaviour change.</p>
-                    <a href="./research/#questions" style="color: var(--accent-primary); font-size: 0.8rem; text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">Research direction →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Methodology Infographic (NEW) -->
-    <section class="about-section" style="background: var(--bg-color);">
-        <div class="container">
-            <div class="section-header" style="text-align: center;">
-                <span class="tag-line">Conceptual Research Development</span>
-                <h2>From Practice Context to Research Design</h2>
-                <p>A conceptual map for translating recurring practice questions into future governed research.</p>
-            </div>
-
-            <div class="methodology-flow research-flow" style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 4rem; position: relative;">
-                <!-- Flow Line -->
-                <div
-                    style="position: absolute; top: 40px; left: 10%; right: 10%; height: 2px; background: var(--glass-border); z-index: 0;">
-                </div>
-
-                <div class="flow-step" style="flex: 1; text-align: center; position: relative; z-index: 1;">
-                    <div class="icon-circle"
-                        style="width: 80px; height: 80px; background: var(--accent-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 0 30px rgba(233,139,104,0.3);">
-                        <i data-lucide="layers"></i>
-                    </div>
-                    <h4>Platform Context</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Describe platform and audience environments</p>
-                </div>
-
-                <div class="flow-step" style="flex: 1; text-align: center; position: relative; z-index: 1;">
-                    <div class="icon-circle"
-                        style="width: 80px; height: 80px; background: var(--bg-color); border: 2px solid var(--accent-primary); color: var(--accent-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                        <i data-lucide="palette"></i>
-                    </div>
-                    <h4>Content Design</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Define observable content features</p>
-                </div>
-
-                <div class="flow-step" style="flex: 1; text-align: center; position: relative; z-index: 1;">
-                    <div class="icon-circle"
-                        style="width: 80px; height: 80px; background: var(--bg-color); border: 2px solid var(--accent-primary); color: var(--accent-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                        <i data-lucide="brain"></i>
-                    </div>
-                    <h4>Mechanisms</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Form testable learning and behaviour hypotheses</p>
-                </div>
-
-                <div class="flow-step" style="flex: 1; text-align: center; position: relative; z-index: 1;">
-                    <div class="icon-circle"
-                        style="width: 80px; height: 80px; background: var(--accent-secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                        <i data-lucide="activity"></i>
-                    </div>
-                    <h4>Research Questions</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-secondary);">Candidate outcomes for future governed study</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="portal-section portal-founder-section">
+  <div class="container portal-founder-grid">
+    <div>
+      <span class="tag-line">Founder & Research Direction</span>
+      <h2>Catherine Ge</h2>
+      <p class="portal-kicker">Prospective Doctoral Researcher · Digital Health & Behaviour Change</p>
+      <p>Catherine Ge combines health-education practice with formal research-methods development. Her current interests include digital health literacy, health communication, behaviour change and physical activity.</p>
+      <div class="cta-group">
+        <a href="/CatherineGe/" class="btn-primary">Academic Profile</a>
+        <a href="/about/" class="btn-secondary">About SISFIT</a>
+      </div>
+    </div>
+    <div class="portal-founder-visual glass">
+      <img src="/assets/images/sisfit_combined_2026.png" alt="SISFIT Academy practice and research-development context">
+    </div>
+  </div>
+</section>
+</main>
 
 
-
-    <!-- The Living Lab -->
-    <section id="lab" class="stats-section">
-        <div class="container">
-            <div class="section-header">
-                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 1rem;">
-                    <img src="assets/images/livinglab_logo_2026.jpg" alt="Living Lab Logo"
-                        style="height: 60px; border-radius: 10px;">
-                    <div>
-                        <span class="tag-line" style="margin:0;">Infrastructure</span>
-                        <h2 style="margin:0;">Practice-Based Digital Health Context</h2>
-                    </div>
-                </div>
-                <p>A large-scale health-education practice environment with historical platform analytics and a longitudinal archive of public-facing content.</p>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card glass">
-                    <i data-lucide="trending-up" class="icon-accent"></i>
-                    <h3>2.75 Million+</h3>
-                    <p>Monthly Platform Interactions</p>
-                    <span class="subtext">Platform-level engagement metrics.</span>
-                </div>
-                <div class="stat-card glass">
-                    <i data-lucide="map-pin" class="icon-accent"></i>
-                    <h3>National Reach</h3>
-                    <p>Cross-City Reach</p>
-                    <span class="subtext">Beijing, Shenzhen, Xi'an, Shanghai.</span>
-                </div>
-                <div class="stat-card glass">
-                    <i data-lucide="zap" class="icon-accent"></i>
-                    <h3>3,000+</h3>
-                    <p>Health-Education Content Assets</p>
-                    <span class="subtext">Published content across formats and topics.</span>
-                </div>
-            </div>
-
-            <!-- Jan 2026 Data Evidence -->
-            <div class="data-evidence" style="margin-top: 4rem;">
-                <span class="tag-line" style="text-align: center; display: block;">Multi-Platform Analytics Proof</span>
-                <!-- Platform Row: Douyin (Jan 2026) -->
-                <div style="margin-top: 2rem;">
-                    <p
-                        style="font-size: 0.8rem; font-weight: 600; color: var(--accent-primary); letter-spacing: 0.1em; margin-bottom: 1rem;">
-                        PLATFORM I: DOUYIN (TIKTOK CHINA) - JAN 2026</p>
-                    <div class="analytics-grid analytics-grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                        <div class="glass"
-                            style="padding: 0.5rem; overflow: hidden; border-radius: 12px; text-align: center;">
-                            <img src="assets/images/douyin_100k.png" alt="100k Milestone"
-                                style="width: 100%; border-radius: 8px; margin-bottom: 0.5rem;">
-                            <p style="font-size: 0.65rem; color: var(--accent-primary); font-weight: 500;">HISTORICAL
-                                MILESTONE<br><span style="color: var(--text-secondary);">100k Growth Point</span></p>
-                        </div>
-                        <div class="glass"
-                            style="padding: 0.5rem; overflow: hidden; border-radius: 12px; text-align: center;">
-                            <img src="assets/images/douyin_data_1.png" alt="Douyin Engagement"
-                                style="width: 100%; border-radius: 8px; filter: contrast(1.05);">
-                            <p
-                                style="font-size: 0.65rem; margin-top: 0.8rem; color: var(--accent-primary); font-weight: 500; text-transform: uppercase;">
-                                Engagement Index<br><span
-                                    style="color: var(--text-secondary); text-transform: none;">(Interactions &
-                                    Retention)</span></p>
-                        </div>
-                        <div class="glass"
-                            style="padding: 0.5rem; overflow: hidden; border-radius: 12px; text-align: center;">
-                            <img src="assets/images/douyin_data_2.png" alt="Douyin Reach"
-                                style="width: 100%; border-radius: 8px; filter: contrast(1.05);">
-                            <p
-                                style="font-size: 0.65rem; margin-top: 0.8rem; color: var(--accent-primary); font-weight: 500; text-transform: uppercase;">
-                                Ecosystem Scale<br><span
-                                    style="color: var(--text-secondary); text-transform: none;">(Platform-reported reach)</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Platform Row: Bilibili (2023 Infrastructure) -->
-                <div style="margin-top: 3rem; border-top: 1px solid var(--glass-border); padding-top: 2rem;">
-                    <p
-                        style="font-size: 0.8rem; font-weight: 600; color: var(--accent-primary); letter-spacing: 0.1em; margin-bottom: 1rem;">
-                        PLATFORM II: BILIBILI (LONG-FORM ECOSYSTEM) - 2023</p>
-                    <div class="analytics-grid analytics-grid-2" style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start;">
-                        <div class="glass" style="padding: 1rem; text-align: left;">
-                            <h4 style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--accent-primary);">
-                                Cross-Platform Context</h4>
-                            <p style="font-size: 0.75rem; color: var(--text-secondary); line-height: 1.5;">Bilibili provides long-form educational content and platform analytics that complement short-form metrics from Douyin. These data describe platform use and engagement rather than research outcomes.</p>
-                        </div>
-                        <div class="glass"
-                            style="padding: 0.5rem; overflow: hidden; border-radius: 12px; text-align: center;">
-                            <img src="assets/images/bilibili_data_2023.png" alt="Bilibili Engagement 2023"
-                                style="width: 100%; border-radius: 8px;">
-                            <p
-                                style="font-size: 0.65rem; margin-top: 0.8rem; color: var(--accent-primary); font-weight: 500; text-transform: uppercase;">
-                                Video Engagement Metrics<br><span
-                                    style="color: var(--text-secondary); text-transform: none;">(Platform-reported metrics)</span></p>
-                        </div>
-                    </div>
-                </div>
-                <p style="text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1.5rem;">
-                    <i data-lucide="check-circle"
-                        style="display:inline-block; width:14px; vertical-align:middle; margin-right:4px;"></i>
-                    Historical platform analytics from SISFIT across multiple platforms. These records are not presented as a research cohort.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional & Educational Outputs -->
-    <section id="curriculum" class="about-section" style="background: var(--accent-secondary); color: white;">
-        <div class="container">
-            <div class="section-header" style="text-align: center;">
-                <span class="tag-line">Professional Outputs</span>
-                <h2>Educational Materials & Curriculum Work</h2>
-                <p>Selected exercise, rehabilitation and health-education materials developed through SISFIT's professional practice.</p>
-            </div>
-            <div class="curriculum-grid" style="grid-template-columns: repeat(3, 1fr);">
-                <!-- SAT Series -->
-                <div class="curriculum-card glass" style="background: rgba(255,255,255,0.05); padding: 2rem;">
-                    <div class="book-carousel" id="book-carousel-merged"
-                        style="position: relative; width: 100%; height: 0; padding-bottom: 145%; overflow: hidden; margin-bottom: 1.5rem; border-radius: 8px;">
-                        <style>
-                            .book-carousel-merged img {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                                opacity: 0;
-                                transition: opacity 1s ease-in-out;
-                            }
-
-                            .book-carousel-merged img.active {
-                                opacity: 1;
-                            }
-                        </style>
-                        <div class="book-carousel-merged" id="merged-carousel">
-                            <img src="assets/images/sat_textbook.png" alt="SAT Essential" class="active">
-                            <img src="assets/images/book_ybpc.jpg" alt="Youth Body Posture">
-                            <img src="assets/images/book_mt.jpg" alt="Manual Technical">
-                        </div>
-                    </div>
-                    <script>
-                        (function () {
-                            let currentIndex = 0;
-                            const images = document.querySelectorAll('#merged-carousel img');
-                            setInterval(() => {
-                                images[currentIndex].classList.remove('active');
-                                currentIndex = (currentIndex + 1) % images.length;
-                                images[currentIndex].classList.add('active');
-                            }, 3000);
-                        })();
-                    </script>
-                    <i data-lucide="activity" size="30" class="icon-accent" style="margin-bottom: 1rem;"></i>
-                    <h3>SAT Series</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">Specialized Activity Training. Essential protocols for
-                        musculoskeletal rehabilitation, supported by the SISFIT-SAT textbook series.</p>
-                </div>
-
-                <!-- Youth Fitness -->
-                <div class="curriculum-card glass" style="background: rgba(255,255,255,0.05); padding: 2rem;">
-                    <img src="assets/images/acsm_youth_fitness.jpg" alt="Youth fitness curriculum material"
-                        style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
-                    <i data-lucide="users" size="30" class="icon-accent" style="margin-bottom: 1rem;"></i>
-                    <h3>Youth Fitness Education</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">Curriculum and professional education materials focused on youth physical activity and health literacy.</p>
-                </div>
-
-                <!-- Clinical Populations -->
-                <div class="curriculum-card glass" style="background: rgba(255,255,255,0.05); padding: 2rem;">
-                    <img src="assets/images/rehab_handbook_full.jpg" alt="Rehabilitation Self-help Handbook"
-                        style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
-                    <i data-lucide="heart" size="30" class="icon-accent" style="margin-bottom: 1rem;"></i>
-                    <h3>Rehabilitation Education</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">Exercise and rehabilitation education materials, including the published <em>Rehabilitation Self-help Handbook</em>.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-content" style="border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4rem;">
-                <div style="max-width: 400px;">
-                    <a href="/" class="logo"
-                        style="font-family: var(--font-serif); font-size: 2rem; display: flex; align-items: center; gap: 15px;">
-                        <img src="assets/images/sisfit_logo_graygold.png" alt="SISFIT Logo" style="height: 40px;">
-                        SISFIT<span class="dot">Academy</span>
-                    </a>
-                    <p style="margin-top: 1.5rem;">Evidence-informed health education at scale. Research-related materials on this site distinguish practice data from formally governed research.</p>
-                </div>
-                <div class="nav-links" style="flex-direction: column; align-items: flex-start; gap: 1rem;">
-                    <strong>Documentation</strong>
-                    <a href="./CatherineGe">Research Portfolio</a>
-                    <a href="./open-research/">Open Research</a>
-                    <a href="#lab">Practice Data Context</a>
-                    <a href="#curriculum">Professional Outputs</a>
-                </div>
-            </div>
-            <div class="copyright"
-                style="padding-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
-                <div>&copy; 2026 SISFIT Academy. All rights reserved. SISFIT practice assets and educational materials.</div>
-                <img src="assets/images/sisfit_logo_graygold.png" alt="SISFIT Logo Footer"
-                    style="height: 25px; opacity: 0.5;">
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        lucide.createIcons();
-    </script>
+<footer class="footer site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="/" class="logo site-logo">
+          <img src="/assets/images/sisfit_logo_graygold.png" alt="SISFIT Logo">
+          SISFIT<span class="dot">Academy</span>
+        </a>
+        <p>Evidence-informed health education at scale, with practice context clearly separated from formally governed research.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/research/">Research</a>
+        <a href="/open-research/">Open Research</a>
+        <a href="/practice/">Practice Context</a>
+        <a href="/outputs/">Professional Outputs</a>
+      </div>
+    </div>
+    <div class="copyright">&copy; 2026 SISFIT Academy. All rights reserved.</div>
+  </div>
+</footer>
+<script>lucide.createIcons();</script>
+<script>
+document.querySelectorAll('.nav-dropdown').forEach(function(menu){
+  document.addEventListener('click', function(e){
+    if(menu.open && !menu.contains(e.target)) menu.removeAttribute('open');
+  });
+});
+</script>
 </body>
-
 </html>
