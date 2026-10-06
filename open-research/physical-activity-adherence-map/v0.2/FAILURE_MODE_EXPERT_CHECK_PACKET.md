@@ -20,9 +20,17 @@ We currently distinguish:
 
 These are descriptive coding categories, not claims of causal mechanisms.
 
+## Terminology grounding
+
+Before requesting external review, we cross-walked the working labels against implementation-fidelity, treatment-fidelity, digital-engagement, process-evaluation, and behavior-maintenance frameworks.
+
+The implementation/exposure versus mechanism-of-impact distinction is therefore **not claimed as novel**. See:
+
+`TERMINOLOGY_CROSSWALK.md`
+
 ## Narrow expert-check question 1
 
-Should **mechanism failure despite adequate exposure** be coded separately from **failure of exposure/engagement itself**?
+Is our **operational mapping** of these PA trials onto implementation/exposure versus incremental behavioral-effect failure defensible, and are we using the most appropriate established terminology?
 
 Example contrast:
 
@@ -31,7 +39,9 @@ Example contrast:
 
 Our proposed rule:
 
-> Do not infer that a behavioral mechanism failed unless there is reasonable evidence that participants were actually exposed to that mechanism. When exposure is weak or uncertain, code an exposure/engagement failure separately.
+> Do not infer failure of a hypothesized behavioral mechanism from a null behavioral result when meaningful intervention receipt/exposure is weak or uncertain. Code the implementation/exposure evidence separately, and reserve mechanism-of-impact claims for studies that actually measure them.
+
+For public wording, prefer **no incremental behavioral effect despite documented exposure** over **mechanism failed** unless a mechanism of action was directly measured.
 
 ## Narrow expert-check question 2
 
