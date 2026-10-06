@@ -1,6 +1,6 @@
 # Zenodo Manual Deposit Metadata — v0.1
 
-This file prepares the metadata for a future **manual Zenodo deposit** of the frozen v0.1 snapshot. No DOI has been minted yet.
+This file records the metadata for the **manual Zenodo deposit** of the frozen v0.1 snapshot. Zenodo has reserved DOI **10.5281/zenodo.23178043** for record **23178043**; the DOI will resolve after publication.
 
 ## Title
 Physical Activity Adherence — Digital Intervention Micro Map
@@ -9,7 +9,7 @@ Physical Activity Adherence — Digital Intervention Micro Map
 0.1
 
 ## Publication date
-2026-10-05
+2026-10-06
 
 ## Resource type
 Dataset
@@ -44,7 +44,9 @@ Creative Commons Attribution 4.0 International (CC BY 4.0)
 Zenodo license identifier: `cc-by-4.0`
 
 ## DOI
-**Not yet minted.** Replace this line only after Zenodo returns a real DOI.
+Reserved DOI: **10.5281/zenodo.23178043**
 
-## Suggested citation before DOI
-Ge, C., & Choi, S. (2026). *Physical Activity Adherence — Digital Intervention Micro Map* (Version 0.1) [Data set]. SISFIT Open Research. https://sisfit.cn/open-research/physical-activity-adherence-map/
+Zenodo record ID: **23178043**
+
+## Suggested citation
+Ge, C., & Choi, S. (2026). *Physical Activity Adherence — Digital Intervention Micro Map* (Version 0.1) [Data set]. SISFIT Open Research. https://doi.org/10.5281/zenodo.23178043
