@@ -22,6 +22,7 @@ After self-monitoring and feedback became near-default components of digital phy
 
 ## Files
 
+- `index.html` — public human-readable working map for PA001–PA015
 - `SCHEMA.md` — v0.2 schema and coding rules
 - `micro_map_manifest_v0.2.csv` — **canonical working manifest, PA001–PA015**
 - `micro_map_manifest_v0.2_additions.csv` — PA011–PA015 promotion overlay retained for audit/provenance
@@ -36,6 +37,9 @@ After self-monitoring and feedback became near-default components of digital phy
 - Public expert-check issue: https://github.com/catherinexge2003-SISFIT/catherine-ge-portfolio/issues/13
 
 The canonical working table now contains **15 rows**. PA001–PA010 were backfilled only into the five new v0.2 structural fields; their frozen v0.1 source rows remain unchanged.
+
+Public working map:
+https://sisfit.cn/open-research/physical-activity-adherence-map/v0.2/
 
 ## Version boundary
 
