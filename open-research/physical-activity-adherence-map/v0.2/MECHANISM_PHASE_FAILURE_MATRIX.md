@@ -11,13 +11,15 @@ The 15-study manifest shows that the same digital component can mean different t
 1. **phase** — acquisition, continuous treatment, maintenance, post-intervention follow-up;
 2. **incremental mechanism** — what the digital layer adds beyond the comparator;
 3. **exposure** — whether participants actually continue to use/read/wear it;
-4. **failure mode** — why an apparent intervention advantage weakens or disappears.
+4. **descriptive failure/constraint state** — what is observed when durable incremental value weakens, disappears, or cannot be cleanly interpreted.
 
 The matrix therefore asks:
 
-> When a digital PA intervention fails to produce durable incremental value, **where in the mechanism chain does the failure occur?**
+> When a digital PA intervention does not show durable incremental value, **which implementation/exposure, outcome, comparator, or attribution state best describes the evidence?**
 
 ## Controlled failure-mode vocabulary
+
+These are operational descriptive categories, not claims that a psychological or behavioral mechanism itself failed.
 
 ### F1 — No maintenance test
 The study ends during active exposure, so durability after withdrawal cannot be assessed.
@@ -73,9 +75,9 @@ The intervention works at package level but the active ingredient cannot be isol
 
 ---
 
-# Cross-era pattern 1 — The failure mode moved downstream
+# Cross-era pattern 1 — The limiting evidence moved downstream
 
-Earlier studies often fail because:
+Earlier studies often show limitations because:
 - the package is fixed;
 - extra prompts lose effect;
 - no post-intervention phase is tested.
@@ -95,9 +97,9 @@ to:
 
 ---
 
-# Cross-era pattern 2 — Maintenance failure has at least four different mechanisms
+# Cross-era pattern 2 — Null or attenuated maintenance findings arise from distinct states
 
-A single label such as “did not maintain effect” hides distinct processes:
+A single label such as “did not maintain effect” hides structurally different observations:
 
 ### A. Attenuation
 Early effect weakens with time.  
@@ -115,7 +117,7 @@ Examples: PA006, PA010, PA012, PA013.
 The control already includes strong self-monitoring/feedback, reducing incremental headroom.  
 Examples: PA003, PA009, PA013, PA015.
 
-These mechanisms should not be pooled conceptually.
+These states and signals should not be pooled conceptually.
 
 ---
 
@@ -146,10 +148,10 @@ It is:
 The matrix suggests a common pathway behind several apparently different failures:
 
 ```
-mechanism available
-→ mechanism noticed
-→ mechanism still relevant
-→ mechanism actionable now
+support available
+→ support noticed
+→ support still relevant
+→ support actionable now
 → action repeated
 → behavior preserved
 ```
@@ -175,8 +177,8 @@ When initial behavior change has already occurred, which components should be **
 ## Q2 — Comparator saturation
 When both groups already receive self-monitoring and feedback, what should count as a meaningful incremental digital mechanism?
 
-## Q3 — Engagement vs mechanism failure
-How should a trial distinguish “the mechanism failed despite exposure” from “participants stopped meaningfully receiving the mechanism”?
+## Q3 — Implementation/exposure vs incremental behavioral effect
+Is our operational mapping of PA006, PA010, PA012 and PA013 onto implementation/exposure versus incremental behavioral-effect failure defensible, and are we using the most appropriate established terminology?
 
 ## Q4 — Preservation as outcome
 For maintenance trials, should preventing decline be treated as a distinct success state rather than a weaker version of continued improvement?
@@ -206,4 +208,4 @@ Its purpose would be different from the original Micro Map:
 - **Micro Map:** what mechanisms/intervention structures were used?
 - **Failure Map:** where does durable incremental value break down?
 
-Do not publish this second object yet. First expose the matrix to at least one external expert check and use that response to decide whether the failure-mode vocabulary is defensible.
+Do not publish this second object yet. First obtain at least one real external researcher/method-expert response and use that response to decide whether the descriptive failure/constraint vocabulary is defensible.
