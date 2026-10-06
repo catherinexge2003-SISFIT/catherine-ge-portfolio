@@ -12,6 +12,23 @@ The five A-level candidates from the 2020–2026 refresh passed full-text extrac
 | R04 Brickwood et al. 2021 | PA014 | PROMOTE | post-program maintenance; digital vs human support |
 | R05 Yoshimura et al. 2022 | PA015 | PROMOTE | long-duration app exposure; PA ≠ weight loss |
 
+## Unified-manifest decision — 2026-10-06
+
+A unified **PA001–PA015** v0.2 working manifest was approved.
+
+PA001–PA010 were retrospectively coded only for:
+- phase structure;
+- shared backbone / active comparator;
+- adaptation / personalization;
+- engagement / exposure;
+- maintenance interpretation.
+
+Their frozen v0.1 rows were not overwritten.
+
+Canonical v0.2 working file:
+
+`micro_map_manifest_v0.2.csv`
+
 ## Boundary
 
 - PA001–PA010 remain frozen in v0.1.
