@@ -98,8 +98,16 @@ if '<meta charset="UTF-8">\\n' in open_research:
     fail("literal \\n remains in open-research/index.html head")
 
 micro_map = (ROOT / "open-research/physical-activity-adherence-map/index.html").read_text(encoding="utf-8")
+micro_map_v02 = (ROOT / "open-research/physical-activity-adherence-map/v0.2/index.html").read_text(encoding="utf-8")
 if "repeat(auto-fit,minmax(180px,1fr))" not in micro_map:
     fail("micro-map CTA grid is no longer content-adaptive")
+
+if '<section class="research-section"><div class="container map-wrap"></div>\n</div></section>' in micro_map_v02:
+    fail("malformed micro-map section structure in v0.2")
+if 'Frozen v0.1 Snapshot</a></div></div>\n</div>\n</div>\n<p class="map-note"' in micro_map:
+    fail("malformed micro-map method-boundary container in v0.1")
+if 'v0.1 Zenodo DOI</a>\n</div></div>\n</div>\n</div>\n<p class="map-note"' in micro_map_v02:
+    fail("malformed micro-map method-boundary container in v0.2")
 
 css = (ROOT / "assets/css/style.css").read_text(encoding="utf-8")
 for marker in ("Site-wide layout hardening", ".markdown-body", ".cta-group"):
