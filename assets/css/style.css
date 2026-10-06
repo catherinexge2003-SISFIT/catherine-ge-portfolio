@@ -1089,21 +1089,25 @@ p.lead {
 }
 
 
-/* Catherine quick-review path */
-.catherine-profile .quick-review-path {
-    border-top: 1px solid var(--glass-border);
-    border-bottom: 1px solid var(--glass-border);
-    background: rgba(255,255,255,0.55);
+/* Long-page section navigation */
+section[id] {
+    scroll-margin-top: 108px;
 }
 
-.catherine-profile .quick-review-path .container {
+.page-section-nav {
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+    background: rgba(255,255,255,0.58);
+}
+
+.page-section-nav .container {
     display: flex;
     align-items: center;
     gap: 1.25rem;
     min-height: 54px;
 }
 
-.catherine-profile .quick-review-label {
+.page-section-label {
     flex: 0 0 auto;
     font-size: 0.72rem;
     font-weight: 700;
@@ -1112,37 +1116,42 @@ p.lead {
     color: var(--text-secondary);
 }
 
-.catherine-profile .quick-review-links {
+.page-section-links {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 0.4rem 1.1rem;
 }
 
-.catherine-profile .quick-review-links a {
+.page-section-links a {
     color: var(--text-primary);
     text-decoration: none;
     font-size: 0.86rem;
     font-weight: 600;
 }
 
-.catherine-profile .quick-review-links a:hover {
+.page-section-links a:hover,
+.page-section-links a:focus-visible {
     color: var(--accent-primary);
 }
 
 @media (max-width: 768px) {
-    .catherine-profile .quick-review-path .container {
+    section[id] {
+        scroll-margin-top: 126px;
+    }
+
+    .page-section-nav .container {
         display: block;
         padding-top: 0.8rem;
         padding-bottom: 0.8rem;
     }
 
-    .catherine-profile .quick-review-label {
+    .page-section-label {
         display: block;
         margin-bottom: 0.45rem;
     }
 
-    .catherine-profile .quick-review-links {
+    .page-section-links {
         flex-wrap: nowrap;
         overflow-x: auto;
         white-space: nowrap;
@@ -1150,7 +1159,7 @@ p.lead {
         scrollbar-width: thin;
     }
 
-    .catherine-profile .quick-review-links a {
+    .page-section-links a {
         flex: 0 0 auto;
     }
 }
