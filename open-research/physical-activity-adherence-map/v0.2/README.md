@@ -26,6 +26,7 @@ After self-monitoring and feedback became near-default components of digital phy
 - `micro_map_manifest_v0.2.csv` — **canonical working manifest, PA001–PA015**
 - `micro_map_manifest_v0.2_additions.csv` — PA011–PA015 promotion overlay retained for audit/provenance
 - `ADJUDICATION_LOG.md` — candidate-to-record promotion decisions
+- `CROSS_ERA_STRUCTURAL_ANALYSIS.md` — first PA001–PA015 cross-era structural analysis and working maintenance hypotheses
 
 The canonical working table now contains **15 rows**. PA001–PA010 were backfilled only into the five new v0.2 structural fields; their frozen v0.1 source rows remain unchanged.
 
