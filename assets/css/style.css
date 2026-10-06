@@ -803,8 +803,14 @@ p.lead {
 }
 
 .markdown-body code {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.markdown-body pre code {
     overflow-wrap: normal;
     word-break: normal;
+    white-space: pre;
 }
 
 .markdown-body table {
@@ -891,6 +897,17 @@ p.lead {
         align-items: flex-start !important;
         gap: 1rem;
         text-align: left;
+    }
+
+    .academy-home .footer-content > div:first-child {
+        width: 100%;
+        max-width: 100% !important;
+        min-width: 0;
+    }
+
+    .academy-home .footer .logo {
+        max-width: 100%;
+        flex-wrap: wrap;
     }
 
     .academy-home .timeline-container {
