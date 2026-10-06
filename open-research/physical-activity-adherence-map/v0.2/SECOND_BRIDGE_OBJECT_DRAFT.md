@@ -35,8 +35,8 @@ No new studies are required before the first external method check.
 5. adaptation class
 6. engagement / exposure signal
 7. maintenance outcome
-8. primary failure mode
-9. secondary failure signal
+8. primary descriptive failure/constraint state
+9. secondary constraint signal
 10. one-line structural interpretation
 11. source DOI
 
@@ -57,7 +57,7 @@ No new studies are required before the first external method check.
 
 Do **not** freeze or deposit this object until all of the following are true:
 
-1. At least one external researcher/method expert has responded to the failure-mode distinction.
+1. At least one external researcher/method expert has responded to the operational mapping / terminology check.
 2. The response has been recorded as correction, acknowledgement, disagreement, or terminology guidance.
 3. The vocabulary has been revised or explicitly retained after that check.
 4. Each PA001–PA015 failure-mode assignment has a traceable source in the unified manifest/full-text notes.
@@ -68,11 +68,11 @@ Do **not** freeze or deposit this object until all of the following are true:
 
 Primary:
 
-> Should mechanism failure despite adequate exposure be coded separately from exposure/engagement failure?
+> Is our operational mapping of PA006, PA010, PA012 and PA013 onto implementation/exposure versus incremental behavioral-effect failure defensible, and are we using the most appropriate established terminology?
 
 Secondary:
 
-> Should preservation of behavior relative to a declining counterfactual be treated as a distinct maintenance success state?
+> Is “preserved behavior” a useful descriptive maintenance outcome category when activity is maintained relative to a declining comparator, or should this be represented differently?
 
 ## Current public check
 
@@ -86,4 +86,4 @@ The first object remains authoritative for v0.1:
 **Physical Activity Adherence — Digital Intervention Micro Map v0.1**  
 DOI: https://doi.org/10.5281/zenodo.23178043
 
-The second object should only be released if external checking makes the failure-mode layer more defensible than an internal coding exercise.
+The second object should only be released if external checking makes the descriptive failure/constraint layer more defensible than an internal coding exercise.
