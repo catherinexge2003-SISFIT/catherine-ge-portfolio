@@ -36,6 +36,34 @@ REQUIRED_FILES = [
 FROZEN_RELEASE = ROOT / "open-research/physical-activity-adherence-map/releases/v0.1/index.html"
 FROZEN_GIT_BLOB_SHA = "8aff954df259366edbb8c5b0807fc42fe55fc91e"
 
+FORBIDDEN_PUBLIC_PHRASES = (
+    "pending reconciliation",
+    "source record is reconciled",
+    "no guessed OSF",
+    "Planned Additions",
+    "What Will Be Added Next",
+    "never inferred from name matching alone",
+    "dedicated public academic email can be added",
+    "Persistent research identifiers and academic contact links will be added",
+    "Internal development complete",
+    "External Validation Gate",
+    "canonical working manifest",
+    "Canonical Working CSV",
+    "Release Readiness",
+    "canonical PA001–PA015 manifest",
+)
+
+PUBLIC_LANGUAGE_PAGES = [
+    ROOT / "CatherineGe/index.html",
+    ROOT / "cv/index.html",
+    ROOT / "cv/Catherine_Ge_Academic_CV_2026.html",
+    ROOT / "open-research/index.html",
+    ROOT / "open-research/physical-activity-adherence-map/index.html",
+    ROOT / "open-research/physical-activity-adherence-map/v0.2/index.html",
+    ROOT / "research-training/index.html",
+]
+PUBLIC_LANGUAGE_PAGES += sorted((ROOT / "open-research/research-notes").glob("*/index.html"))
+
 
 def git_blob_sha(path: Path) -> str:
     data = path.read_bytes()
@@ -51,6 +79,13 @@ def fail(message: str) -> None:
 for path in PRIMARY_NAV + REQUIRED_FILES + [FROZEN_RELEASE]:
     if not path.is_file():
         fail(f"required site file missing: {path.relative_to(ROOT)}")
+
+for path in PUBLIC_LANGUAGE_PAGES:
+    text = path.read_text(encoding="utf-8")
+    lower = text.lower()
+    for phrase in FORBIDDEN_PUBLIC_PHRASES:
+        if phrase.lower() in lower:
+            fail(f"internal-process wording leaked to public page {path.relative_to(ROOT)}: {phrase}")
 
 for path in PRIMARY_NAV:
     text = path.read_text(encoding="utf-8")

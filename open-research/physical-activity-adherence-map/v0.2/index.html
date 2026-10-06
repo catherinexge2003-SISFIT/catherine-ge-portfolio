@@ -76,7 +76,7 @@
 </div></div></nav>
 
 <header id="main-content" class="hero" tabindex="-1"><div class="container hero-content">
-<span class="badge">Joint Open Research Project · Catherine Ge + Starr Choi · v0.2 working draft</span>
+<span class="badge">Joint Open Research Project · Catherine Ge + Starr Choi · v0.2 working version</span>
 <h1>Physical Activity Adherence — Digital Intervention Micro Map v0.2</h1>
 <p class="hero-subtitle">身体活动依从性 — 数字干预微地图 v0.2</p>
 <p class="lead">A working 15-study structural map of selected adult digital physical-activity interventions, extending v0.1 with phase, active-comparator structure, adaptation, engagement/exposure and maintenance interpretation.</p>
@@ -112,7 +112,7 @@
 <section class="about-section"><div class="container map-wrap">
 <span class="tag-line">15-Study Working Map</span>
 <h2>Selected digital physical-activity interventions</h2>
-<p class="map-note">The table is rendered directly from the canonical working manifest <code>micro_map_manifest_v0.2.csv</code>. Filters affect display only; they do not modify the dataset.</p>
+<p class="map-note">The table is rendered from the working study dataset <code>micro_map_manifest_v0.2.csv</code>. Filters affect display only; they do not modify the data.</p>
 <div class="map-controls">
 <input id="mapSearch" type="search" placeholder="Search study, intervention, outcome, exposure…">
 <select id="phaseFilter"><option value="">All phases</option></select>
@@ -131,10 +131,10 @@
 <th>Maintenance interpretation</th>
 <th>Source</th>
 </tr></thead>
-<tbody id="mapBody"><tr><td colspan="8">Loading canonical working manifest…</td></tr></tbody>
+<tbody id="mapBody"><tr><td colspan="8">Loading study data…</td></tr></tbody>
 </table>
 </div>
-<noscript><p class="warning-box">JavaScript is required for the interactive table. The canonical CSV remains available below.</p></noscript>
+<noscript><p class="warning-box">JavaScript is required for the interactive table. The working CSV remains available below.</p></noscript>
 </div></section>
 
 <section class="research-section"><div class="container map-wrap">
@@ -151,21 +151,20 @@
 </div></section>
 
 <section class="about-section"><div class="container map-wrap">
-<span class="tag-line">External Validation Gate</span>
+<span class="tag-line">External Validation</span>
 <h2>What remains open</h2>
 <div class="warning-box">
-<p><strong>v0.2 is publicly browsable but not frozen.</strong> Its internal development is complete; external methodological validation is still pending.</p>
-<p>The current expert check asks whether the operational mapping of PA006, PA010, PA012 and PA013 onto implementation/exposure versus incremental behavioral-effect failure is defensible, and whether <em>preserved behavior</em> is a useful descriptive maintenance outcome category.</p>
+<p><strong>v0.2 is a working public version and has not been frozen.</strong> External methodological validation is still pending.</p>
+<p>External feedback is invited on whether the operational mapping of PA006, PA010, PA012 and PA013 onto implementation/exposure versus incremental behavioral-effect failure is defensible, and whether <em>preserved behavior</em> is a useful descriptive maintenance outcome category.</p>
 </div>
 <div class="artifact-resource-groups" aria-label="Working v0.2 resources">
-<div class="artifact-resource-group"><span class="artifact-resource-label">Data</span><div class="artifact-resource-links"><a href="micro_map_manifest_v0.2.csv" class="btn-secondary" target="_blank" rel="noopener">Canonical Working CSV</a></div></div>
+<div class="artifact-resource-group"><span class="artifact-resource-label">Data</span><div class="artifact-resource-links"><a href="micro_map_manifest_v0.2.csv" class="btn-secondary" target="_blank" rel="noopener">Working Data (CSV)</a></div></div>
 <div class="artifact-resource-group"><span class="artifact-resource-label">Analysis</span><div class="artifact-resource-links">
 <a href="MECHANISM_PHASE_FAILURE_MATRIX.md" class="btn-secondary" target="_blank" rel="noopener">Failure / Constraint Matrix</a>
 <a href="TERMINOLOGY_CROSSWALK.md" class="btn-secondary" target="_blank" rel="noopener">Terminology Crosswalk</a>
 </div></div>
 <div class="artifact-resource-group"><span class="artifact-resource-label">Validation</span><div class="artifact-resource-links">
 <a href="FAILURE_MODE_EXPERT_CHECK_PACKET.md" class="btn-secondary" target="_blank" rel="noopener">Expert Check Packet</a>
-<a href="V0.2_RELEASE_READINESS.md" class="btn-secondary" target="_blank" rel="noopener">Release Readiness</a>
 <a href="https://github.com/catherinexge2003-SISFIT/catherine-ge-portfolio/issues/13" class="btn-secondary" target="_blank" rel="noopener">Open Expert Check</a>
 </div></div>
 </div>
@@ -271,7 +270,7 @@ function doiFrom(result){
     render();
   }catch(err){
     count.textContent='Map data could not be loaded.';
-    body.innerHTML='<tr><td colspan="8">The working manifest is temporarily unavailable. Use the Canonical Working CSV link below.</td></tr>';
+    body.innerHTML='<tr><td colspan="8">The study data is temporarily unavailable. Use the Working Data (CSV) link below.</td></tr>';
   }
   if(window.lucide) lucide.createIcons();
 })();
