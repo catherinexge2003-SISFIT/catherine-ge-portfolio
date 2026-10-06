@@ -112,11 +112,12 @@
 </head>
 
 <body data-theme="academy" class="academy-home">
+<a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- Navigation -->
     <nav class="navbar glass">
         <div class="container">
-            <a href="/" class="logo"
+            <a href="/" class="logo" aria-current="page"
                 style="font-family: var(--font-serif); display: flex; align-items: center; gap: 10px;">
                 <img src="assets/images/sisfit_logo_graygold.png" alt="SISFIT Logo" style="height: 30px;">
                 SISFIT<span class="dot" style="color: var(--accent-primary);">Academy</span>
@@ -134,7 +135,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header id="main-content" class="hero" tabindex="-1">
         <div class="container hero-content">
             <span class="tag-line">Systems for Impact & Fit</span>
             <h1 class="hero-title">Bridging <span class="gradient-text italic">Behavioral Science</span> & <br>Digital

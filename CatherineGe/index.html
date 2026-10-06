@@ -23,11 +23,12 @@
 </head>
 
 <body data-theme="bio" class="catherine-profile">
+<a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- Navigation -->
     <nav class="navbar glass">
         <div class="container">
-            <a href="/" class="logo">sisfit.cn<span class="dot">/CatherineGe</span></a>
+            <a href="/" class="logo" aria-current="page">sisfit.cn<span class="dot">/CatherineGe</span></a>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="/research/">Research</a>
@@ -40,7 +41,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header id="main-content" class="hero" tabindex="-1">
         <div class="container hero-content">
             <span class="badge">Digital Health · Behaviour Change · Physical Activity</span>
             <h1>How People <span class="gradient-text">Understand and Act on Health Information</span> Online</h1>
@@ -406,6 +407,20 @@ Research Focus:
         </div>
     </footer>
 
+<script>
+(function(){
+ const nav=document.querySelector('.page-section-nav');
+ if(!nav||!('IntersectionObserver' in window)) return;
+ const links=[...nav.querySelectorAll('a[href^="#"]')];
+ const targets=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+ const setActive=id=>links.forEach(a=>a.getAttribute('href')==='#'+id?a.setAttribute('aria-current','location'):a.removeAttribute('aria-current'));
+ const observer=new IntersectionObserver(entries=>{
+  const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+  if(visible) setActive(visible.target.id);
+ },{rootMargin:'-18% 0px -65% 0px',threshold:[0.01,0.25,0.5]});
+ targets.forEach(t=>observer.observe(t));
+})();
+</script>
     <script>
         lucide.createIcons();
     </script>
