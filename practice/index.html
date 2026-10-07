@@ -15,6 +15,80 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css?v=20261007-1043">
+<style>
+.practice-evidence-note{
+  margin:-.35rem 0 1.15rem;
+  color:var(--text-secondary);
+  font-size:.9rem;
+}
+.douyin-evidence-grid{
+  display:grid;
+  grid-template-columns:minmax(260px,.72fr) minmax(0,1.7fr);
+  gap:1.4rem;
+  align-items:start;
+}
+.evidence-side-stack{
+  display:grid;
+  gap:1.4rem;
+}
+.platform-evidence-figure{
+  margin:0;
+  min-width:0;
+}
+.platform-evidence-figure > a{
+  display:block;
+  border:1px solid var(--glass-border);
+  border-radius:10px;
+  overflow:hidden;
+  background:#fff;
+}
+.platform-evidence-figure img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:0;
+}
+.platform-evidence-figure.evidence-primary img{
+  max-height:690px;
+  object-fit:contain;
+}
+.platform-evidence-caption{
+  display:grid;
+  gap:.2rem;
+  padding:.8rem .1rem 0;
+}
+.platform-evidence-caption strong{
+  font-family:var(--font-heading);
+  font-size:1rem;
+  line-height:1.35;
+}
+.platform-evidence-caption span{
+  color:var(--text-secondary);
+  font-size:.88rem;
+  line-height:1.5;
+}
+.platform-evidence-caption small{
+  color:var(--text-secondary);
+  font-size:.76rem;
+  opacity:.82;
+}
+.bilibili-evidence{
+  margin:0;
+}
+.bilibili-evidence img{
+  width:100%;
+  display:block;
+  border-radius:10px;
+}
+@media (max-width:900px){
+  .douyin-evidence-grid{grid-template-columns:1fr;}
+  .platform-evidence-figure.evidence-primary{
+    max-width:520px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+</style>
 <script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
@@ -52,20 +126,6 @@
   <div class="hero-bg-grid"></div>
 </header>
 
-<nav class="practice-local-nav" aria-label="Practice page sections">
-  <div class="container">
-    <details class="page-section-nav">
-      <summary>Explore Practice</summary>
-      <div class="page-section-menu">
-        <a href="#practice-scale">Practice Scale</a>
-        <a href="#platform-footprint">Platform Footprint</a>
-        <a href="#practice-to-research">Practice → Research</a>
-        <a href="#data-boundary">Data Boundary</a>
-      </div>
-    </details>
-  </div>
-</nav>
-
 <main>
 <section id="practice-scale" class="portal-section">
   <div class="container">
@@ -87,17 +147,53 @@
     <div class="analytics-showcase">
       <article class="analytics-panel glass">
         <span class="analytics-label">Douyin · Jan 2026</span>
-        <div class="analytics-image-grid">
-          <img src="/assets/images/douyin_100k.png" alt="Historical Douyin 100k audience milestone">
-          <img src="/assets/images/douyin_data_1.png" alt="Historical Douyin engagement analytics">
-          <img src="/assets/images/douyin_data_2.png" alt="Historical Douyin reach analytics">
+        <p class="practice-evidence-note">English interpretation is provided below each original Chinese platform screenshot.</p>
+        <div class="douyin-evidence-grid">
+          <figure class="platform-evidence-figure evidence-primary">
+            <a href="/assets/images/douyin_100k.png" target="_blank" rel="noopener">
+              <img src="/assets/images/douyin_100k.png" alt="Douyin milestone notification showing SISFIT exceeded 100,000 followers on 12 January 2026">
+            </a>
+            <figcaption class="platform-evidence-caption">
+              <strong>100k+ followers</strong>
+              <span>Official Douyin milestone notification dated 12 Jan 2026.</span>
+              <small>Original platform screenshot retained as source evidence.</small>
+            </figcaption>
+          </figure>
+          <div class="evidence-side-stack">
+            <figure class="platform-evidence-figure">
+              <a href="/assets/images/douyin_data_1.png" target="_blank" rel="noopener">
+                <img src="/assets/images/douyin_data_1.png" alt="Douyin analytics showing 103,200 video views, higher than 86.14 percent of comparable creators">
+              </a>
+              <figcaption class="platform-evidence-caption">
+                <strong>103.2k video views</strong>
+                <span>Platform analytics reports performance above 86.14% of comparable creators.</span>
+              </figcaption>
+            </figure>
+            <figure class="platform-evidence-figure">
+              <a href="/assets/images/douyin_data_2.png" target="_blank" rel="noopener">
+                <img src="/assets/images/douyin_data_2.png" alt="Douyin analytics showing an interaction index of 7.37 percent, higher than 77.60 percent of comparable creators">
+              </a>
+              <figcaption class="platform-evidence-caption">
+                <strong>Interaction index: 7.37%</strong>
+                <span>Platform analytics reports performance above 77.60% of comparable creators.</span>
+              </figcaption>
+            </figure>
+          </div>
         </div>
-        
       </article>
       <article class="analytics-panel glass">
         <span class="analytics-label">Bilibili · 2023</span>
-        <img class="analytics-wide-image" src="/assets/images/bilibili_data_2023.png" alt="Historical Bilibili engagement analytics">
-        
+        <p class="practice-evidence-note">English interpretation of the original Chinese platform record.</p>
+        <figure class="bilibili-evidence platform-evidence-figure">
+          <a href="/assets/images/bilibili_data_2023.png" target="_blank" rel="noopener">
+            <img src="/assets/images/bilibili_data_2023.png" alt="Bilibili 2023 supporter analytics showing 10 monthly paid supporters and performance above 94 percent of creators">
+          </a>
+          <figcaption class="platform-evidence-caption">
+            <strong>10 monthly paid supporters</strong>
+            <span>Bilibili “Charging” snapshot dated 25 Apr 2023; the supporter count exceeded that of 94% of creators on the platform.</span>
+            <small>Original platform screenshot retained as source evidence.</small>
+          </figcaption>
+        </figure>
       </article>
     </div>
   </div>
@@ -148,33 +244,6 @@
     <div class="copyright">&copy; 2026 SISFIT Academy. All rights reserved.</div>
   </div>
 </footer>
-<script>
-(function(){
-  const menu=document.querySelector('details.page-section-nav');
-  if(!menu) return;
-  const links=[...menu.querySelectorAll('a[href^="#"]')];
-  const targets=links.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);
-
-  links.forEach(link=>link.addEventListener('click',()=>menu.removeAttribute('open')));
-  document.addEventListener('click',event=>{
-    if(menu.open && !menu.contains(event.target)) menu.removeAttribute('open');
-  });
-
-  if(!('IntersectionObserver' in window)) return;
-  const setActive=id=>links.forEach(link=>
-    link.getAttribute('href')==='#'+id
-      ? link.setAttribute('aria-current','location')
-      : link.removeAttribute('aria-current')
-  );
-  const observer=new IntersectionObserver(entries=>{
-    const visible=entries
-      .filter(entry=>entry.isIntersecting)
-      .sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
-    if(visible) setActive(visible.target.id);
-  },{rootMargin:'-18% 0px -65% 0px',threshold:[0.01,0.25,0.5]});
-  targets.forEach(target=>observer.observe(target));
-})();
-</script>
 <script>lucide.createIcons();</script>
 <script>
 document.querySelectorAll('.nav-dropdown').forEach(function(menu){
