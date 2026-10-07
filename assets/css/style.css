@@ -309,6 +309,46 @@ p.lead {
     color: var(--accent-secondary);
 }
 
+/* Open Research status definitions */
+.status-definition-list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.status-definition-list li {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    align-items: start;
+    gap: 0.75rem;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0;
+    line-height: 1.55;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.status-definition-list li:first-child {
+    padding-top: 0;
+}
+
+.status-definition-list li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.status-definition-list li i {
+    width: 20px;
+    height: 20px;
+    margin: 0.1rem 0 0;
+}
+
+.status-definition-list li strong {
+    color: var(--text-primary);
+}
+
+
 /* Footer */
 .footer {
     padding: 4rem 0;
