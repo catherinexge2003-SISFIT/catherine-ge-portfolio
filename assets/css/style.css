@@ -1207,6 +1207,36 @@ section[id] {
 }
 
 
+/* Practice page local section navigation */
+.practice-local-nav {
+    position: relative;
+    z-index: 90;
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+    background: rgba(250, 248, 245, 0.92);
+}
+
+.practice-local-nav .container {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+}
+
+.practice-local-nav .page-section-nav summary {
+    padding-left: 0;
+}
+
+@media (max-width: 768px) {
+    .practice-local-nav .container {
+        min-height: 52px;
+    }
+
+    .practice-local-nav .page-section-nav summary {
+        padding-left: 0;
+    }
+}
+
+
 /* Research evidence card system */
 .evidence-card {
     display: block;
