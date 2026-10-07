@@ -309,6 +309,42 @@ p.lead {
     color: var(--accent-secondary);
 }
 
+/* Research working questions */
+.research-question-list {
+    display: grid;
+    gap: 0;
+    margin: 1rem 0 0;
+    padding: 0;
+}
+
+.research-question-list li {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    align-items: start;
+    gap: 0.75rem;
+    width: 100%;
+    margin: 0;
+    padding: 0.9rem 0;
+    line-height: 1.55;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.research-question-list li:first-child {
+    padding-top: 0.4rem;
+}
+
+.research-question-list li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.research-question-list li i {
+    width: 20px;
+    height: 20px;
+    margin: 0.1rem 0 0;
+}
+
+
 /* Open Research status definitions */
 .status-definition-list {
     display: grid;
