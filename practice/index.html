@@ -38,6 +38,15 @@
         </div>
       </details>
       <a href="/practice/" aria-current="page">Practice</a>
+      <details class="page-section-nav">
+        <summary>Sections</summary>
+        <div class="page-section-menu">
+          <a href="#practice-scale">Practice Scale</a>
+          <a href="#platform-footprint">Platform Footprint</a>
+          <a href="#practice-to-research">Practice → Research</a>
+          <a href="#data-boundary">Data Boundary</a>
+        </div>
+      </details>
       <a href="/outputs/">Outputs</a>
       <a href="/CatherineGe/" class="btn-primary">Catherine Ge</a>
     </div>
@@ -53,7 +62,7 @@
 </header>
 
 <main>
-<section class="portal-section">
+<section id="practice-scale" class="portal-section">
   <div class="container">
     <div class="portal-stats">
       <div class="portal-stat"><strong>300k+</strong><span>Cumulative cross-platform audience reach</span></div>
@@ -63,7 +72,7 @@
   </div>
 </section>
 
-<section class="portal-section portal-muted">
+<section id="platform-footprint" class="portal-section portal-muted">
   <div class="container">
     <div class="section-header portal-section-header">
       <span class="tag-line">Platform Footprint</span>
@@ -89,7 +98,7 @@
   </div>
 </section>
 
-<section class="portal-section">
+<section id="practice-to-research" class="portal-section">
   <div class="container">
     <div class="section-header portal-section-header">
       <span class="tag-line">How Practice Informs Research</span>
@@ -103,7 +112,7 @@
   </div>
 </section>
 
-<section class="portal-section portal-boundary-section">
+<section id="data-boundary" class="portal-section portal-boundary-section">
   <div class="container boundary-card glass">
     <span class="tag-line">Data Boundary</span>
     <h2>Practice analytics are not a pre-existing research cohort.</h2>
@@ -134,6 +143,33 @@
     <div class="copyright">&copy; 2026 SISFIT Academy. All rights reserved.</div>
   </div>
 </footer>
+<script>
+(function(){
+  const menu=document.querySelector('details.page-section-nav');
+  if(!menu) return;
+  const links=[...menu.querySelectorAll('a[href^="#"]')];
+  const targets=links.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);
+
+  links.forEach(link=>link.addEventListener('click',()=>menu.removeAttribute('open')));
+  document.addEventListener('click',event=>{
+    if(menu.open && !menu.contains(event.target)) menu.removeAttribute('open');
+  });
+
+  if(!('IntersectionObserver' in window)) return;
+  const setActive=id=>links.forEach(link=>
+    link.getAttribute('href')==='#'+id
+      ? link.setAttribute('aria-current','location')
+      : link.removeAttribute('aria-current')
+  );
+  const observer=new IntersectionObserver(entries=>{
+    const visible=entries
+      .filter(entry=>entry.isIntersecting)
+      .sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+    if(visible) setActive(visible.target.id);
+  },{rootMargin:'-18% 0px -65% 0px',threshold:[0.01,0.25,0.5]});
+  targets.forEach(target=>observer.observe(target));
+})();
+</script>
 <script>lucide.createIcons();</script>
 <script>
 document.querySelectorAll('.nav-dropdown').forEach(function(menu){
