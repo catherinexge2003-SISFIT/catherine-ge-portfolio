@@ -9,7 +9,7 @@ permissions:
   actions: write
 jobs:
   purge:
-    if: github.event.head_commit.message == 'security: purge pre-cleanup Pages artifacts'
+    if: "github.event.head_commit.message == 'security: purge pre-cleanup Pages artifacts'"
     runs-on: ubuntu-latest
     steps:
       - name: Remove precisely identified pre-cleanup Pages artifacts
