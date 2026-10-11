@@ -1,0 +1,32 @@
+name: Validate academic CV PDF build
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Chrome
+        run: google-chrome --version
+      - name: Render PDF
+        run: |
+          mkdir -p /tmp/cv-build
+          google-chrome \
+            --headless \
+            --disable-gpu \
+            --no-sandbox \
+            --disable-dev-shm-usage \
+            --print-to-pdf="/tmp/cv-build/Catherine_Ge_Academic_CV_2026.pdf" \
+            --no-pdf-header-footer \
+            "file://$GITHUB_WORKSPACE/cv/Catherine_Ge_Academic_CV_2026.html"
+          test -s /tmp/cv-build/Catherine_Ge_Academic_CV_2026.pdf
+      - name: Upload validation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Catherine-Ge-Academic-CV-2026
+          path: /tmp/cv-build/Catherine_Ge_Academic_CV_2026.pdf

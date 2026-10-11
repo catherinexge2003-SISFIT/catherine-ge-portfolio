@@ -1,0 +1,8 @@
+data/raw/
+data/processed/
+*.dta
+*.csv
+*.sav
+*.rda
+__pycache__/
+.ipynb_checkpoints/

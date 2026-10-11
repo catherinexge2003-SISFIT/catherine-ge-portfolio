@@ -1,0 +1,4 @@
+*.xpt
+*.zip
+.Rhistory
+.RData
