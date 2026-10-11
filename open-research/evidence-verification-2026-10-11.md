@@ -13,10 +13,12 @@ This public summary distinguishes checks actually performed from work not yet in
 | Analysis | Existing reported result checked against saved results, validation and website | Current verification level |
 | --- | --- | --- |
 | HINTS 7 (2024) | Adjusted OR 1.83 (95% CI 1.42–2.34); complete-case n=5,183; JK1 50 replicates. README historical status was reconciled to its 2 October 2026 validation report. | Desk audit; earlier script execution described in project validation report |
-| HINTS 6 + 7 (2022/2024) | Survey-cycle interaction OR 1.20 (95% CI 0.83–1.73), p=0.330, pooled n=10,838; 100 Rizzo replicates. Saved coefficient beta 0.1820247 and SE 0.1858702 imply exp(beta)=1.19965 (rounds to 1.20). | Desk audit and independent arithmetic check of saved coefficient; not raw-data replication |
+| HINTS 6 + 7 (2022/2024) | Survey-cycle interaction OR 1.20 (95% CI 0.83–1.73), p=0.330, pooled n=10,838; 100 Rizzo replicates. Saved coefficient beta 0.1820247 and SE 0.1858702 imply exp(beta)=1.19964 (rounds to 1.20). | Desk audit and independent arithmetic check of saved coefficient; not raw-data replication |
 | NHANES 2013–14 PAM | Adjusted beta 0.00876 (95% CI 0.00347–0.01404), p=0.0030, n=4,726; saved beta 0.008756585 and SE 0.002480304. | Desk audit and coefficient/SE agreement; not raw-data replication |
 
 These are secondary, cross-sectional or repeated cross-sectional studies. Associations do not establish causality. HINTS outcomes are self-reported health-information use; NHANES MIMS is not MVPA time. These are independent research-development artifacts, **not peer-reviewed journal publications**.
+
+Independent check of reported values from stored coefficients, standard errors and stated survey-model degrees of freedom: HINTS 6+7 OR 1.19964, 95% CI 0.82959–1.73478, p 0.32984 (df 98); NHANES beta 0.008756585, 95% CI 0.00346994–0.01404323, p 0.0030283 (df 15). This does not constitute fresh survey-model execution.
 
 **Reproducibility remaining:** a fresh independent download/execution of official survey data using pinned versions, checksumed inputs, script revision, runtime environment and dated output comparisons. As of this report, that step **has not been performed**.
 
