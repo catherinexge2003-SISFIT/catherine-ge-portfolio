@@ -24,7 +24,7 @@ These are secondary, cross-sectional or repeated cross-sectional studies. Associ
 
 - **v0.1 frozen:** PA001–PA010; ten unique study IDs in the `micro_map_manifest.csv` on the checked default branch. Jointly maintained by Catherine Ge and Starr Choi. `CITATION.cff` lists Zenodo DOI [10.5281/zenodo.23178043](https://doi.org/10.5281/zenodo.23178043), CC BY 4.0, and `date-released: 2026-10-06`. The original `VERSION` file separately records `release_date=2026-10-05`. This is an archival metadata discrepancy **documented here, without altering the frozen release**; publication date should be independently read from Zenodo for definitive citation.
 - **v0.2 working:** PA001–PA015; fifteen unique IDs checked in `v0.2/micro_map_manifest_v0.2.csv`. It adds phase, active comparator, adaptation, exposure/engagement and maintenance fields. Its README identifies v0.2 as not frozen or deposited.
-- The v0.1 row set is included by ID in the v0.2 working data; this ID-level check is **not** a row-by-row semantic coding audit or independent review of all source studies.
+- A CSV parse of both manifests confirms that all **10 original rows × 10 original fields (100 corresponding cells)** are exactly preserved in v0.2; the first 10 column names match, v0.2 adds five columns and five new rows, and the IDs are unique in each version. This source-data equality check is **not** an independent source-paper verification of the research coding.
 - [Frozen v0.1 page](./physical-activity-adherence-map/releases/v0.1/) · [Working v0.2 page](./physical-activity-adherence-map/v0.2/) · [v0.1 CSV](./physical-activity-adherence-map/micro_map_manifest.csv) · [v0.2 CSV](./physical-activity-adherence-map/v0.2/micro_map_manifest_v0.2.csv)
 
 ## Formal research training
