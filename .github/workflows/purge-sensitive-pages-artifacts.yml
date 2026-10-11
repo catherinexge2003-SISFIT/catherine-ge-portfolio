@@ -1,0 +1,24 @@
+name: One-time purge of old Pages archives
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/purge-sensitive-pages-artifacts.yml
+permissions:
+  contents: read
+  actions: write
+jobs:
+  purge:
+    if: github.event.head_commit.message == 'security: purge pre-cleanup Pages artifacts'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove precisely identified pre-cleanup Pages artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          for artifact_id in 11695400247 11694940042 11694543904 11694238548 11669931870 11670395722 11670151267 11669359205 11669223924 11668988295 11669371578 11668194627; do
+            gh api -X DELETE "/repos/$GH_REPO/actions/artifacts/$artifact_id"
+            echo "removed $artifact_id"
+          done
