@@ -150,22 +150,16 @@ if "Sitemap: https://www.sisfit.cn/sitemap.xml" not in robots:
 
 catherine = (ROOT / "CatherineGe/index.html").read_text(encoding="utf-8")
 
-CATHERINE_TAXONOMY = (
-    ("research-profile", "Research Profile"),
-    ("research-evidence", "Research Evidence"),
-    ("methods-preparation", "Methods & Preparation"),
-    ("background-context", "Background & Context"),
-    ("updates-contact", "Updates & Contact"),
+# Verify research-profile section hierarchy without requiring retired utility-navigation labels.
+CATHERINE_ANCHORS = (
+    "research-profile", "research-evidence", "methods-preparation",
+    "background-context", "updates-contact",
 )
 last_pos = -1
-for anchor_id, label in CATHERINE_TAXONOMY:
-    anchor_marker = f'id="{anchor_id}"'
-    link_marker = f'href="#{anchor_id}">{label}</a>'
-    if anchor_marker not in catherine or link_marker not in catherine:
-        fail(f"Catherine taxonomy missing: {label}")
-    pos = catherine.find(anchor_marker)
-    if pos <= last_pos:
-        fail(f"Catherine taxonomy order is incorrect at: {label}")
+for anchor_id in CATHERINE_ANCHORS:
+    pos = catherine.find(f'id="{anchor_id}"')
+    if pos < 0 or pos <= last_pos:
+        fail(f"Catherine section hierarchy missing/out of order: {anchor_id}")
     last_pos = pos
 
 research_page = (ROOT / "research/index.html").read_text(encoding="utf-8")
@@ -173,8 +167,8 @@ for label, page in (("Catherine profile", catherine), ("Research page", research
     nav_start = page.find('<nav class="navbar')
     nav_end = page.find('</nav>', nav_start)
     nav_html = page[nav_start:nav_end] if nav_start >= 0 and nav_end >= 0 else ""
-    if '<details class="page-section-nav nav-utility">' not in nav_html or '<summary>Sections</summary>' not in nav_html:
-        fail(f"expandable Sections navigation missing from {label}")
+    if not nav_html or 'href="/open-research/"' not in nav_html or 'href="/cv/"' not in nav_html:
+        fail(f"academic site navigation missing from {label}")
     if '<div class="hero-page-tools">' in page or '<summary>Page contents</summary>' in page:
         fail(f"obsolete hero page-contents control remains in {label}")
 
