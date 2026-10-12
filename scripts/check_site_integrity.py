@@ -214,4 +214,30 @@ cv = (ROOT / "cv/index.html").read_text(encoding="utf-8")
 if '<meta charset="UTF-8">\\n' in cv:
     fail("literal \\n remains in cv/index.html head")
 
+
+# Check that published pages do not link to missing local files.
+import posixpath
+import re
+from urllib.parse import unquote, urlsplit
+
+for page in ROOT.rglob("*.html"):
+    document = page.read_text(encoding="utf-8", errors="replace")
+    for href in re.findall(r'''\bhref\s*=\s*["']([^"']+)["']''', document):
+        if href.startswith(("#", "http:", "https:", "mailto:", "tel:", "data:", "javascript:")):
+            continue
+        parsed = urlsplit(href)
+        if not parsed.path:
+            continue
+        relative = unquote(parsed.path)
+        if relative.startswith("/"):
+            normalized = posixpath.normpath(relative.lstrip("/"))
+        else:
+            directory = page.parent.relative_to(ROOT).as_posix()
+            normalized = posixpath.normpath(posixpath.join(directory, relative))
+        if normalized.startswith("../"):
+            fail(f"local link escapes site: {page.relative_to(ROOT)} -> {href}")
+        destination = ROOT / normalized
+        if not destination.is_file() and not (destination / "index.html").is_file():
+            fail(f"broken local link: {page.relative_to(ROOT)} -> {href}")
+
 print("PASS: SISFIT public-site integrity contract")

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Health Information Judgement &amp; Decisions | Catherine Ge</title>
+<meta name="description" content="HINTS 7 and HINTS 6+7 analyses: evidence and methods on judging social-media health information and using it for personal decisions.">
+<link rel="canonical" href="https://www.sisfit.cn/open-research/health-information-judgement/">
+<meta property="og:type" content="article"><meta property="og:title" content="Health Information Judgement &amp; Decisions | Catherine Ge">
+<meta property="og:description" content="Two linked survey analyses, method decisions, bounded findings and reproducible source files.">
+<link rel="stylesheet" href="../../assets/css/style.css?v=20261012-1634">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+<style>
+.case-wrap{max-width:990px;margin:auto}.case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.3rem 0}
+.case-card{padding:1.35rem;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:12px}
+.case-card h3{font-size:1.2rem;margin:.5rem 0}.case-stat{font:700 2rem 'Outfit',sans-serif;color:var(--accent-secondary)}
+.case-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}.case-table th,.case-table td{padding:.7rem;text-align:left;border-bottom:1px solid var(--glass-border)}.case-table th{background:var(--glass-bg)}
+.case-links{display:flex;gap:.65rem;flex-wrap:wrap;margin-top:1rem}.case-links a{word-break:break-word}
+.case-note{border-left:3px solid var(--accent-secondary);padding:1rem 1.2rem;background:var(--glass-bg);margin:1rem 0}
+.case-wrap p{margin:.8rem 0}.case-wrap h2{font-size:1.7rem}
+@media(max-width:700px){.case-grid{grid-template-columns:1fr}.case-table{font-size:.78rem}.case-table th,.case-table td{padding:.45rem}}
+</style>
+</head>
+<body data-theme="bio">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="navbar glass"><div class="container"><a href="/CatherineGe/" class="logo">Catherine Ge <span class="dot">Research</span></a><div class="nav-links"><a href="/research/">Research</a><a href="/open-research/" aria-current="page">Open Research</a><a href="/cv/">CV</a></div></div></nav>
+<header id="main-content" class="hero" tabindex="-1"><div class="container hero-content">
+<span class="badge">Featured Research Case · Secondary Data Analysis</span>
+<h1>Health Information Judgement <span class="gradient-text">&amp; Decisions</span></h1>
+<p class="lead">Two related analyses of social-media health-information judgement and self-reported health-decision use: one within 2024 and one comparing independent survey cycles in 2022 and 2024.</p>
+<p style="font-size:.85rem;color:var(--text-secondary)">Research-development work · Observational findings · Not a peer-reviewed or AI-specific study</p>
+</div><div class="hero-bg-grid"></div></header>
+
+<section class="about-section"><div class="container case-wrap">
+<span class="tag-line">Research Sequence</span><h2>One problem, two research questions</h2>
+<div class="case-grid">
+<article class="case-card"><span class="tag-line">HINTS 7 · 2024</span><h3>Is difficulty judging truthfulness associated with reported health-decision use?</h3>
+<div class="case-stat">1.83</div><p>Adjusted odds ratio (95% CI 1.42–2.34); complete-case n=5,183.</p>
+<p>Cross-sectional survey-weighted logistic regression using the HINTS person weight and 50 JK1 replicate weights. Association does not establish causation.</p>
+<a href="https://github.com/catherinexge2003-SISFIT/catherine-ge-portfolio/blob/main/projects/hints7-social-media-health-info/validation_report.md" target="_blank" rel="noopener">Methods and validation</a></article>
+<article class="case-card"><span class="tag-line">HINTS 6 + 7 · 2022/2024</span><h3>Did the association differ between independent survey cycles?</h3>
+<div class="case-stat">1.20</div><p>Survey-year interaction OR (95% CI 0.83–1.73); p=0.330; pooled n=10,838.</p>
+<p>Repeated cross-sectional model with 100 merged Rizzo replicate weights and 98 design degrees of freedom. No established change in association.</p>
+<a href="https://github.com/catherinexge2003-SISFIT/catherine-ge-portfolio/blob/main/projects/hints6-hints7-trends/validation_report.md" target="_blank" rel="noopener">Methods and validation</a></article>
+</div>
+<div class="case-note"><strong>Interpretation boundary:</strong> the adjusted estimate from HINTS 7 and the survey-year interaction estimate from HINTS 6+7 answer different questions and use different analytic samples. They cannot be interpreted as two estimates of the same effect.</div>
+</div></section>
+
+<section class="research-section"><div class="container case-wrap">
+<span class="tag-line">Descriptive Comparison</span><h2>Observed use across survey cycles</h2>
+<p>Weighted percentage reporting use of social-media information for personal health decisions, by cycle and reported difficulty judging truthfulness:</p>
+<table class="case-table"><thead><tr><th>Cycle</th><th>No reported difficulty</th><th>Reported difficulty</th></tr></thead><tbody>
+<tr><td>2022 · HINTS 6</td><td>13.4% (95% CI 9.8–17.0%)</td><td>18.8% (95% CI 15.8–21.7%)</td></tr>
+<tr><td>2024 · HINTS 7</td><td>15.1% (95% CI 12.5–17.8%)</td><td>24.2% (95% CI 21.8–26.6%)</td></tr>
+</tbody></table>
+<p>The descriptive gap is numerically larger in 2024, but the formal survey-year interaction is not statistically significant (p=0.330). A within-person change cannot be inferred from independent cross-sectional samples.</p>
+</div></section>
+
+<section class="about-section"><div class="container case-wrap">
+<span class="tag-line">Methodological Interpretation</span><h2>Decisions worth examining</h2>
+<div class="case-grid">
+<div class="case-card"><h3>Sampling and uncertainty</h3><p>Population survey weights and replicate-based standard errors were used instead of treating observations as a simple random sample. The pooled survey follows NCI merging-tool logic.</p></div>
+<div class="case-card"><h3>Measurement</h3><p>Perceived difficulty judging social-media health information is measured with a single survey item. It should not be presented as a validated measure of digital health literacy.</p></div>
+<div class="case-card"><h3>Causal inference</h3><p>Neither design establishes that judging difficulty causes information use. Temporality, residual confounding and reporting effects remain unresolved.</p></div>
+<div class="case-card"><h3>Next research question</h3><p>Which information-judgement processes could explain this association, and how might a prospective or experimental design distinguish the possible explanations?</p></div>
+</div>
+<div class="case-note">These analyses do not measure how people respond to AI-generated health advice. Any extension to that question would require distinct data and a new design.</div>
+</div></section>
+
+<section class="research-section"><div class="container case-wrap">
+<span class="tag-line">Evidence &amp; Reproducibility</span><h2>Inspect the original work</h2>
+<p>Project repositories contain code, variable definitions, saved outputs and study-level validation reports. The 11 October 2026 cross-project desk audit reviewed records; it did not independently rerun the raw public-use survey files.</p>
+<div class="case-links">
+<a class="btn-secondary" href="https://github.com/catherinexge2003-SISFIT/catherine-ge-portfolio/tree/main/projects/hints7-social-media-health-info" target="_blank" rel="noopener">HINTS 7 project</a>
+<a class="btn-secondary" href="https://github.com/catherinexge2003-SISFIT/catherine-ge-portfolio/tree/main/projects/hints6-hints7-trends" target="_blank" rel="noopener">HINTS 6+7 project</a>
+<a class="btn-secondary" href="https://hints.cancer.gov/data/download-data.aspx" target="_blank" rel="noopener">NCI official data</a>
+<a class="btn-secondary" href="/open-research/evidence-verification/">Verification scope</a>
+</div>
+<p style="margin-top:1.5rem;font-size:.86rem;color:var(--text-secondary)">Research-development analyses in Catherine Ge's portfolio. No peer-review claim or unverified claim of independent intellectual contribution.</p>
+</div></section>
+<footer class="footer"><div class="container"><div class="footer-content"><a href="/open-research/" class="logo">Open Research</a></div><div class="copyright">&copy; 2026 Catherine Ge.</div></div></footer>
+</body></html>
