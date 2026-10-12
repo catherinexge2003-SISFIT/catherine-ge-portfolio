@@ -1,0 +1,50 @@
+name: Verify live public research pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/production-readback.yml"
+      - "research/**"
+      - "open-research/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  public-readback:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check custom-domain pages and deployed content
+        shell: bash
+        run: |
+          python3 - <<'PYCODE'
+          import time
+          from urllib.request import Request, urlopen
+
+          cases = {
+              "https://www.sisfit.cn/open-research/": "Research Questions, Findings &amp; Methods",
+              "https://www.sisfit.cn/open-research/health-information-judgement/": "One problem, two research questions",
+              "https://www.sisfit.cn/research/": "Measurement decision: related does not mean interchangeable",
+              "https://www.sisfit.cn/open-research/physical-activity-adherence-map/v0.2/": "What the comparisons actually suggest",
+          }
+          failures = []
+          for url, marker in cases.items():
+              for attempt in range(1, 5):
+                  try:
+                      req = Request(url, headers={"User-Agent": "SISFIT-Readback/1.0", "Cache-Control": "no-cache"})
+                      with urlopen(req, timeout=15) as response:
+                          body = response.read().decode("utf-8", "replace")
+                          ok = response.status == 200 and marker in body
+                          print(f"{url} -> HTTP {response.status}; marker={marker in body}; bytes={len(body)}; final={response.url}", flush=True)
+                          if ok: break
+                          raise RuntimeError("unexpected response or outdated content")
+                  except Exception as exc:
+                      print(f"attempt {attempt}/4: {type(exc).__name__}: {exc}", flush=True)
+                      if attempt == 4: failures.append(url)
+                      else: time.sleep(5)
+          if failures:
+              raise SystemExit("Live readback failed: " + ", ".join(failures))
+          print("PASS: all four production research pages match deployed content")
+          PYCODE
