@@ -19,13 +19,13 @@ Dataset
 2. Starr Choi
 
 ## Description
-A descriptive micro-map of 10 selected adult digital physical-activity intervention studies. The resource structures each study by population, target behavior, adherence problem, intervention, behavior-change mechanism/component, duration, outcome, and result. Version 0.1 is a convenience micro-map for structural comparison and correction; it is not a systematic review, meta-analysis, or intervention-effectiveness ranking.
+A descriptive micro-map of 10 selected adult digital physical-activity intervention studies. The resource structures each study by population, target behavior, adherence problem, intervention, intervention mechanism/component, duration, outcome, and result. Version 0.1 is a convenience micro-map for structural comparison and correction; it is not a systematic review, meta-analysis, or intervention-effectiveness ranking.
 
 ## Keywords
 - physical activity
 - digital health
-- behaviour change
-- behavior change
+- physical activity maintenance
+- physical activity maintenance
 - self-monitoring
 - feedback
 - adherence
