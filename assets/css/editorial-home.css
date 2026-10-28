@@ -45,3 +45,11 @@
 @media(max-width:850px){.editorial-home .er-grid{grid-template-columns:1fr 1fr}.editorial-home .er-split{grid-template-columns:1fr;gap:25px}.editorial-home .er-nav-inner{align-items:flex-start;flex-direction:column;padding:18px 0}.editorial-home .er-links{gap:12px 20px}}
 @media(max-width:600px){.editorial-home .er-wrap{width:min(100% - 34px,1120px)}.editorial-home .er-hero{padding:70px 0}.editorial-home .er-section{padding:58px 0}.editorial-home .er-grid{grid-template-columns:1fr}.editorial-home .er-project{min-height:0}.editorial-home .er-links details>div{right:0;left:auto}}
 @media(prefers-reduced-motion:reduce){.editorial-home *{scroll-behavior:auto!important;transition:none!important}}
+
+/* Layout baseline for the standalone homepage stylesheet */
+.editorial-home,.editorial-home *,.editorial-home *::before,.editorial-home *::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body.editorial-home{margin:0}
+.editorial-home h1,.editorial-home h2,.editorial-home h3,.editorial-home p{margin-top:0}
+.editorial-home .er-nav summary{list-style-position:inside}
+.editorial-home .er-nav a:focus-visible,.editorial-home .er-nav summary:focus-visible{outline:3px solid #17675e;outline-offset:4px}
