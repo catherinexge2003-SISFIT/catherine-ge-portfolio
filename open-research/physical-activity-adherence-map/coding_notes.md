@@ -27,7 +27,7 @@ Use `NR` rather than guessing.
 - Keep relative treatment effect and absolute behavioral direction distinct.
 - Retain null-effect studies.
 - Describe active comparators explicitly.
-- Separate behavior change from physiological capacity.
+- Separate activity-pattern outcomes from physiological capacity.
 - Do not code transient early response as sustained effect.
 - Distinguish personal behavioral feedback from social comparison.
 - More digital exposure is not automatically better maintenance.
