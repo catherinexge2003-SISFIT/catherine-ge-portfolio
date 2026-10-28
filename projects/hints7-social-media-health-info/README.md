@@ -6,7 +6,7 @@ Among U.S. adults who use social media, is difficulty judging whether health inf
 
 ## Why this project
 
-This project is designed as a reproducible secondary-data analysis aligned with Catherine Ge's research interests in digital health literacy, health communication, behaviour change and physical activity.
+This project is designed as a reproducible secondary-data analysis aligned with Catherine Ge's research interests in digital health literacy, health communication and physical activity.
 
 The analysis uses the U.S. National Cancer Institute's Health Information National Trends Survey (HINTS) 7, fielded in 2024. HINTS 7 contains 7,278 respondents and is a nationally representative probability-based survey. Public-use data are available from:
 
