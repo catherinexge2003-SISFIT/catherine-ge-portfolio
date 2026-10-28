@@ -24,7 +24,7 @@ Version 0.1 contains **10 selected adult digital physical-activity intervention 
 - target behavior
 - adherence problem
 - intervention
-- behavior-change mechanism/component
+- intervention mechanism/component
 - duration
 - outcome
 - result and DOI
