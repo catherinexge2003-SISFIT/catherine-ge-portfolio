@@ -71,5 +71,5 @@ Primary estimand: adjusted odds ratio for `hard_to_judge`.
 - cross-sectional data;
 - self-reported measures;
 - no causal language;
-- no inference that platform use produces behaviour change;
+- no inference that platform use produces sustained physical-activity outcomes;
 - no inference that difficulty judging truthfulness constitutes a validated digital-health-literacy scale.
