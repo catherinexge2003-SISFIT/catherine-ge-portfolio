@@ -11,7 +11,7 @@ Use publicly only when the source can be independently resolved.
 - GPA 4.46 / 5
 - University of Aberdeen — PU5027 Fundamentals of Research Design (Online), 2026–27 — In Progress
 - Catherine Ge — Founder, SISFIT Academy
-- Research interests: digital health literacy, eHealth, behaviour change, physical activity, digital health interventions, implementation science, health communication
+- Research interests: digital health literacy, eHealth, health communication, physical activity, digital health interventions, implementation science
 - Two systematic-review / evidence-synthesis projects are in progress
 - One of the two review projects has an OSF DOI, but the exact public identifier is not yet reconciled
 
